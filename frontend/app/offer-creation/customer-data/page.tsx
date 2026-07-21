@@ -5,6 +5,27 @@ import { useRouter } from "next/navigation";
 import { Info } from "lucide-react";
 import DashboardShell from "@/components/DashboardShell";
 
+export interface Customer {
+  name: string;
+  newExistingCustomer: string;
+  currentCustomerType: string;
+  proposedCustomerType: string;
+  distributorName: string;
+  customerNumber: string;
+  keyAccount: string;
+  state: string;
+  segment: string;
+  subSegment: string;
+  jdeCode: string;
+  salesRep: string;
+  salesArea: string;
+  address: string;
+  previousWbc: string;
+  previousWbcOffer: string;
+  gstNumber: string;
+}
+
+
 // Header & Footer Layouts
 import OfferHeader from "@/components/offer-creation/layout/OfferHeader";
 import StickyFooter from "@/components/offer-creation/layout/StickyFooter";
@@ -46,24 +67,28 @@ export default function OfferCreationAccordionPage() {
     offerCreationType: "New Offer",
     dollarValue: 250000,
 
-    // Accordion 2: Customer Data
-    newExistingCustomer: "Existing Customer",
-    currentCustomerType: "Wholesale Dealer",
-    proposedCustomerType: "Direct Key Account",
-    customerNames: ["Anand Distributors Pvt Ltd"], // upgraded to array
-    distributorName: "Anand Logistics West",
-    customerNumber: "C-839284",
-    keyAccount: "Yes",
-    state: "Maharashtra",
-    segment: "Automotive Lubricants",
-    subSegment: "Logistics & Fleet",
-    jdeCode: "JDE-8472910",
-    salesRep: "Rajesh Kumar",
-    salesArea: "West 1 (Mumbai)",
-    address: "Plot 12, GIDC Industrial Estate, Thane West, Mumbai, 400604",
-    previousWbc: "Yes",
-    previousWbcOffer: "WBC-2025-091 - Monsoon Fleet Base",
-    gstNumber: "", // added GST
+    // Accordion 2: Customer Data (Upgraded to array of Customer objects)
+    customers: [
+      {
+        name: "Anand Distributors Pvt Ltd",
+        newExistingCustomer: "Existing Customer",
+        currentCustomerType: "Wholesale Dealer",
+        proposedCustomerType: "Direct Key Account",
+        distributorName: "Anand Logistics West",
+        customerNumber: "C-839284",
+        keyAccount: "Yes",
+        state: "Maharashtra",
+        segment: "Automotive Lubricants",
+        subSegment: "Logistics & Fleet",
+        jdeCode: "JDE-8472910",
+        salesRep: "Rajesh Kumar",
+        salesArea: "West 1 (Mumbai)",
+        address: "Plot 12, GIDC Industrial Estate, Thane West, Mumbai, 400604",
+        previousWbc: "Yes",
+        previousWbcOffer: "WBC-2025-091 - Monsoon Fleet Base",
+        gstNumber: "",
+      },
+    ],
 
     // Accordion 3: Past Actual Performance
     // volume details
@@ -143,23 +168,20 @@ export default function OfferCreationAccordionPage() {
       newErrors.dollarValue = "Dollar Value must be greater than zero";
     }
 
-    // 2. Customer Data
-    // Multiple customer names validation
-    formData.customerNames.forEach((name, index) => {
-      if (!name.trim()) {
-        newErrors[`customerName_${index}`] = "Customer Name is required";
+    // 2. Customer Data (Iterate over all customers)
+    formData.customers.forEach((customer, index) => {
+      if (!customer.name.trim()) {
+        newErrors[`customer_${index}_name`] = "Customer Name is required";
+      }
+      if (customer.previousWbc === "Yes" && !customer.previousWbcOffer.trim()) {
+        newErrors[`customer_${index}_previousWbcOffer`] = "Previous WBC Offer is required";
+      }
+      // GST visibility & mandatory rules based on Offer Stream
+      const isGstMandatory = formData.offerStream === "CAS" || formData.offerStream === "CASN";
+      if (isGstMandatory && !customer.gstNumber.trim()) {
+        newErrors[`customer_${index}_gstNumber`] = "GST Number is required for CAS/CASN stream";
       }
     });
-
-    if (formData.previousWbc === "Yes" && !formData.previousWbcOffer) {
-      newErrors.previousWbcOffer = "Previous WBC Offer is required";
-    }
-
-    // GST visibility & mandatory rules based on Offer Stream
-    const isGstMandatory = formData.offerStream === "CAS" || formData.offerStream === "CASN";
-    if (isGstMandatory && !formData.gstNumber.trim()) {
-      newErrors.gstNumber = "GST Number is required for CAS/CASN stream";
-    }
 
     // 5. Competitor Offer
     if (!formData.competitorDetails.trim()) {
@@ -190,8 +212,8 @@ export default function OfferCreationAccordionPage() {
     } else {
       const hasSectionError = (fields: string[]) => {
         if (fields.includes("customerName")) {
-          const hasNameErr = Object.keys(newErrors).some((k) => k.startsWith("customerName_"));
-          if (hasNameErr) return true;
+          const hasCustErr = Object.keys(newErrors).some((k) => k.startsWith("customer_"));
+          if (hasCustErr) return true;
         }
         return fields.some((f) => !!newErrors[f]);
       };
@@ -236,8 +258,8 @@ export default function OfferCreationAccordionPage() {
 
   const sectionHasErrors = (fields: string[]): boolean => {
     if (fields.includes("customerName")) {
-      const hasNameErr = Object.keys(errors).some((k) => k.startsWith("customerName_"));
-      if (hasNameErr) return true;
+      const hasCustErr = Object.keys(errors).some((k) => k.startsWith("customer_"));
+      if (hasCustErr) return true;
     }
     return touched && fields.some((f) => !!errors[f]);
   };
@@ -252,7 +274,17 @@ export default function OfferCreationAccordionPage() {
           onPreviewClick={() => setExpandedSections((prev) => ({ ...prev, remarks: true }))}
         />
 
-        {/* Section Accordions */}
+        <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4 flex gap-3 shadow-sm">
+          <Info size={20} className="text-primary shrink-0 mt-0.5" />
+          <div>
+            <p className="text-sm font-bold text-primary">
+              Enterprise Accordion Form Enabled
+            </p>
+            <p className="text-xs text-primary/95 mt-0.5 leading-relaxed">
+              Complete each of the sections below. Mandatory fields are marked with a red asterisk (*). You can expand any section independently.
+            </p>
+          </div>
+        </div>
 
         {/* ==================================================== */}
         {/* VERTICAL ACCORDIONS LIST */}
@@ -292,28 +324,11 @@ export default function OfferCreationAccordionPage() {
             ])}
           >
             <CustomerDataSection
-              data={{
-                offerStream: formData.offerStream,
-                newExistingCustomer: formData.newExistingCustomer,
-                currentCustomerType: formData.currentCustomerType,
-                proposedCustomerType: formData.proposedCustomerType,
-                customerNames: formData.customerNames,
-                distributorName: formData.distributorName,
-                customerNumber: formData.customerNumber,
-                keyAccount: formData.keyAccount,
-                state: formData.state,
-                segment: formData.segment,
-                subSegment: formData.subSegment,
-                jdeCode: formData.jdeCode,
-                salesRep: formData.salesRep,
-                salesArea: formData.salesArea,
-                address: formData.address,
-                previousWbc: formData.previousWbc,
-                previousWbcOffer: formData.previousWbcOffer,
-                gstNumber: formData.gstNumber,
-              }}
+              offerStream={formData.offerStream}
+              customers={formData.customers}
               errors={errors}
-              onChange={handleFieldChange}
+              onChange={(updatedCustomers) => handleFieldChange("customers", updatedCustomers)}
+              touched={touched}
             />
           </Accordion>
 
