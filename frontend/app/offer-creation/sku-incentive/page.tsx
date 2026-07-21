@@ -9,6 +9,7 @@ import DashboardShell from "@/components/DashboardShell";
 import Input from "@/components/offer-creation/ui/Input";
 import Select from "@/components/offer-creation/ui/Select";
 import Accordion from "@/components/offer-creation/ui/Accordion";
+import SearchDropdown from "@/components/offer-creation/ui/SearchDropdown";
 
 // Header & Footer Layouts
 import OfferHeader from "@/components/offer-creation/layout/OfferHeader";
@@ -32,6 +33,48 @@ interface SkuRow {
   skuRebate: number;
   productTargetIncentive: number;
 }
+
+const AVAILABLE_SKUS = [
+  {
+    skuCode: "SKU-8392",
+    skuName: "EDGE 5W-40 Synthetic",
+    skuDataOption: "Synthetic",
+    cogs: 420,
+    lbmName: "LBM - High Performance",
+    pvName: "HD",
+    recMixIncentive: 2.2,
+    mixIncentive: 2.2,
+    skuRebate: 3.5,
+    productTargetIncentive: 1.5,
+  },
+  {
+    skuCode: "SKU-4829",
+    skuName: "GTX 15W-40 Mineral",
+    skuDataOption: "Mineral",
+    cogs: 280,
+    lbmName: "LBM - Standard",
+    pvName: "ILS",
+    recMixIncentive: 1.5,
+    mixIncentive: 1.5,
+    skuRebate: 2.2,
+    productTargetIncentive: 1.0,
+  },
+  {
+    skuCode: "SKU-9182",
+    skuName: "CRB Turbo 15W-40 Diesel",
+    skuDataOption: "Semi-Synthetic",
+    cogs: 310,
+    lbmName: "LBM - Light Duty",
+    pvName: "FWS",
+    recMixIncentive: 1.8,
+    mixIncentive: 1.8,
+    skuRebate: 2.5,
+    productTargetIncentive: 1.2,
+  },
+];
+
+const skuCodesOptions = AVAILABLE_SKUS.map((s) => s.skuCode);
+const skuNamesOptions = AVAILABLE_SKUS.map((s) => s.skuName);
 
 export default function SkuIncentivePage() {
   const router = useRouter();
@@ -157,6 +200,8 @@ export default function SkuIncentivePage() {
   // TABLE SEARCH, SORTING & PAGINATION STATE
   // ----------------------------------------------------
   const [searchQuery, setSearchQuery] = useState("");
+  const [filterSkuCode, setFilterSkuCode] = useState<string>("");
+  const [filterSkuName, setFilterSkuName] = useState<string>("");
   const [sortField, setSortField] = useState<keyof SkuRow>("skuName");
   const [sortAsc, setSortAsc] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -281,6 +326,48 @@ export default function SkuIncentivePage() {
     );
   };
 
+  const handleSelectSku = (rowId: string, val: string) => {
+    const selectedCode = val.split(" - ")[0];
+    const foundSku = AVAILABLE_SKUS.find((sku) => sku.skuCode === selectedCode);
+
+    setSkus((prev) =>
+      prev.map((row) => {
+        if (row.id === rowId) {
+          if (foundSku) {
+            return {
+              ...row,
+              skuCode: foundSku.skuCode,
+              skuName: foundSku.skuName,
+              skuDataOption: foundSku.skuDataOption,
+              cogs: foundSku.cogs,
+              lbmName: foundSku.lbmName,
+              pvName: foundSku.pvName,
+              recMixIncentive: foundSku.recMixIncentive,
+              mixIncentive: foundSku.mixIncentive,
+              skuRebate: foundSku.skuRebate,
+              productTargetIncentive: foundSku.productTargetIncentive,
+            };
+          } else {
+            return {
+              ...row,
+              skuCode: "",
+              skuName: "",
+              skuDataOption: "",
+              cogs: 0,
+              lbmName: "",
+              pvName: "",
+              recMixIncentive: 0,
+              mixIncentive: 0,
+              skuRebate: 0,
+              productTargetIncentive: 0,
+            };
+          }
+        }
+        return row;
+      })
+    );
+  };
+
   // ----------------------------------------------------
   // VALIDATIONS & ERROR HANDLING
   // ----------------------------------------------------
@@ -360,11 +447,21 @@ export default function SkuIncentivePage() {
     }
   };
 
-  const filteredSkus = skus.filter(
-    (row) =>
+  const filteredSkus = skus.filter((row) => {
+    // 1. Global Search
+    const matchesGlobal =
+      !searchQuery ||
       row.skuName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      row.skuCode.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+      row.skuCode.toLowerCase().includes(searchQuery.toLowerCase());
+
+    // 2. SKU Code Filter
+    const matchesCode = !filterSkuCode || row.skuCode === filterSkuCode;
+
+    // 3. SKU Name Filter
+    const matchesName = !filterSkuName || row.skuName === filterSkuName;
+
+    return matchesGlobal && matchesCode && matchesName;
+  });
 
   const sortedSkus = [...filteredSkus].sort((a, b) => {
     const valA = a[sortField];
@@ -513,25 +610,50 @@ export default function SkuIncentivePage() {
           >
             <div className="space-y-4">
               {/* TABLE TOOLBAR */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-gray-50/50 p-3 rounded-xl border border-gray-150 shadow-sm">
-                <div className="relative w-full sm:w-72">
-                  <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-brand-gray pointer-events-none">
-                    <Search size={15} />
-                  </span>
-                  <input
-                    type="text"
-                    placeholder="Search SKU Name or Code..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-9 pr-4 py-2 text-xs sm:text-sm text-brand-dark bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary placeholder-gray-400 transition"
-                  />
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 bg-gray-50/50 p-3 rounded-xl border border-gray-150 shadow-sm text-brand-dark">
+                {/* Search controls group */}
+                <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 flex-1">
+                  {/* Global Search */}
+                  <div className="relative w-full lg:w-[300px]">
+                    <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-brand-gray pointer-events-none">
+                      <Search size={15} />
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="Search SKU Name or Code..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full pl-9 pr-4 py-2 text-xs sm:text-sm text-brand-dark bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary placeholder-gray-400 transition"
+                    />
+                  </div>
+
+                  {/* SKU Code Dropdown */}
+                  <div className="w-full md:w-[220px]">
+                    <SearchDropdown
+                      placeholder="Select SKU Code"
+                      options={skuCodesOptions}
+                      value={filterSkuCode}
+                      onChange={(val) => setFilterSkuCode(val)}
+                    />
+                  </div>
+
+                  {/* SKU Name Dropdown */}
+                  <div className="w-full md:w-[240px]">
+                    <SearchDropdown
+                      placeholder="Select SKU Name"
+                      options={skuNamesOptions}
+                      value={filterSkuName}
+                      onChange={(val) => setFilterSkuName(val)}
+                    />
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-2 w-full sm:w-auto">
+                {/* Actions group */}
+                <div className="flex items-center gap-2 shrink-0 w-full lg:w-auto mt-2 lg:mt-0">
                   <button
                     type="button"
                     onClick={handleUpload}
-                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-brand-gray hover:text-brand-dark bg-white border border-gray-200 rounded-lg shadow-xs hover:bg-gray-50 transition"
+                    className="flex-1 lg:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2 h-9 text-xs font-semibold text-brand-gray hover:text-brand-dark bg-white border border-gray-200 rounded-lg shadow-xs hover:bg-gray-50 transition duration-150"
                     title="Upload file"
                   >
                     <Upload size={14} />
@@ -540,7 +662,7 @@ export default function SkuIncentivePage() {
                   <button
                     type="button"
                     onClick={handleDownload}
-                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-brand-gray hover:text-brand-dark bg-white border border-gray-200 rounded-lg shadow-xs hover:bg-gray-50 transition"
+                    className="flex-1 lg:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2 h-9 text-xs font-semibold text-brand-gray hover:text-brand-dark bg-white border border-gray-200 rounded-lg shadow-xs hover:bg-gray-50 transition duration-150"
                     title="Download file"
                   >
                     <Download size={14} />
@@ -549,7 +671,7 @@ export default function SkuIncentivePage() {
                   <button
                     type="button"
                     onClick={handleCopy}
-                    className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-brand-gray hover:text-brand-dark bg-white border border-gray-200 rounded-lg shadow-xs hover:bg-gray-50 transition"
+                    className="flex-1 lg:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2 h-9 text-xs font-semibold text-brand-gray hover:text-brand-dark bg-white border border-gray-200 rounded-lg shadow-xs hover:bg-gray-50 transition duration-150"
                     title="Copy settings"
                   >
                     <Copy size={14} />
@@ -574,7 +696,7 @@ export default function SkuIncentivePage() {
                           SKU Name <ArrowUpDown size={12} />
                         </div>
                       </th>
-                      <th className="p-3.5">SKU Option</th>
+                      <th className="p-3.5 min-w-[200px]">Select SKU</th>
                       {offerStream === "IWS" && <th className="p-3.5">LBM Name</th>}
                       {(offerStream === "FWS" || offerStream === "HD" || offerStream === "ILS") && <th className="p-3.5">PV Name</th>}
                       <th className="p-3.5">Base Vol</th>
@@ -618,16 +740,13 @@ export default function SkuIncentivePage() {
                           </td>
                           <td className="p-3 font-semibold text-brand-dark">{row.skuCode}</td>
                           <td className="p-3 font-medium text-brand-dark">{row.skuName}</td>
-                          <td className="p-3 min-w-[120px]">
-                            <select
-                              value={row.skuDataOption}
-                              onChange={(e) => handleRowFieldChange(row.id, "skuDataOption", e.target.value)}
-                              className="text-xs border border-gray-200 rounded px-1.5 py-1 w-full bg-white focus:outline-none focus:border-primary"
-                            >
-                              <option value="Synthetic">Synthetic</option>
-                              <option value="Semi-Synthetic">Semi-Synthetic</option>
-                              <option value="Mineral">Mineral</option>
-                            </select>
+                          <td className="p-3 min-w-[220px]">
+                            <SearchDropdown
+                              placeholder="Search SKU..."
+                              options={AVAILABLE_SKUS.map((sku) => `${sku.skuCode} - ${sku.skuName}`)}
+                              value={row.skuCode && row.skuName ? `${row.skuCode} - ${row.skuName}` : ""}
+                              onChange={(val) => handleSelectSku(row.id, val)}
+                            />
                           </td>
                           {offerStream === "IWS" && (
                             <td className="p-3 min-w-[150px]">
