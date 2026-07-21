@@ -1,0 +1,21 @@
+{{!-- File: src/modules/mail/templates/partials/offer-summary.hbs --}}
+<table style="border-collapse: collapse; width: 100%; max-width: 600px; font-family: Arial, sans-serif;">
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd; background: #f4f4f4; font-weight: bold;">Offer Code</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">{{offerCode}}</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd; background: #f4f4f4; font-weight: bold;">Customer</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">{{customerName}}</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd; background: #f4f4f4; font-weight: bold;">Approval Level</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">{{level}}</td>
+  </tr>
+  {{#if remarks}}
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd; background: #f4f4f4; font-weight: bold;">Remarks</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">{{remarks}}</td>
+  </tr>
+  {{/if}}
+</table>
