@@ -2,8 +2,18 @@
 
 import React, { useState, useEffect, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Info, Calendar, ShieldCheck, AlertTriangle } from "lucide-react";
+import { Info, Calendar, ShieldCheck, AlertTriangle, Check, AlertCircle } from "lucide-react";
 import DashboardShell from "@/components/DashboardShell";
+
+export interface YearlyPlan {
+  year: number;
+  volume: number;
+  monthlyVolume: number;
+  volumePct: number;
+  advanceRebate: number;
+  advanceRebatePct: number;
+}
+
 
 // Custom UI Inputs
 import Input from "@/components/offer-creation/ui/Input";
@@ -31,14 +41,14 @@ export default function InvestmentAndApprovalPage() {
     credit: false,
   });
 
+  const [activeYearIndex, setActiveYearIndex] = useState<number>(0);
+
   // ----------------------------------------------------
   // STATE MANAGEMENT FOR INVESTMENT FIELDS
   // ----------------------------------------------------
   const [formData, setFormData] = useState({
     // Section 1: Investment Classification
     investmentType: "Cash Loan",
-    fws: "FWS", // FWS field
-    iws: "Standard IWS",
     investmentRationale: "Asset Purchase",
     bpBankFunded: "BP Funded",
     planningStatus: "Planned",
@@ -57,18 +67,25 @@ export default function InvestmentAndApprovalPage() {
     totalVolumeCommitment: 50000,
     amortizationRatePerLitre: 2.4,
 
-    // Section 3: Advance Rebate & Volume Disbursement Plan
-    year1Volume: 20000,
-    year1VolumePct: 40,
-    year1MonthlyVolume: 833.33,
-    year1AdvanceRebate: 25000,
-    year1AdvanceRebatePct: 50,
-
-    year2Volume: 30000,
-    year2VolumePct: 60,
-    year2MonthlyVolume: 1250,
-    year2AdvanceRebate: 25000,
-    year2AdvanceRebatePct: 50,
+    // Section 3: Advance Rebate & Volume Disbursement Plan (Upgraded to dynamic array)
+    yearlyPlans: [
+      {
+        year: 1,
+        volume: 20000,
+        monthlyVolume: 1666.67,
+        volumePct: 40,
+        advanceRebate: 25000,
+        advanceRebatePct: 50,
+      },
+      {
+        year: 2,
+        volume: 30000,
+        monthlyVolume: 2500.00,
+        volumePct: 60,
+        advanceRebate: 25000,
+        advanceRebatePct: 50,
+      },
+    ] as YearlyPlan[],
 
     // Section 4: Advance Rebate Total
     totalVolume: 50000,
@@ -81,6 +98,8 @@ export default function InvestmentAndApprovalPage() {
     bgAmountPctOfAr: 80,
     bankName: "State Bank of India",
     bankAddress: "MG Road Branch, Mumbai",
+    gstNumber: "",
+    gstName: "",
     bgTenureCheck: true,
 
     // Section 6: Credit Input
@@ -92,20 +111,23 @@ export default function InvestmentAndApprovalPage() {
     totalCreditExposure: 230000,
   });
 
+  // Keep activeYearIndex inside valid boundaries
+  useEffect(() => {
+    if (activeYearIndex >= formData.yearlyPlans.length) {
+      setActiveYearIndex(Math.max(0, formData.yearlyPlans.length - 1));
+    }
+  }, [formData.yearlyPlans.length, activeYearIndex]);
+
   // ----------------------------------------------------
   // AUTO CALCULATIONS EFFECT
   // ----------------------------------------------------
   useEffect(() => {
-    // 1. Rule: If Investment Type = None, set IWS = None, and disable/hide FWS, Rationale, BP/Bank Funded, Planning Status
-    let updatedIws = formData.iws;
-    let updatedFws = formData.fws;
+    // 1. Rule: If Investment Type = None, clear Rationale, BP/Bank Funded, Planning Status
     let updatedRationale = formData.investmentRationale;
     let updatedBpBankFunded = formData.bpBankFunded;
     let updatedPlanningStatus = formData.planningStatus;
 
     if (formData.investmentType === "None") {
-      updatedIws = "None";
-      updatedFws = "None";
       updatedRationale = "";
       updatedBpBankFunded = "";
       updatedPlanningStatus = "";
@@ -124,19 +146,52 @@ export default function InvestmentAndApprovalPage() {
     // 3. Total Additional Loan: Cash + Equipment
     const calculatedTotalAdditional = Number(formData.additionalCashLoan || 0) + Number(formData.additionalEquipmentLoan || 0);
 
-    // 4. Year 1 & Year 2 Volume % and Rebate % Calculations
-    const calculatedTotalVolume = Number(formData.year1Volume || 0) + Number(formData.year2Volume || 0);
-    const calculatedTotalRebate = Number(formData.year1AdvanceRebate || 0) + Number(formData.year2AdvanceRebate || 0);
+    // 4. Dynamic Yearly Plans resizing & calculations
+    const targetYears = Math.floor(Number(formData.investmentTerm || 24) / 12);
+    let updatedYearlyPlans = [...formData.yearlyPlans];
 
-    const termMonths = Number(formData.investmentTerm || 1);
-    const y1MonthlyVol = Number((Number(formData.year1Volume || 0) / termMonths).toFixed(2));
-    const y2MonthlyVol = Number((Number(formData.year2Volume || 0) / termMonths).toFixed(2));
+    if (updatedYearlyPlans.length !== targetYears) {
+      if (updatedYearlyPlans.length > targetYears) {
+        // Shrink term: preserve Year 1 values
+        updatedYearlyPlans = updatedYearlyPlans.slice(0, targetYears);
+      } else {
+        // Expand term: add new years, initialize with default values
+        for (let y = updatedYearlyPlans.length + 1; y <= targetYears; y++) {
+          updatedYearlyPlans.push({
+            year: y,
+            volume: 0,
+            monthlyVolume: 0,
+            volumePct: 0,
+            advanceRebate: 0,
+            advanceRebatePct: 0,
+          });
+        }
+      }
+    }
 
-    const y1VolPct = Number(formData.totalVolumeCommitment || 1) > 0 ? Math.round((Number(formData.year1Volume || 0) / Number(formData.totalVolumeCommitment || 1)) * 100) : 0;
-    const y2VolPct = Number(formData.totalVolumeCommitment || 1) > 0 ? Math.round((Number(formData.year2Volume || 0) / Number(formData.totalVolumeCommitment || 1)) * 100) : 0;
+    // Calculate sums
+    let calculatedTotalVolume = 0;
+    let calculatedTotalRebate = 0;
+    updatedYearlyPlans.forEach((plan) => {
+      calculatedTotalVolume += Number(plan.volume || 0);
+      calculatedTotalRebate += Number(plan.advanceRebate || 0);
+    });
 
-    const y1RebatePct = calculatedTotalRebate > 0 ? Math.round((Number(formData.year1AdvanceRebate || 0) / calculatedTotalRebate) * 100) : 0;
-    const y2RebatePct = calculatedTotalRebate > 0 ? Math.round((Number(formData.year2AdvanceRebate || 0) / calculatedTotalRebate) * 100) : 0;
+    const totalCommitment = Number(formData.totalVolumeCommitment || 0);
+
+    // Map yearly calculations: Monthly Volume = Year Volume / 12
+    // Volume % = (Year Volume / Total Volume Commitment) * 100
+    // Advance Rebate % = (Year Advance Rebate / Total Advance Rebate Amount) * 100
+    updatedYearlyPlans = updatedYearlyPlans.map((plan) => {
+      const vol = Number(plan.volume || 0);
+      const reb = Number(plan.advanceRebate || 0);
+      return {
+        ...plan,
+        monthlyVolume: Number((vol / 12).toFixed(2)),
+        volumePct: totalCommitment > 0 ? Math.round((vol / totalCommitment) * 100) : 0,
+        advanceRebatePct: calculatedTotalRebate > 0 ? Math.round((reb / calculatedTotalRebate) * 100) : 0,
+      };
+    });
 
     // 5. BG Amount % of AR Amount
     const calculatedBgPctOfAr = calculatedTotalRebate > 0 ? Math.round((Number(formData.bgAmount || 0) / calculatedTotalRebate) * 100) : 0;
@@ -153,15 +208,33 @@ export default function InvestmentAndApprovalPage() {
     }
 
     // 7. Total Credit Exposure & Additional Security Required
-    // Total Credit Exposure = Trading Credit Limit + Additional Loan
-    // Additional Security Required = Total Credit Exposure - Existing Security
     const calculatedExposure = Number(formData.tradingCreditLimit || 0) + calculatedTotalAdditional;
     const calculatedAddSec = calculatedExposure - Number(formData.existingSecurity || 0);
 
+    // Check if yearly plans changed
+    let plansChanged = false;
+    if (updatedYearlyPlans.length !== formData.yearlyPlans.length) {
+      plansChanged = true;
+    } else {
+      for (let i = 0; i < updatedYearlyPlans.length; i++) {
+        const u = updatedYearlyPlans[i];
+        const f = formData.yearlyPlans[i];
+        if (
+          u.year !== f.year ||
+          u.volume !== f.volume ||
+          u.monthlyVolume !== f.monthlyVolume ||
+          u.volumePct !== f.volumePct ||
+          u.advanceRebate !== f.advanceRebate ||
+          u.advanceRebatePct !== f.advanceRebatePct
+        ) {
+          plansChanged = true;
+          break;
+        }
+      }
+    }
+
     // Update state once if any calculated value changes
     if (
-      updatedIws !== formData.iws ||
-      updatedFws !== formData.fws ||
       updatedRationale !== formData.investmentRationale ||
       updatedBpBankFunded !== formData.bpBankFunded ||
       updatedPlanningStatus !== formData.planningStatus ||
@@ -169,21 +242,14 @@ export default function InvestmentAndApprovalPage() {
       calculatedTotalAdditional !== formData.totalAdditionalLoan ||
       calculatedTotalVolume !== formData.totalVolume ||
       calculatedTotalRebate !== formData.totalAdvanceRebateAmount ||
-      y1MonthlyVol !== formData.year1MonthlyVolume ||
-      y2MonthlyVol !== formData.year2MonthlyVolume ||
-      y1VolPct !== formData.year1VolumePct ||
-      y2VolPct !== formData.year2VolumePct ||
-      y1RebatePct !== formData.year1AdvanceRebatePct ||
-      y2RebatePct !== formData.year2AdvanceRebatePct ||
       calculatedBgPctOfAr !== formData.bgAmountPctOfAr ||
       isBgTenureValid !== formData.bgTenureCheck ||
       calculatedExposure !== formData.totalCreditExposure ||
-      calculatedAddSec !== formData.additionalSecurityRequired
+      calculatedAddSec !== formData.additionalSecurityRequired ||
+      plansChanged
     ) {
       setFormData((prev) => ({
         ...prev,
-        iws: updatedIws,
-        fws: updatedFws,
         investmentRationale: updatedRationale,
         bpBankFunded: updatedBpBankFunded,
         planningStatus: updatedPlanningStatus,
@@ -191,12 +257,7 @@ export default function InvestmentAndApprovalPage() {
         totalAdditionalLoan: calculatedTotalAdditional,
         totalVolume: calculatedTotalVolume,
         totalAdvanceRebateAmount: calculatedTotalRebate,
-        year1MonthlyVolume: y1MonthlyVol,
-        year2MonthlyVolume: y2MonthlyVol,
-        year1VolumePct: y1VolPct,
-        year2VolumePct: y2VolPct,
-        year1AdvanceRebatePct: y1RebatePct,
-        year2AdvanceRebatePct: y2RebatePct,
+        yearlyPlans: updatedYearlyPlans,
         bgAmountPctOfAr: calculatedBgPctOfAr,
         bgTenureCheck: isBgTenureValid,
         totalCreditExposure: calculatedExposure,
@@ -205,8 +266,6 @@ export default function InvestmentAndApprovalPage() {
     }
   }, [
     formData.investmentType,
-    formData.fws,
-    formData.iws,
     formData.investmentRationale,
     formData.bpBankFunded,
     formData.planningStatus,
@@ -214,15 +273,12 @@ export default function InvestmentAndApprovalPage() {
     formData.investmentTerm,
     formData.additionalCashLoan,
     formData.additionalEquipmentLoan,
-    formData.year1Volume,
-    formData.year2Volume,
-    formData.year1AdvanceRebate,
-    formData.year2AdvanceRebate,
     formData.bgAmount,
     formData.bgEndDate,
     formData.tradingCreditLimit,
     formData.existingSecurity,
     formData.totalVolumeCommitment,
+    JSON.stringify(formData.yearlyPlans),
   ]);
 
   // ----------------------------------------------------
@@ -241,6 +297,31 @@ export default function InvestmentAndApprovalPage() {
       });
     }
   };
+
+  const handleYearlyPlanChange = (index: number, field: "volume" | "advanceRebate", value: number) => {
+    setFormData((prev) => {
+      const updatedPlans = prev.yearlyPlans.map((plan, i) => {
+        if (i === index) {
+          return { ...plan, [field]: value };
+        }
+        return plan;
+      });
+      return { ...prev, yearlyPlans: updatedPlans };
+    });
+  };
+
+  const getYearPlanStatus = (plan: YearlyPlan) => {
+    const vol = Number(plan.volume || 0);
+    const reb = Number(plan.advanceRebate || 0);
+    if (vol > 0 && reb > 0) {
+      return { status: "complete", label: "Complete" };
+    }
+    if (vol === 0 && reb === 0) {
+      return { status: "unconfigured", label: "Not Configured" };
+    }
+    return { status: "incomplete", label: "Incomplete" };
+  };
+
 
   const handleToggleSection = (sectionId: string) => {
     setExpandedSections((prev) => ({
@@ -329,8 +410,7 @@ export default function InvestmentAndApprovalPage() {
   };
 
   // Section 1 Visibility logic
-  // Enabled / Visible only for FWS + Cash Loan
-  const isFwsCashLoan = formData.investmentType === "Cash Loan" && formData.fws === "FWS";
+  const isCashLoanActive = formData.investmentType === "Cash Loan";
 
   return (
     <DashboardShell>
@@ -377,27 +457,11 @@ export default function InvestmentAndApprovalPage() {
                 required
               />
 
-              <Select
-                label="FWS"
-                disabled={formData.investmentType === "None"}
-                options={["None", "FWS"]}
-                value={formData.fws}
-                onChange={(e) => handleFieldChange("fws", e.target.value)}
-              />
-
-              <Select
-                label="IWS"
-                disabled={formData.investmentType === "None"}
-                options={["None", "Standard IWS", "Custom IWS"]}
-                value={formData.iws}
-                onChange={(e) => handleFieldChange("iws", e.target.value)}
-              />
-
-              {isFwsCashLoan && (
+              {isCashLoanActive && (
                 <>
                   <Select
                     label="Investment Rationale *"
-                    options={["", "Asset Purchase", "Marketing Support", "Distributor Setup"]}
+                    options={["- select -", "Asset Purchase", "Marketing Support", "Distributor Setup"]}
                     value={formData.investmentRationale}
                     onChange={(e) => handleFieldChange("investmentRationale", e.target.value)}
                     error={errors.investmentRationale}
@@ -406,7 +470,7 @@ export default function InvestmentAndApprovalPage() {
 
                   <Select
                     label="BP / Bank Funded *"
-                    options={["", "BP Funded", "Bank Funded"]}
+                    options={["- select -", "BP Funded", "Bank Funded"]}
                     value={formData.bpBankFunded}
                     onChange={(e) => handleFieldChange("bpBankFunded", e.target.value)}
                     error={errors.bpBankFunded}
@@ -415,7 +479,7 @@ export default function InvestmentAndApprovalPage() {
 
                   <Select
                     label="Planning Status *"
-                    options={["", "Planned", "Unplanned"]}
+                    options={["- select -", "Planned", "Unplanned"]}
                     value={formData.planningStatus}
                     onChange={(e) => handleFieldChange("planningStatus", e.target.value)}
                     error={errors.planningStatus}
@@ -546,89 +610,186 @@ export default function InvestmentAndApprovalPage() {
             isOpen={expandedSections.plan}
             onToggle={() => handleToggleSection("plan")}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Year 1 */}
-              <div className="bg-gray-50 p-4 rounded-xl border border-gray-150 space-y-4">
-                <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider flex items-center gap-1.5 border-b border-gray-200 pb-2">
-                  <Calendar size={14} className="text-primary" />
-                  Year 1 Plan
-                </h4>
-                <div className="grid grid-cols-2 gap-4">
-                  <Input
-                    label="Volume (Ltr)"
-                    type="number"
-                    value={formData.year1Volume || ""}
-                    onChange={(e) => handleFieldChange("year1Volume", Number(e.target.value))}
-                  />
-                  <Input
-                    label="Monthly Volume (Ltr)"
-                    type="number"
-                    disabled
-                    value={formData.year1MonthlyVolume}
-                  />
-                  <Input
-                    label="Volume %"
-                    type="number"
-                    disabled
-                    value={formData.year1VolumePct}
-                    suffixText="%"
-                  />
-                  <Input
-                    label="Advance Rebate (₹)"
-                    type="number"
-                    value={formData.year1AdvanceRebate || ""}
-                    onChange={(e) => handleFieldChange("year1AdvanceRebate", Number(e.target.value))}
-                  />
-                  <Input
-                    label="Advance Rebate %"
-                    type="number"
-                    disabled
-                    value={formData.year1AdvanceRebatePct}
-                    suffixText="%"
-                  />
+            <div className="flex flex-col md:flex-row gap-6 w-full text-brand-dark">
+              {/* LEFT PANEL: YEAR LIST */}
+              <div className="w-full md:w-[35%] lg:w-[30%] shrink-0 flex flex-col gap-4">
+                <div className="flex justify-between items-center px-1">
+                  <h4 className="text-xs font-bold text-brand-gray uppercase tracking-wider">Rebate Plans</h4>
+                  <span className="text-[10px] font-semibold text-brand-gray bg-gray-100 border border-gray-200 px-2.5 py-0.5 rounded-full select-none">
+                    {formData.yearlyPlans.length} {formData.yearlyPlans.length === 1 ? "Year" : "Years"}
+                  </span>
+                </div>
+
+                {/* MOBILE LAYOUT: Horizontal scrollable tab list */}
+                <div className="flex md:hidden flex-row gap-3 overflow-x-auto pb-2 pt-1 scrollbar-none snap-x snap-mandatory">
+                  {formData.yearlyPlans.map((plan, index) => {
+                    const isActive = index === activeYearIndex;
+                    const { status } = getYearPlanStatus(plan);
+                    const formattedVol = plan.volume ? `${plan.volume.toLocaleString()} Ltr` : "Not Configured";
+                    const formattedReb = plan.advanceRebate ? `₹${plan.advanceRebate.toLocaleString()}` : "";
+
+                    return (
+                      <div
+                        key={plan.year}
+                        onClick={() => setActiveYearIndex(index)}
+                        className={`shrink-0 w-44 snap-align-start relative p-3 rounded-xl border-2 transition-all cursor-pointer flex flex-col justify-between h-24 select-none
+                          ${isActive ? "border-primary bg-primary/[0.02] shadow-sm" : "border-gray-200 bg-white"}
+                        `}
+                      >
+                        <div>
+                          <span className="text-[9px] font-bold text-brand-gray uppercase tracking-wider block mb-0.5">
+                            Year {plan.year}
+                          </span>
+                          <h4 className={`text-xs font-bold truncate ${plan.volume ? "text-brand-dark" : "text-brand-gray/60 italic"}`}>
+                            {formattedVol}
+                          </h4>
+                          {formattedReb && (
+                            <span className="text-[9px] font-semibold text-brand-gray block mt-0.5">
+                              {formattedReb}
+                            </span>
+                          )}
+                        </div>
+
+                        <div className="flex items-center gap-1.5">
+                          {status === "complete" && (
+                            <>
+                              <div className="bg-emerald-500 text-white rounded-full p-0.5 flex items-center justify-center shrink-0">
+                                <Check size={8} className="stroke-[3]" />
+                              </div>
+                              <span className="text-[9px] font-bold text-emerald-600">Complete</span>
+                            </>
+                          )}
+                          {status === "unconfigured" && (
+                            <>
+                              <div className="w-2.5 h-2.5 rounded-full border border-gray-300 flex items-center justify-center shrink-0" />
+                              <span className="text-[9px] font-bold text-gray-500">Not Configured</span>
+                            </>
+                          )}
+                          {status === "incomplete" && (
+                            <>
+                              <div className="text-amber-500 shrink-0">
+                                <AlertTriangle size={10} className="stroke-amber-500 stroke-[2.5]" />
+                              </div>
+                              <span className="text-[9px] font-bold text-amber-600">Incomplete</span>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* TABLET / DESKTOP LAYOUT: Vertical card list */}
+                <div className="hidden md:flex flex-col gap-3 max-h-[260px] overflow-y-auto overflow-x-hidden pr-1 thin-scroll scroll-smooth">
+                  {formData.yearlyPlans.map((plan, index) => {
+                    const isActive = index === activeYearIndex;
+                    const { status } = getYearPlanStatus(plan);
+                    const formattedVol = plan.volume ? `${plan.volume.toLocaleString()} Ltr` : "Not Configured";
+                    const formattedReb = plan.advanceRebate ? `₹${plan.advanceRebate.toLocaleString()}` : "—";
+
+                    return (
+                      <div
+                        key={plan.year}
+                        onClick={() => setActiveYearIndex(index)}
+                        className={`group relative p-4 rounded-xl border-2 transition-all cursor-pointer flex flex-col justify-between h-28 select-none
+                          ${isActive ? "border-primary bg-primary/[0.01] shadow-xs" : "border-gray-250 bg-white hover:border-gray-350 hover:shadow-xs"}
+                        `}
+                      >
+                        <div>
+                          <span className="text-[10px] font-bold text-brand-gray uppercase tracking-wider block mb-1">
+                            Year {plan.year}
+                          </span>
+                          <h4 className={`text-sm font-bold truncate leading-snug ${plan.volume ? "text-brand-dark" : "text-brand-gray/60 italic"}`}>
+                            {formattedVol}
+                          </h4>
+                        </div>
+
+                        <div className="flex items-center justify-between text-[10px] font-medium text-brand-gray pt-1">
+                          <div>
+                            <span className="text-gray-400 font-normal">Rebate:</span> {formattedReb}
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            {status === "complete" && (
+                              <>
+                                <div className="bg-emerald-500 text-white rounded-full p-0.5 flex items-center justify-center shrink-0">
+                                  <Check size={10} className="stroke-[3]" />
+                                </div>
+                                <span className="text-[10px] font-bold text-emerald-600">Complete</span>
+                              </>
+                            )}
+                            {status === "unconfigured" && (
+                              <>
+                                <div className="w-3.5 h-3.5 rounded-full border-2 border-gray-300 flex items-center justify-center shrink-0" />
+                                <span className="text-[10px] font-bold text-gray-500">Not Configured</span>
+                              </>
+                            )}
+                            {status === "incomplete" && (
+                              <>
+                                <div className="text-amber-500 shrink-0">
+                                  <AlertTriangle size={12} className="stroke-amber-500 stroke-[2.5]" />
+                                </div>
+                                <span className="text-[10px] font-bold text-amber-600">Incomplete</span>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
-              {/* Year 2 */}
-              <div className="bg-gray-50 p-4 rounded-xl border border-gray-150 space-y-4">
-                <h4 className="text-xs font-bold text-brand-dark uppercase tracking-wider flex items-center gap-1.5 border-b border-gray-200 pb-2">
-                  <Calendar size={14} className="text-primary" />
-                  Year 2 Plan
-                </h4>
-                <div className="grid grid-cols-2 gap-4">
-                  <Input
-                    label="Volume (Ltr)"
-                    type="number"
-                    value={formData.year2Volume || ""}
-                    onChange={(e) => handleFieldChange("year2Volume", Number(e.target.value))}
-                  />
-                  <Input
-                    label="Monthly Volume (Ltr)"
-                    type="number"
-                    disabled
-                    value={formData.year2MonthlyVolume}
-                  />
-                  <Input
-                    label="Volume %"
-                    type="number"
-                    disabled
-                    value={formData.year2VolumePct}
-                    suffixText="%"
-                  />
-                  <Input
-                    label="Advance Rebate (₹)"
-                    type="number"
-                    value={formData.year2AdvanceRebate || ""}
-                    onChange={(e) => handleFieldChange("year2AdvanceRebate", Number(e.target.value))}
-                  />
-                  <Input
-                    label="Advance Rebate %"
-                    type="number"
-                    disabled
-                    value={formData.year2AdvanceRebatePct}
-                    suffixText="%"
-                  />
-                </div>
+              {/* RIGHT PANEL: SELECTED YEAR DETAILS */}
+              <div className="flex-1 md:w-[65%] lg:w-[70%]">
+                {formData.yearlyPlans[activeYearIndex] ? (
+                  <div className="bg-white border border-gray-200 rounded-xl p-5 md:p-6 shadow-xs space-y-6">
+                    <div className="border-b border-gray-100 pb-4">
+                      <h4 className="text-sm font-bold text-brand-dark uppercase tracking-wider">Year {formData.yearlyPlans[activeYearIndex].year} Plan</h4>
+                      <p className="text-xs text-brand-gray mt-0.5 font-medium">
+                        Configure volume targets and advance rebates for Year {formData.yearlyPlans[activeYearIndex].year}
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <Input
+                        label="Volume (Ltr) *"
+                        type="number"
+                        value={formData.yearlyPlans[activeYearIndex].volume || ""}
+                        onChange={(e) => handleYearlyPlanChange(activeYearIndex, "volume", Number(e.target.value))}
+                      />
+                      <Input
+                        label="Monthly Volume (Ltr)"
+                        type="number"
+                        disabled
+                        value={formData.yearlyPlans[activeYearIndex].monthlyVolume}
+                      />
+                      <Input
+                        label="Volume %"
+                        type="number"
+                        disabled
+                        value={formData.yearlyPlans[activeYearIndex].volumePct}
+                        suffixText="%"
+                      />
+                      <Input
+                        label="Advance Rebate (₹) *"
+                        type="number"
+                        value={formData.yearlyPlans[activeYearIndex].advanceRebate || ""}
+                        onChange={(e) => handleYearlyPlanChange(activeYearIndex, "advanceRebate", Number(e.target.value))}
+                      />
+                      <Input
+                        label="Advance Rebate %"
+                        type="number"
+                        disabled
+                        value={formData.yearlyPlans[activeYearIndex].advanceRebatePct}
+                        suffixText="%"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-gray-50 border border-dashed border-gray-250 rounded-xl p-8 text-center text-brand-gray font-medium text-xs">
+                    Please select a Year Plan to see details.
+                  </div>
+                )}
               </div>
             </div>
           </Accordion>
@@ -716,6 +877,20 @@ export default function InvestmentAndApprovalPage() {
                 rows={2}
                 value={formData.bankAddress}
                 onChange={(e) => handleFieldChange("bankAddress", e.target.value)}
+              />
+
+              <Input
+                label="GST Number"
+                placeholder="Enter GST Number"
+                value={formData.gstNumber}
+                onChange={(e) => handleFieldChange("gstNumber", e.target.value)}
+              />
+
+              <Input
+                label="GST Name (Company Name)"
+                placeholder="Enter GST Name"
+                value={formData.gstName}
+                onChange={(e) => handleFieldChange("gstName", e.target.value)}
               />
 
               <div className="sm:col-span-3">
