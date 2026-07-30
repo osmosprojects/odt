@@ -1,30 +1,33 @@
 import { JwtService } from '@nestjs/jwt';
-export interface LoginDto {
-    username: string;
-    password: string;
-}
+import { Repository } from 'typeorm';
+import { UserEntity } from '../../database/migrations/user.entity';
+import { LoginDto } from '../auth/dto/login.dto';
+import { JwtPayload } from '../../modules/auth/jwt.strategy';
 export declare class AuthService {
-    private readonly jwtService;
-    constructor(jwtService: JwtService);
-    login(credentials: LoginDto): Promise<{
-        message: string;
+    private userRepo;
+    private jwtService;
+    constructor(userRepo: Repository<UserEntity>, jwtService: JwtService);
+    login(dto: LoginDto): Promise<{
         accessToken: string;
-        user: {
-            id: number;
-            name: string;
-            email: string;
-            role: string;
-            stream: string;
-            channel: string;
-        };
+        refreshToken: string;
+        user: JwtPayload;
     }>;
-    getProfile(userPayload: any): Promise<{
-        userId: any;
-        loginId: any;
-        userCode: any;
-        email: any;
-        role: any;
-        stream: any;
-        channel: any;
+    private verifyPassword;
+    generateTokens(user: UserEntity): Promise<{
+        accessToken: string;
+        refreshToken: string;
+        user: JwtPayload;
+    }>;
+    getProfile(userId: number): Promise<UserEntity | null>;
+    logout(userId: number): Promise<{
+        message: string;
+    }>;
+    sendPassword(email: string): Promise<{
+        message: string;
+    }>;
+    refreshTokens(userId: number, refreshToken: string): Promise<{
+        accessToken: string;
+        refreshToken: string;
+        user: JwtPayload;
     }>;
 }

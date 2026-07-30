@@ -1,5 +1,5 @@
 // Centralized API Client for NestJS Backend Connection
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 async function fetchApi<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
   const token = typeof window !== 'undefined' ? localStorage.getItem('odt_token') : null;
@@ -48,10 +48,17 @@ export const api = {
   getRegions: (zoneCode?: string) =>
     fetchApi<any[]>(`/master-data/regions${zoneCode ? `?zoneCode=${zoneCode}` : ''}`),
   getCustomers: (params?: Record<string, string>) => {
-    const query = new URLSearchParams(params).toString();
-    return fetchApi<any[]>(`/master-data/customers${query ? `?${query}` : ''}`);
+    const query = params ? new URLSearchParams(params).toString() : '';
+    return fetchApi<any>(`/customers/search${query ? `?${query}` : ''}`).then((res: any) =>
+      Array.isArray(res) ? res : res?.data || []
+    );
   },
-  getSkus: () => fetchApi<any[]>('/master-data/skus'),
+  getSkus: (search?: string) => {
+    const query = search ? `?q=${encodeURIComponent(search)}` : '';
+    return fetchApi<any>(`/items/search${query}`).then((res: any) =>
+      Array.isArray(res) ? res : res?.data || []
+    );
+  },
 
   // Offers
   getOffers: (params?: Record<string, string>) => {
@@ -128,4 +135,94 @@ export const api = {
   getNotifications: () => fetchApi<any[]>('/notifications/inbox'),
   markNotificationRead: (id: number) =>
     fetchApi<any>(`/notifications/${id}/read`, { method: 'POST' }),
+
+  // Multi-step Offer Creation & PCA Business Logic
+  saveStep1Data: (payload: any) =>
+    fetchApi<any>('/offers/step1', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }),
+  saveStep2Data: (payload: any) =>
+    fetchApi<any>('/offers/step2', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }),
+  saveStep3Data: (payload: any) =>
+    fetchApi<any>('/offers/step3', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }),
+  saveOfferDraft: (payload: { offerId?: number; step: number; payload: any }) =>
+    fetchApi<any>('/offers/draft', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }),
+  submitOfferForApproval: (payload: { offerId: number; remarks?: string }) =>
+    fetchApi<any>('/offers/submit', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }),
+  getPcaAnalysis: (payload: any) =>
+    fetchApi<any>('/financials/pca-analysis', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    }),
+
+  // Previous WBC Workflow APIs
+  getPreviousWbcOffers: (executiveCode?: string) => {
+    const query = executiveCode ? `?executiveCode=${encodeURIComponent(executiveCode)}` : '';
+    return fetchApi<{ success: boolean; data: any[] }>(`/offers/previous-wbc${query}`);
+  },
+
+  getPreviousWbcOfferDetails: (offerId: string | number) => {
+    return fetchApi<{ success: boolean; data: any }>(`/offers/previous-wbc/${offerId}`);
+  },
+
+  // Offer History Structured Lookup
+  lookupPreviousOffer: (payload: {
+    customerCode?: string;
+    custId?: string;
+    executiveCode?: string;
+    customerName?: string;
+  }) => {
+    const params = new URLSearchParams();
+    if (payload.customerCode) params.append('customerCode', payload.customerCode);
+    if (payload.custId) params.append('custId', payload.custId);
+    if (payload.executiveCode) params.append('executiveCode', payload.executiveCode);
+    if (payload.customerName) params.append('customerName', payload.customerName);
+
+    return fetchApi<{
+      success: boolean;
+      hasPreviousOffer: boolean;
+      previousOffer: any;
+      offerHistory: any[];
+    }>(`/offers/history/lookup?${params.toString()}`);
+  },
+
+  getOfferHistory: (param: string) =>
+    fetchApi<any>(`/offers/history/${encodeURIComponent(param)}`),
+
+  getOfferHistoryByCustomer: (param: string) => {
+    return fetchApi<any>(`/offers/history/${encodeURIComponent(param)}`);
+  },
+
+  getOfferHistoryByCustomerName: (customerName: string) => {
+    return fetchApi<any>(`/offers/history/lookup?customerName=${encodeURIComponent(customerName)}`);
+  },
+
+  getOfferHistoryByCustomerCode: (customerCode: string) => {
+    return fetchApi<any>(`/offers/history/lookup?customerCode=${encodeURIComponent(customerCode)}`);
+  },
+
+  getOfferHistoryByCustId: (custId: string) => {
+    return fetchApi<any>(`/offers/history/lookup?custId=${encodeURIComponent(custId)}`);
+  },
+
+  // Offer Validation
+  validateOffer: (offerId: number) =>
+    fetchApi<any>(`/offers/${offerId}/validate`, { method: 'POST' }),
+
+  // Offer Letter Download
+  getOfferLetterUrl: (offerId: number) =>
+    `${API_BASE_URL}/offers/${offerId}/generate-letter`,
 };

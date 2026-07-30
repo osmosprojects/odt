@@ -47,129 +47,70 @@ export default function OfferLifecyclePage() {
   // ----------------------------------------------------
   const [formData, setFormData] = useState({
     // Section 1: Approval Pipeline
-    accountManager: "Rajesh Kumar",
-    offerCode: "OC-2026-0847",
-    finalOfferName: "Monsoon Premium Rebate Package",
-    finalDofa: "L3 - Vice President Approval Required",
-    gmpl: 18.5,
-    level: "L3",
+    accountManager: "",
+    offerCode: "",
+    finalOfferName: "",
+    finalDofa: "",
+    gmpl: null as any,
+    level: "",
     bulkSelection: false,
-    totalVolume: 50000,
-    totalOfferValue: 200000,
-    remarks: "Formulated targeting heavy vehicle key distributors in West region.",
+    totalVolume: 0,
+    totalOfferValue: 0,
+    remarks: "",
 
     // Calculated Financial Metrics
-    yo: 230000,
-    yoPerLtr: 4.6,
-    gm: 144000,
-    gmPerLtr: 2.88,
-    roc: 56000,
-    rocPct: 28,
-    roacePct: 23.8,
+    yo: 0,
+    yoPerLtr: 0,
+    gm: 0,
+    gmPerLtr: 0,
+    roc: 0,
+    rocPct: 0,
+    roacePct: 0,
 
     // Economic Indicators
-    ebit: 35000,
-    irr: 24,
-    irrPct: 24,
-    discountedPayback: "14 Months",
+    ebit: 0,
+    irr: 0,
+    irrPct: 0,
+    discountedPayback: "",
 
     // Section 2: Approval View
-    currentApprover: "Suresh Chandra (VP Sales)",
-    approvalComments: "Financial KPIs look highly compliant; volume commitments are secured.",
+    currentApprover: "",
+    approvalComments: "",
 
     // Section 3: Approval Authentication
     authOption: "Approve",
-    authRemarks: "Recommended for final deployment. Excellent profit margins.",
+    authRemarks: "",
 
     // Section 4: Offer Publish
     autoPublish: true,
-    wbcNumber: "WBC-2026-9824",
-    offerNumber: "OFF-482910",
-    customer: "Anand Distributors Pvt Ltd",
-    customerType: "Wholesale Dealer",
-    offerType: "Volume Payout",
-    startDate: "2026-08-01",
-    endDate: "2028-08-01",
-    effectiveDate: "2026-08-01",
-    skuCode: "SKU-8392",
-    skuName: "EDGE 5W-40 Synthetic",
-    proposedVolume: 50000,
+    wbcNumber: "",
+    offerNumber: "",
+    customer: "",
+    customerType: "",
+    offerType: "",
+    startDate: "",
+    endDate: "",
+    effectiveDate: "",
+    skuCode: "",
+    skuName: "",
+    proposedVolume: 0,
 
     // Section 5: Offer Closure
-    closureAdditionalVolume: 5000,
-    closureActualVolume: 48000,
-    closurePercentageVolume: 96,
-    closureActualGmpl: 19.1,
-    closureComments: "Excellent compliance and timely quarterly slab execution.",
+    closureAdditionalVolume: 0,
+    closureActualVolume: 0,
+    closurePercentageVolume: 0,
+    closureActualGmpl: null as any,
+    closureComments: "",
 
     // Section 6: Offer Extend
-    extendActualVolume: 48000,
-    extendTargetIncentive: 60000,
-    extendGmpl: 19.5,
-    extendEarlierContract: "Yes",
-    extendReason: "Extend rebate contract by 6 months due to customer expansion in Pune area.",
+    extendActualVolume: 0,
+    extendTargetIncentive: 0,
+    extendGmpl: null as any,
+    extendEarlierContract: "No",
+    extendReason: "",
   });
 
-  // ----------------------------------------------------
-  // AUTO CALCULATIONS EFFECT
-  // ----------------------------------------------------
-  useEffect(() => {
-    // 1. Pipeline Financial calculations
-    const calculatedYo = Number(formData.totalOfferValue || 0) * 1.15;
-    const calculatedYoLtr = Number((calculatedYo / (formData.totalVolume || 1)).toFixed(2));
-    const calculatedGm = Number(formData.totalOfferValue || 0) * 0.72;
-    const calculatedGmLtr = Number((calculatedGm / (formData.totalVolume || 1)).toFixed(2));
-    const calculatedRoc = Number(formData.totalOfferValue || 0) * 0.28;
-    const calculatedRocPct = Number(formData.totalOfferValue || 1) > 0 ? Math.round((calculatedRoc / Number(formData.totalOfferValue || 1)) * 100) : 0;
-    const calculatedRoace = Number((calculatedRocPct * 0.85).toFixed(1));
-
-    // 2. Closure calculations
-    // Percentage Volume = Actual Volume / Total Volume Commitment * 100
-    const calculatedPercentageVolume = formData.totalVolume > 0 ? Math.round((Number(formData.closureActualVolume || 0) / formData.totalVolume) * 100) : 0;
-
-    // Update state once if any calculated value changes
-    if (
-      calculatedYo !== formData.yo ||
-      calculatedYoLtr !== formData.yoPerLtr ||
-      calculatedGm !== formData.gm ||
-      calculatedGmLtr !== formData.gmPerLtr ||
-      calculatedRoc !== formData.roc ||
-      calculatedRocPct !== formData.rocPct ||
-      calculatedRoace !== formData.roacePct ||
-      calculatedPercentageVolume !== formData.closurePercentageVolume
-    ) {
-      setFormData((prev) => ({
-        ...prev,
-        yo: calculatedYo,
-        yoPerLtr: calculatedYoLtr,
-        gm: calculatedGm,
-        gmPerLtr: calculatedGmLtr,
-        roc: calculatedRoc,
-        rocPct: calculatedRocPct,
-        roacePct: calculatedRoace,
-        closurePercentageVolume: calculatedPercentageVolume,
-      }));
-    }
-  }, [
-    formData.totalOfferValue,
-    formData.totalVolume,
-    formData.closureActualVolume,
-    formData.yo,
-    formData.yoPerLtr,
-    formData.gm,
-    formData.gmPerLtr,
-    formData.roc,
-    formData.rocPct,
-    formData.roacePct,
-    formData.closurePercentageVolume,
-  ]);
-
-  // Previous approvals log dataset
-  const [approvalHistory] = useState([
-    { role: "Regional Sales Mgr", comment: "Verified customer credentials. Looks good.", time: "2026-07-15 10:30 AM", status: "Approved" },
-    { role: "Finance Auditor", comment: "Calculations validated. Payback terms meet the standard 18-month guideline.", time: "2026-07-16 02:15 PM", status: "Approved" },
-    { role: "National Sales Lead", comment: "Pending DOFA VP final approval threshold.", time: "2026-07-17 09:00 AM", status: "Approved" },
-  ]);
+  const [approvalHistory, setApprovalHistory] = useState<any[]>([]);
 
   // ----------------------------------------------------
   // ACTION HANDLERS

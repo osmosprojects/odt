@@ -1,0 +1,40 @@
+<!-- File: src/modules/mail/templates/approval.hbs -->
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /></head>
+<body style="font-family: Arial, sans-serif; color: #222;">
+  <h2>
+    {{#if (eq action "PUBLISHED")}}Offer Published — Approval Required{{/if}}
+    {{#if (eq action "APPROVED")}}Offer Approved{{/if}}
+    {{#if (eq action "REJECTED")}}Offer Rejected{{/if}}
+    {{#if (eq action "RECALLED")}}Offer Recalled{{/if}}
+    {{#if (eq action "CANCELLED")}}Offer Cancelled{{/if}}
+  </h2>
+
+  <p>Dear {{recipientName}},</p>
+
+  <p>
+    {{#if (eq action "PUBLISHED")}}
+      An offer has been published and is pending your approval at level <b>{{level}}</b>.
+    {{/if}}
+    {{#if (eq action "APPROVED")}}
+      The offer below has been approved at level <b>{{level}}</b>.
+    {{/if}}
+    {{#if (eq action "REJECTED")}}
+      The offer below has been rejected at level <b>{{level}}</b>.
+    {{/if}}
+    {{#if (eq action "RECALLED")}}
+      The offer below has been recalled and reset to draft.
+    {{/if}}
+    {{#if (eq action "CANCELLED")}}
+      The offer below has been cancelled.
+    {{/if}}
+  </p>
+
+  {{> offer-summary}}
+
+  <p style="margin-top: 24px; font-size: 12px; color: #888;">
+    This is an automated notification from WOW Genie. Please do not reply to this email.
+  </p>
+</body>
+</html>

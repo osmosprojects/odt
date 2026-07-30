@@ -128,6 +128,14 @@ export const sidebarNav: NavItem[] = [
     ],
   },
   {
+    label: "Offer Creation Demo",
+    icon: "offers",
+    items: [
+      { label: "Pipeline Dashboard", href: "/offer-creation/pipeline-dashboard" },
+      { label: "Create New Offer", href: "/offer-creation-demo" },
+    ],
+  },
+  {
     label: "Offer Operations",
     icon: "offers",
     items: [

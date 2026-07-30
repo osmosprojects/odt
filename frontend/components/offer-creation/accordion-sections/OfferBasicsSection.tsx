@@ -47,7 +47,7 @@ export default function OfferBasicsSection({
 
       <div>
         <div className="flex items-center gap-1.5 mb-1.5">
-          <label className="text-xs font-semibold text-brand-gray">Current Dollar Value</label>
+          <label className="text-xs font-semibold text-brand-gray">Current Dollar Value (INR)</label>
           <AutoBadge />
         </div>
         <Input

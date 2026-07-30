@@ -1,0 +1,2545 @@
+=== RESULT RETURNED BY SERVICE ===
+Success: true
+hasPreviousOffer: true
+Previous Offer ID: 15815
+Previous Offer Code: BIKEPOINTS-01138172-15815
+Offer History Count: 5
+
+{
+  "success": true,
+  "hasPreviousOffer": true,
+  "previousOffer": {
+    "offer_id": 15815,
+    "offer_code": "BIKEPOINTS-01138172-15815",
+    "stream": "WBC",
+    "executive_code": "01174821",
+    "start_date": "2025-05-31",
+    "end_date": "2027-05-30",
+    "contract_tenure": "24",
+    "tot_volume_commitment": "8400",
+    "offer_status": "P",
+    "total_gross_margin": "0",
+    "gmpl_dofa": "106.1632827380952",
+    "remark": "",
+    "proposal_id": "",
+    "customer_level_input_text": "a:13:{s:22:\"target_incentive_total\";s:5:\"84000\";s:23:\"target_incentive_rs_lts\";s:2:\"10\";s:21:\"marketing_input_total\";s:0:\"\";s:22:\"marketing_input_rs_lts\";s:0:\"\";s:19:\"sign_on_bonus_total\";s:1:\"0\";s:20:\"sign_on_bonus_rs_lts\";s:1:\"0\";s:15:\"any_other_total\";s:1:\"0\";s:18:\"any_otherrs_rs_lts\";s:1:\"0\";s:11:\"Total_total\";s:5:\"84000\";s:12:\"Total_rs_lts\";s:2:\"10\";s:14:\"focus_brand_rs\";s:1:\"0\";s:22:\"focus_brand_rs_per_ltr\";s:3:\"NaN\";s:17:\"synthetic_counter\";i:0;}",
+    "current_proposed_text": "a:35:{s:23:\"previous_contract_exist\";N;s:15:\"existing_remark\";s:0:\"\";s:17:\"volume_kl_current\";s:0:\"\";s:18:\"volume_kl_proposed\";s:4:\"8400\";s:19:\"period_from_current\";s:0:\"\";s:20:\"period_from_proposed\";s:10:\"01-06-2025\";s:17:\"period_to_current\";s:0:\"\";s:18:\"period_to_proposed\";s:10:\"31-05-2027\";s:14:\"months_current\";s:0:\"\";s:15:\"months_proposed\";s:2:\"24\";s:13:\"kl_pm_current\";i:0;s:13:\"kl_pm_propsed\";i:350;s:19:\"synth_share_current\";s:0:\"\";s:20:\"synth_share_proposed\";d:10.714285714285714;s:15:\"AR_SEOL_current\";s:0:\"\";s:16:\"AR_SEOL_proposed\";s:1:\"0\";s:17:\"marketing_current\";s:0:\"\";s:18:\"marketing_proposed\";s:0:\"\";s:14:\"others_current\";s:0:\"\";s:15:\"others_proposed\";s:1:\"0\";s:23:\"rs_l_investment_current\";i:0;s:24:\"rs_l_investment_proposed\";i:10;s:12:\"gmpl_current\";s:0:\"\";s:13:\"gmpl_proposed\";d:106.16328273809521;s:24:\"target_incentive_current\";s:0:\"\";s:25:\"target_incentive_proposed\";s:5:\"84000\";s:21:\"sign_on_bonus_current\";s:0:\"\";s:22:\"sign_on_bonus_proposed\";s:1:\"0\";s:24:\"total_investment_current\";s:0:\"\";s:25:\"total_investment_proposed\";i:84000;s:28:\"target_incentive_comment_vol\";a:4:{i:0;s:4:\"2100\";i:1;s:4:\"4200\";i:2;s:4:\"6300\";i:3;s:4:\"8400\";}s:28:\"target_incentive_comment_amt\";a:4:{i:0;s:5:\"21000\";i:1;s:5:\"21000\";i:2;s:5:\"21000\";i:3;s:5:\"21000\";}s:30:\"target_incentive_comment_month\";a:4:{i:0;s:1:\"6\";i:1;s:2:\"12\";i:2;s:2:\"18\";i:3;s:2:\"24\";}s:17:\"any_other_comment\";s:0:\"\";s:30:\"marketing_disbursement_options\";s:1:\"Y\";}",
+    "previous_sku_details": "",
+    "sku_text": "a:703:{s:11:\"sku_counter\";i:29;s:15:\"sku_base_trans0\";s:3:\"1.3\";s:15:\"sku_base_trans1\";s:3:\"1.3\";s:15:\"sku_base_trans2\";s:3:\"1.3\";s:15:\"sku_base_trans3\";s:3:\"1.3\";s:15:\"sku_base_trans4\";s:3:\"1.3\";s:15:\"sku_base_trans5\";s:3:\"1.3\";s:15:\"sku_base_trans6\";s:3:\"1.3\";s:15:\"sku_base_trans7\";s:3:\"1.3\";s:15:\"sku_base_trans8\";s:3:\"1.3\";s:15:\"sku_base_trans9\";s:3:\"1.3\";s:16:\"sku_base_trans10\";s:3:\"1.3\";s:16:\"sku_base_trans11\";s:3:\"1.3\";s:16:\"sku_base_trans12\";s:3:\"1.3\";s:16:\"sku_base_trans13\";s:3:\"1.3\";s:16:\"sku_base_trans14\";s:3:\"1.3\";s:16:\"sku_base_trans15\";s:3:\"1.3\";s:16:\"sku_base_trans16\";s:3:\"1.3\";s:16:\"sku_base_trans17\";s:3:\"1.3\";s:16:\"sku_base_trans18\";s:3:\"1.3\";s:16:\"sku_base_trans19\";s:3:\"1.3\";s:16:\"sku_base_trans20\";s:3:\"1.3\";s:16:\"sku_base_trans21\";s:3:\"1.3\";s:16:\"sku_base_trans22\";s:3:\"1.3\";s:16:\"sku_base_trans23\";s:3:\"1.3\";s:16:\"sku_base_trans24\";s:3:\"1.3\";s:9:\"sku_name0\";s:36:\"ACTIV 4T 10W-30, 20X.9L MK - 3412701\";s:9:\"sku_code0\";s:7:\"3412701\";s:15:\"sku_base_gross0\";s:8:\"271.5851\";s:14:\"sku_base_cogs0\";s:6:\"118.87\";s:11:\"sku_volume0\";s:4:\"4000\";s:11:\"foc_volume0\";s:0:\"\";s:16:\"sku_reb_per_ltr0\";s:2:\"35\";s:13:\"sku_gm_level0\";s:1:\"N\";s:12:\"total_input0\";s:2:\"35\";s:17:\"view_foc_prv_ref0\";s:0:\"\";s:13:\"cogs_prv_ref0\";s:0:\"\";s:14:\"t_cogs_prv_ref\";s:0:\"\";s:13:\"t_foc_prv_ref\";s:1:\"0\";s:25:\"product_target_incentive0\";s:1:\"0\";s:30:\"product_target_incentive_pool0\";s:1:\"0\";s:17:\"view_foc_deal_y10\";s:1:\"0\";s:13:\"cogs_deal_y10\";s:1:\"0\";s:13:\"t_foc_deal_y1\";s:1:\"0\";s:14:\"t_cogs_deal_y1\";s:1:\"0\";s:17:\"view_foc_deal_y20\";s:1:\"0\";s:13:\"cogs_deal_y20\";s:1:\"0\";s:13:\"t_foc_deal_y2\";s:1:\"0\";s:14:\"t_cogs_deal_y2\";s:1:\"0\";s:17:\"view_foc_deal_y30\";s:1:\"0\";s:13:\"cogs_deal_y30\";s:1:\"0\";s:13:\"t_foc_deal_y3\";s:1:\"0\";s:14:\"t_cogs_deal_y3\";s:1:\"0\";s:17:\"view_foc_deal_y40\";s:1:\"0\";s:13:\"cogs_deal_y40\";s:1:\"0\";s:13:\"t_foc_deal_y4\";s:1:\"0\";s:14:\"t_cogs_deal_y4\";s:1:\"0\";s:17:\"view_foc_deal_y50\";s:1:\"0\";s:13:\"cogs_deal_y50\";s:1:\"0\";s:13:\"t_foc_deal_y5\";s:1:\"0\";s:14:\"t_cogs_deal_y5\";s:1:\"0\";s:9:\"sku_name1\";s:39:\"ACTIV 4T 20W-40, 20X.9L MC MK - 3414742\";s:9:\"sku_code1\";s:7:\"3414742\";s:15:\"sku_base_gross1\";s:7:\"262.128\";s:14:\"sku_base_cogs1\";s:6:\"133.01\";s:11:\"sku_volume1\";s:3:\"950\";s:11:\"foc_volume1\";s:0:\"\";s:16:\"sku_reb_per_ltr1\";s:2:\"11\";s:13:\"sku_gm_level1\";s:1:\"N\";s:12:\"total_input1\";s:2:\"11\";s:17:\"view_foc_prv_ref1\";s:0:\"\";s:13:\"cogs_prv_ref1\";s:0:\"\";s:25:\"product_target_incentive1\";s:1:\"0\";s:30:\"product_target_incentive_pool1\";s:1:\"0\";s:17:\"view_foc_deal_y11\";s:1:\"0\";s:13:\"cogs_deal_y11\";s:1:\"0\";s:17:\"view_foc_deal_y21\";s:1:\"0\";s:13:\"cogs_deal_y21\";s:1:\"0\";s:17:\"view_foc_deal_y31\";s:1:\"0\";s:13:\"cogs_deal_y31\";s:1:\"0\";s:17:\"view_foc_deal_y41\";s:1:\"0\";s:13:\"cogs_deal_y41\";s:1:\"0\";s:17:\"view_foc_deal_y51\";s:1:\"0\";s:13:\"cogs_deal_y51\";s:1:\"0\";s:9:\"sku_name2\";s:40:\"ACTIV CRUISE 20W-50 20X1HP7 MK - 3429572\";s:9:\"sku_code2\";s:7:\"3429572\";s:15:\"sku_base_gross2\";s:8:\"330.7627\";s:14:\"sku_base_cogs2\";s:6:\"132.07\";s:11:\"sku_volume2\";s:2:\"50\";s:11:\"foc_volume2\";s:0:\"\";s:16:\"sku_reb_per_ltr2\";s:2:\"30\";s:13:\"sku_gm_level2\";s:1:\"N\";s:12:\"total_input2\";s:2:\"30\";s:17:\"view_foc_prv_ref2\";s:0:\"\";s:13:\"cogs_prv_ref2\";s:0:\"\";s:25:\"product_target_incentive2\";s:1:\"0\";s:30:\"product_target_incentive_pool2\";s:1:\"0\";s:17:\"view_foc_deal_y12\";s:1:\"0\";s:13:\"cogs_deal_y12\";s:1:\"0\";s:17:\"view_foc_deal_y22\";s:1:\"0\";s:13:\"cogs_deal_y22\";s:1:\"0\";s:17:\"view_foc_deal_y32\";s:1:\"0\";s:13:\"cogs_deal_y32\";s:1:\"0\";s:17:\"view_foc_deal_y42\";s:1:\"0\";s:13:\"cogs_deal_y42\";s:1:\"0\";s:17:\"view_foc_deal_y52\";s:1:\"0\";s:13:\"cogs_deal_y52\";s:1:\"0\";s:9:\"sku_name3\";s:40:\"ACTIV CRUISE 4T 15W50,4X2.5PMK - 3425934\";s:9:\"sku_code3\";s:7:\"3425934\";s:15:\"sku_base_gross3\";s:8:\"288.1271\";s:14:\"sku_base_cogs3\";s:6:\"127.88\";s:11:\"sku_volume3\";s:2:\"50\";s:11:\"foc_volume3\";s:0:\"\";s:16:\"sku_reb_per_ltr3\";s:2:\"30\";s:13:\"sku_gm_level3\";s:1:\"N\";s:12:\"total_input3\";s:2:\"30\";s:17:\"view_foc_prv_ref3\";s:0:\"\";s:13:\"cogs_prv_ref3\";s:0:\"\";s:25:\"product_target_incentive3\";s:1:\"0\";s:30:\"product_target_incentive_pool3\";s:1:\"0\";s:17:\"view_foc_deal_y13\";s:1:\"0\";s:13:\"cogs_deal_y13\";s:1:\"0\";s:17:\"view_foc_deal_y23\";s:1:\"0\";s:13:\"cogs_deal_y23\";s:1:\"0\";s:17:\"view_foc_deal_y33\";s:1:\"0\";s:13:\"cogs_deal_y33\";s:1:\"0\";s:17:\"view_foc_deal_y43\";s:1:\"0\";s:13:\"cogs_deal_y43\";s:1:\"0\";s:17:\"view_foc_deal_y53\";s:1:\"0\";s:13:\"cogs_deal_y53\";s:1:\"0\";s:9:\"sku_name4\";s:40:\"ACTIV ESSENTIAL 10W30,20X.9 MK - 3421858\";s:9:\"sku_code4\";s:7:\"3421858\";s:15:\"sku_base_gross4\";s:8:\"263.0424\";s:14:\"sku_base_cogs4\";s:6:\"115.96\";s:11:\"sku_volume4\";s:3:\"500\";s:11:\"foc_volume4\";s:0:\"\";s:16:\"sku_reb_per_ltr4\";s:2:\"30\";s:13:\"sku_gm_level4\";s:1:\"N\";s:12:\"total_input4\";s:2:\"30\";s:17:\"view_foc_prv_ref4\";s:0:\"\";s:13:\"cogs_prv_ref4\";s:0:\"\";s:25:\"product_target_incentive4\";s:1:\"0\";s:30:\"product_target_incentive_pool4\";s:1:\"0\";s:17:\"view_foc_deal_y14\";s:1:\"0\";s:13:\"cogs_deal_y14\";s:1:\"0\";s:17:\"view_foc_deal_y24\";s:1:\"0\";s:13:\"cogs_deal_y24\";s:1:\"0\";s:17:\"view_foc_deal_y34\";s:1:\"0\";s:13:\"cogs_deal_y34\";s:1:\"0\";s:17:\"view_foc_deal_y44\";s:1:\"0\";s:13:\"cogs_deal_y44\";s:1:\"0\";s:17:\"view_foc_deal_y54\";s:1:\"0\";s:13:\"cogs_deal_y54\";s:1:\"0\";s:9:\"sku_name5\";s:40:\"ACTIV ESSENTIAL 20W40,20X.9LMK - 3431292\";s:9:\"sku_code5\";s:7:\"3431292\";s:15:\"sku_base_gross5\";s:8:\"234.9068\";s:14:\"sku_base_cogs5\";s:6:\"133.66\";s:11:\"sku_volume5\";s:3:\"500\";s:11:\"foc_volume5\";s:0:\"\";s:16:\"sku_reb_per_ltr5\";s:2:\"30\";s:13:\"sku_gm_level5\";s:1:\"N\";s:12:\"total_input5\";s:2:\"30\";s:17:\"view_foc_prv_ref5\";s:0:\"\";s:13:\"cogs_prv_ref5\";s:0:\"\";s:25:\"product_target_incentive5\";s:1:\"0\";s:30:\"product_target_incentive_pool5\";s:1:\"0\";s:17:\"view_foc_deal_y15\";s:1:\"0\";s:13:\"cogs_deal_y15\";s:1:\"0\";s:17:\"view_foc_deal_y25\";s:1:\"0\";s:13:\"cogs_deal_y25\";s:1:\"0\";s:17:\"view_foc_deal_y35\";s:1:\"0\";s:13:\"cogs_deal_y35\";s:1:\"0\";s:17:\"view_foc_deal_y45\";s:1:\"0\";s:13:\"cogs_deal_y45\";s:1:\"0\";s:17:\"view_foc_deal_y55\";s:1:\"0\";s:13:\"cogs_deal_y55\";s:1:\"0\";s:9:\"sku_name6\";s:40:\"ACTIV HONDA 10W-30 20X.8HP7 MK - 3429579\";s:9:\"sku_code6\";s:7:\"3429579\";s:15:\"sku_base_gross6\";s:8:\"352.2034\";s:14:\"sku_base_cogs6\";s:5:\"162.2\";s:11:\"sku_volume6\";s:2:\"50\";s:11:\"foc_volume6\";s:0:\"\";s:16:\"sku_reb_per_ltr6\";s:2:\"30\";s:13:\"sku_gm_level6\";s:1:\"N\";s:12:\"total_input6\";s:2:\"30\";s:17:\"view_foc_prv_ref6\";s:0:\"\";s:13:\"cogs_prv_ref6\";s:0:\"\";s:25:\"product_target_incentive6\";s:1:\"0\";s:30:\"product_target_incentive_pool6\";s:1:\"0\";s:17:\"view_foc_deal_y16\";s:1:\"0\";s:13:\"cogs_deal_y16\";s:1:\"0\";s:17:\"view_foc_deal_y26\";s:1:\"0\";s:13:\"cogs_deal_y26\";s:1:\"0\";s:17:\"view_foc_deal_y36\";s:1:\"0\";s:13:\"cogs_deal_y36\";s:1:\"0\";s:17:\"view_foc_deal_y46\";s:1:\"0\";s:13:\"cogs_deal_y46\";s:1:\"0\";s:17:\"view_foc_deal_y56\";s:1:\"0\";s:13:\"cogs_deal_y56\";s:1:\"0\";s:9:\"sku_name7\";s:40:\"ACTIV SCOOTER 10W30 4AT 12X.8F - 3420431\";s:9:\"sku_code7\";s:7:\"3420431\";s:15:\"sku_base_gross7\";s:3:\"270\";s:14:\"sku_base_cogs7\";s:6:\"123.12\";s:11:\"sku_volume7\";s:4:\"1000\";s:11:\"foc_volume7\";s:0:\"\";s:16:\"sku_reb_per_ltr7\";s:2:\"30\";s:13:\"sku_gm_level7\";s:1:\"N\";s:12:\"total_input7\";s:2:\"30\";s:17:\"view_foc_prv_ref7\";s:0:\"\";s:13:\"cogs_prv_ref7\";s:0:\"\";s:25:\"product_target_incentive7\";s:1:\"0\";s:30:\"product_target_incentive_pool7\";s:1:\"0\";s:17:\"view_foc_deal_y17\";s:1:\"0\";s:13:\"cogs_deal_y17\";s:1:\"0\";s:17:\"view_foc_deal_y27\";s:1:\"0\";s:13:\"cogs_deal_y27\";s:1:\"0\";s:17:\"view_foc_deal_y37\";s:1:\"0\";s:13:\"cogs_deal_y37\";s:1:\"0\";s:17:\"view_foc_deal_y47\";s:1:\"0\";s:13:\"cogs_deal_y47\";s:1:\"0\";s:17:\"view_foc_deal_y57\";s:1:\"0\";s:13:\"cogs_deal_y57\";s:1:\"0\";s:9:\"sku_name8\";s:38:\"ACTIV SCOOTER 5W304AT,12X.6L - 3434629\";s:9:\"sku_code8\";s:7:\"3434629\";s:15:\"sku_base_gross8\";s:8:\"412.5847\";s:14:\"sku_base_cogs8\";s:6:\"153.57\";s:11:\"sku_volume8\";s:2:\"50\";s:11:\"foc_volume8\";s:0:\"\";s:16:\"sku_reb_per_ltr8\";s:2:\"30\";s:13:\"sku_gm_level8\";s:1:\"N\";s:12:\"total_input8\";s:2:\"30\";s:17:\"view_foc_prv_ref8\";s:0:\"\";s:13:\"cogs_prv_ref8\";s:0:\"\";s:25:\"product_target_incentive8\";s:1:\"0\";s:30:\"product_target_incentive_pool8\";s:1:\"0\";s:17:\"view_foc_deal_y18\";s:1:\"0\";s:13:\"cogs_deal_y18\";s:1:\"0\";s:17:\"view_foc_deal_y28\";s:1:\"0\";s:13:\"cogs_deal_y28\";s:1:\"0\";s:17:\"view_foc_deal_y38\";s:1:\"0\";s:13:\"cogs_deal_y38\";s:1:\"0\";s:17:\"view_foc_deal_y48\";s:1:\"0\";s:13:\"cogs_deal_y48\";s:1:\"0\";s:17:\"view_foc_deal_y58\";s:1:\"0\";s:13:\"cogs_deal_y58\";s:1:\"0\";s:9:\"sku_name9\";s:40:\"ACTIV SCT HONDA 10W3020X.8HPMK - 3429581\";s:9:\"sku_code9\";s:7:\"3429581\";s:15:\"sku_base_gross9\";s:8:\"350.3983\";s:14:\"sku_base_cogs9\";s:6:\"169.28\";s:11:\"sku_volume9\";s:2:\"50\";s:11:\"foc_volume9\";s:0:\"\";s:16:\"sku_reb_per_ltr9\";s:2:\"30\";s:13:\"sku_gm_level9\";s:1:\"N\";s:12:\"total_input9\";s:2:\"30\";s:17:\"view_foc_prv_ref9\";s:0:\"\";s:13:\"cogs_prv_ref9\";s:0:\"\";s:25:\"product_target_incentive9\";s:1:\"0\";s:30:\"product_target_incentive_pool9\";s:1:\"0\";s:17:\"view_foc_deal_y19\";s:1:\"0\";s:13:\"cogs_deal_y19\";s:1:\"0\";s:17:\"view_foc_deal_y29\";s:1:\"0\";s:13:\"cogs_deal_y29\";s:1:\"0\";s:17:\"view_foc_deal_y39\";s:1:\"0\";s:13:\"cogs_deal_y39\";s:1:\"0\";s:17:\"view_foc_deal_y49\";s:1:\"0\";s:13:\"cogs_deal_y49\";s:1:\"0\";s:17:\"view_foc_deal_y59\";s:1:\"0\";s:13:\"cogs_deal_y59\";s:1:\"0\";s:10:\"sku_name10\";s:40:\"BRAKE FLUID DOT 3 (C), 20X1L M - 3421200\";s:10:\"sku_code10\";s:7:\"3421200\";s:16:\"sku_base_gross10\";s:8:\"360.9746\";s:15:\"sku_base_cogs10\";s:6:\"331.15\";s:12:\"sku_volume10\";s:2:\"50\";s:12:\"foc_volume10\";s:0:\"\";s:17:\"sku_reb_per_ltr10\";s:2:\"20\";s:14:\"sku_gm_level10\";s:1:\"N\";s:13:\"total_input10\";s:2:\"20\";s:18:\"view_foc_prv_ref10\";s:0:\"\";s:14:\"cogs_prv_ref10\";s:0:\"\";s:26:\"product_target_incentive10\";s:1:\"0\";s:31:\"product_target_incentive_pool10\";s:1:\"0\";s:18:\"view_foc_deal_y110\";s:1:\"0\";s:14:\"cogs_deal_y110\";s:1:\"0\";s:18:\"view_foc_deal_y210\";s:1:\"0\";s:14:\"cogs_deal_y210\";s:1:\"0\";s:18:\"view_foc_deal_y310\";s:1:\"0\";s:14:\"cogs_deal_y310\";s:1:\"0\";s:18:\"view_foc_deal_y410\";s:1:\"0\";s:14:\"cogs_deal_y410\";s:1:\"0\";s:18:\"view_foc_deal_y510\";s:1:\"0\";s:14:\"cogs_deal_y510\";s:1:\"0\";s:10:\"sku_name11\";s:33:\"BRAKE FLUID DOT 4 20X1L - 3370240\";s:10:\"sku_code11\";s:7:\"3370240\";s:16:\"sku_base_gross11\";s:6:\"241.27\";s:15:\"sku_base_cogs11\";s:6:\"361.72\";s:12:\"sku_volume11\";s:2:\"50\";s:12:\"foc_volume11\";s:0:\"\";s:17:\"sku_reb_per_ltr11\";s:2:\"20\";s:14:\"sku_gm_level11\";s:1:\"N\";s:13:\"total_input11\";s:2:\"20\";s:18:\"view_foc_prv_ref11\";s:0:\"\";s:14:\"cogs_prv_ref11\";s:0:\"\";s:26:\"product_target_incentive11\";s:1:\"0\";s:31:\"product_target_incentive_pool11\";s:1:\"0\";s:18:\"view_foc_deal_y111\";s:1:\"0\";s:14:\"cogs_deal_y111\";s:1:\"0\";s:18:\"view_foc_deal_y211\";s:1:\"0\";s:14:\"cogs_deal_y211\";s:1:\"0\";s:18:\"view_foc_deal_y311\";s:1:\"0\";s:14:\"cogs_deal_y311\";s:1:\"0\";s:18:\"view_foc_deal_y411\";s:1:\"0\";s:14:\"cogs_deal_y411\";s:1:\"0\";s:18:\"view_foc_deal_y511\";s:1:\"0\";s:14:\"cogs_deal_y511\";s:1:\"0\";s:10:\"sku_name12\";s:34:\"FORK OIL 20W, 20X.35L MK - 3420343\";s:10:\"sku_code12\";s:7:\"3420343\";s:16:\"sku_base_gross12\";s:8:\"339.2119\";s:15:\"sku_base_cogs12\";s:6:\"131.98\";s:12:\"sku_volume12\";s:2:\"50\";s:12:\"foc_volume12\";s:0:\"\";s:17:\"sku_reb_per_ltr12\";s:2:\"20\";s:14:\"sku_gm_level12\";s:1:\"N\";s:13:\"total_input12\";s:2:\"20\";s:18:\"view_foc_prv_ref12\";s:0:\"\";s:14:\"cogs_prv_ref12\";s:0:\"\";s:26:\"product_target_incentive12\";s:1:\"0\";s:31:\"product_target_incentive_pool12\";s:1:\"0\";s:18:\"view_foc_deal_y112\";s:1:\"0\";s:14:\"cogs_deal_y112\";s:1:\"0\";s:18:\"view_foc_deal_y212\";s:1:\"0\";s:14:\"cogs_deal_y212\";s:1:\"0\";s:18:\"view_foc_deal_y312\";s:1:\"0\";s:14:\"cogs_deal_y312\";s:1:\"0\";s:18:\"view_foc_deal_y412\";s:1:\"0\";s:14:\"cogs_deal_y412\";s:1:\"0\";s:18:\"view_foc_deal_y512\";s:1:\"0\";s:14:\"cogs_deal_y512\";s:1:\"0\";s:10:\"sku_name13\";s:34:\"GREASE AP 3, 120X.05K MK - 3420870\";s:10:\"sku_code13\";s:7:\"3420870\";s:16:\"sku_base_gross13\";s:8:\"436.8559\";s:15:\"sku_base_cogs13\";s:6:\"189.32\";s:12:\"sku_volume13\";s:2:\"50\";s:12:\"foc_volume13\";s:0:\"\";s:17:\"sku_reb_per_ltr13\";s:2:\"20\";s:14:\"sku_gm_level13\";s:1:\"N\";s:13:\"total_input13\";s:2:\"20\";s:18:\"view_foc_prv_ref13\";s:0:\"\";s:14:\"cogs_prv_ref13\";s:0:\"\";s:26:\"product_target_incentive13\";s:1:\"0\";s:31:\"product_target_incentive_pool13\";s:1:\"0\";s:18:\"view_foc_deal_y113\";s:1:\"0\";s:14:\"cogs_deal_y113\";s:1:\"0\";s:18:\"view_foc_deal_y213\";s:1:\"0\";s:14:\"cogs_deal_y213\";s:1:\"0\";s:18:\"view_foc_deal_y313\";s:1:\"0\";s:14:\"cogs_deal_y313\";s:1:\"0\";s:18:\"view_foc_deal_y413\";s:1:\"0\";s:14:\"cogs_deal_y413\";s:1:\"0\";s:18:\"view_foc_deal_y513\";s:1:\"0\";s:14:\"cogs_deal_y513\";s:1:\"0\";s:10:\"sku_name14\";s:33:\"GTX 20W-50, 20X.5L B MK - 3416953\";s:10:\"sku_code14\";s:7:\"3416953\";s:16:\"sku_base_gross14\";s:8:\"298.3475\";s:15:\"sku_base_cogs14\";s:5:\"141.5\";s:12:\"sku_volume14\";s:2:\"50\";s:12:\"foc_volume14\";s:0:\"\";s:17:\"sku_reb_per_ltr14\";s:2:\"11\";s:14:\"sku_gm_level14\";s:1:\"N\";s:13:\"total_input14\";s:2:\"11\";s:18:\"view_foc_prv_ref14\";s:0:\"\";s:14:\"cogs_prv_ref14\";s:0:\"\";s:26:\"product_target_incentive14\";s:1:\"0\";s:31:\"product_target_incentive_pool14\";s:1:\"0\";s:18:\"view_foc_deal_y114\";s:1:\"0\";s:14:\"cogs_deal_y114\";s:1:\"0\";s:18:\"view_foc_deal_y214\";s:1:\"0\";s:14:\"cogs_deal_y214\";s:1:\"0\";s:18:\"view_foc_deal_y314\";s:1:\"0\";s:14:\"cogs_deal_y314\";s:1:\"0\";s:18:\"view_foc_deal_y414\";s:1:\"0\";s:14:\"cogs_deal_y414\";s:1:\"0\";s:18:\"view_foc_deal_y514\";s:1:\"0\";s:14:\"cogs_deal_y514\";s:1:\"0\";s:10:\"sku_name15\";s:40:\"GTX ESSENTIAL SG 20W-50, 20X.5 - 3412840\";s:10:\"sku_code15\";s:7:\"3412840\";s:16:\"sku_base_gross15\";s:7:\"217.322\";s:15:\"sku_base_cogs15\";s:6:\"136.88\";s:12:\"sku_volume15\";s:2:\"50\";s:12:\"foc_volume15\";s:0:\"\";s:17:\"sku_reb_per_ltr15\";s:2:\"11\";s:14:\"sku_gm_level15\";s:1:\"N\";s:13:\"total_input15\";s:2:\"11\";s:18:\"view_foc_prv_ref15\";s:0:\"\";s:14:\"cogs_prv_ref15\";s:0:\"\";s:26:\"product_target_incentive15\";s:1:\"0\";s:31:\"product_target_incentive_pool15\";s:1:\"0\";s:18:\"view_foc_deal_y115\";s:1:\"0\";s:14:\"cogs_deal_y115\";s:1:\"0\";s:18:\"view_foc_deal_y215\";s:1:\"0\";s:14:\"cogs_deal_y215\";s:1:\"0\";s:18:\"view_foc_deal_y315\";s:1:\"0\";s:14:\"cogs_deal_y315\";s:1:\"0\";s:18:\"view_foc_deal_y415\";s:1:\"0\";s:14:\"cogs_deal_y415\";s:1:\"0\";s:18:\"view_foc_deal_y515\";s:1:\"0\";s:14:\"cogs_deal_y515\";s:1:\"0\";s:10:\"sku_name16\";s:39:\"POWER1 4T 10W-30, 10X.9L H MK - 3429759\";s:10:\"sku_code16\";s:7:\"3429759\";s:16:\"sku_base_gross16\";s:8:\"409.4068\";s:15:\"sku_base_cogs16\";s:6:\"123.42\";s:12:\"sku_volume16\";s:3:\"100\";s:12:\"foc_volume16\";s:0:\"\";s:17:\"sku_reb_per_ltr16\";s:2:\"50\";s:14:\"sku_gm_level16\";s:1:\"Y\";s:13:\"total_input16\";s:2:\"50\";s:18:\"view_foc_prv_ref16\";s:0:\"\";s:14:\"cogs_prv_ref16\";s:0:\"\";s:26:\"product_target_incentive16\";s:1:\"0\";s:31:\"product_target_incentive_pool16\";s:1:\"0\";s:18:\"view_foc_deal_y116\";s:1:\"0\";s:14:\"cogs_deal_y116\";s:1:\"0\";s:18:\"view_foc_deal_y216\";s:1:\"0\";s:14:\"cogs_deal_y216\";s:1:\"0\";s:18:\"view_foc_deal_y316\";s:1:\"0\";s:14:\"cogs_deal_y316\";s:1:\"0\";s:18:\"view_foc_deal_y416\";s:1:\"0\";s:14:\"cogs_deal_y416\";s:1:\"0\";s:18:\"view_foc_deal_y516\";s:1:\"0\";s:14:\"cogs_deal_y516\";s:1:\"0\";s:10:\"sku_name17\";s:38:\"POWER1 4T 10W-40, 10X1L H MK - 3429754\";s:10:\"sku_code17\";s:7:\"3429754\";s:16:\"sku_base_gross17\";s:8:\"411.4661\";s:15:\"sku_base_cogs17\";s:6:\"125.26\";s:12:\"sku_volume17\";s:3:\"100\";s:12:\"foc_volume17\";s:0:\"\";s:17:\"sku_reb_per_ltr17\";s:2:\"50\";s:14:\"sku_gm_level17\";s:1:\"Y\";s:13:\"total_input17\";s:2:\"50\";s:18:\"view_foc_prv_ref17\";s:0:\"\";s:14:\"cogs_prv_ref17\";s:0:\"\";s:26:\"product_target_incentive17\";s:1:\"0\";s:31:\"product_target_incentive_pool17\";s:1:\"0\";s:18:\"view_foc_deal_y117\";s:1:\"0\";s:14:\"cogs_deal_y117\";s:1:\"0\";s:18:\"view_foc_deal_y217\";s:1:\"0\";s:14:\"cogs_deal_y217\";s:1:\"0\";s:18:\"view_foc_deal_y317\";s:1:\"0\";s:14:\"cogs_deal_y317\";s:1:\"0\";s:18:\"view_foc_deal_y417\";s:1:\"0\";s:14:\"cogs_deal_y417\";s:1:\"0\";s:18:\"view_foc_deal_y517\";s:1:\"0\";s:14:\"cogs_deal_y517\";s:1:\"0\";s:10:\"sku_name18\";s:40:\"POWER1 CRUISE 4T 15W-50,4X2.5H - 3424534\";s:10:\"sku_code18\";s:7:\"3424534\";s:16:\"sku_base_gross18\";s:8:\"351.8559\";s:15:\"sku_base_cogs18\";s:6:\"135.28\";s:12:\"sku_volume18\";s:3:\"100\";s:12:\"foc_volume18\";s:0:\"\";s:17:\"sku_reb_per_ltr18\";s:2:\"50\";s:14:\"sku_gm_level18\";s:1:\"Y\";s:13:\"total_input18\";s:2:\"50\";s:18:\"view_foc_prv_ref18\";s:0:\"\";s:14:\"cogs_prv_ref18\";s:0:\"\";s:26:\"product_target_incentive18\";s:1:\"0\";s:31:\"product_target_incentive_pool18\";s:1:\"0\";s:18:\"view_foc_deal_y118\";s:1:\"0\";s:14:\"cogs_deal_y118\";s:1:\"0\";s:18:\"view_foc_deal_y218\";s:1:\"0\";s:14:\"cogs_deal_y218\";s:1:\"0\";s:18:\"view_foc_deal_y318\";s:1:\"0\";s:14:\"cogs_deal_y318\";s:1:\"0\";s:18:\"view_foc_deal_y418\";s:1:\"0\";s:14:\"cogs_deal_y418\";s:1:\"0\";s:18:\"view_foc_deal_y518\";s:1:\"0\";s:14:\"cogs_deal_y518\";s:1:\"0\";s:10:\"sku_name19\";s:40:\"POWER1 CRUISE4 20W50,10X1 H MK - 3429740\";s:10:\"sku_code19\";s:7:\"3429740\";s:16:\"sku_base_gross19\";s:8:\"405.5339\";s:15:\"sku_base_cogs19\";s:6:\"136.18\";s:12:\"sku_volume19\";s:3:\"100\";s:12:\"foc_volume19\";s:0:\"\";s:17:\"sku_reb_per_ltr19\";s:2:\"50\";s:14:\"sku_gm_level19\";s:1:\"Y\";s:13:\"total_input19\";s:2:\"50\";s:18:\"view_foc_prv_ref19\";s:0:\"\";s:14:\"cogs_prv_ref19\";s:0:\"\";s:26:\"product_target_incentive19\";s:1:\"0\";s:31:\"product_target_incentive_pool19\";s:1:\"0\";s:18:\"view_foc_deal_y119\";s:1:\"0\";s:14:\"cogs_deal_y119\";s:1:\"0\";s:18:\"view_foc_deal_y219\";s:1:\"0\";s:14:\"cogs_deal_y219\";s:1:\"0\";s:18:\"view_foc_deal_y319\";s:1:\"0\";s:14:\"cogs_deal_y319\";s:1:\"0\";s:18:\"view_foc_deal_y419\";s:1:\"0\";s:14:\"cogs_deal_y419\";s:1:\"0\";s:18:\"view_foc_deal_y519\";s:1:\"0\";s:14:\"cogs_deal_y519\";s:1:\"0\";s:10:\"sku_name20\";s:39:\"POWER1 ULT SCTR 5W40 6X.8HPMK - 3429583\";s:10:\"sku_code20\";s:7:\"3429583\";s:16:\"sku_base_gross20\";s:8:\"453.4661\";s:15:\"sku_base_cogs20\";s:6:\"157.13\";s:12:\"sku_volume20\";s:3:\"100\";s:12:\"foc_volume20\";s:0:\"\";s:17:\"sku_reb_per_ltr20\";s:2:\"60\";s:14:\"sku_gm_level20\";s:1:\"Y\";s:13:\"total_input20\";s:2:\"60\";s:18:\"view_foc_prv_ref20\";s:0:\"\";s:14:\"cogs_prv_ref20\";s:0:\"\";s:26:\"product_target_incentive20\";s:1:\"0\";s:31:\"product_target_incentive_pool20\";s:1:\"0\";s:18:\"view_foc_deal_y120\";s:1:\"0\";s:14:\"cogs_deal_y120\";s:1:\"0\";s:18:\"view_foc_deal_y220\";s:1:\"0\";s:14:\"cogs_deal_y220\";s:1:\"0\";s:18:\"view_foc_deal_y320\";s:1:\"0\";s:14:\"cogs_deal_y320\";s:1:\"0\";s:18:\"view_foc_deal_y420\";s:1:\"0\";s:14:\"cogs_deal_y420\";s:1:\"0\";s:18:\"view_foc_deal_y520\";s:1:\"0\";s:14:\"cogs_deal_y520\";s:1:\"0\";s:10:\"sku_name21\";s:40:\"POWER1 ULTI 10W-40 4T 6X1HP MK - 3429531\";s:10:\"sku_code21\";s:7:\"3429531\";s:16:\"sku_base_gross21\";s:8:\"454.3644\";s:15:\"sku_base_cogs21\";s:6:\"151.91\";s:12:\"sku_volume21\";s:3:\"100\";s:12:\"foc_volume21\";s:0:\"\";s:17:\"sku_reb_per_ltr21\";s:2:\"60\";s:14:\"sku_gm_level21\";s:1:\"Y\";s:13:\"total_input21\";s:2:\"60\";s:18:\"view_foc_prv_ref21\";s:0:\"\";s:14:\"cogs_prv_ref21\";s:0:\"\";s:26:\"product_target_incentive21\";s:1:\"0\";s:31:\"product_target_incentive_pool21\";s:1:\"0\";s:18:\"view_foc_deal_y121\";s:1:\"0\";s:14:\"cogs_deal_y121\";s:1:\"0\";s:18:\"view_foc_deal_y221\";s:1:\"0\";s:14:\"cogs_deal_y221\";s:1:\"0\";s:18:\"view_foc_deal_y321\";s:1:\"0\";s:14:\"cogs_deal_y321\";s:1:\"0\";s:18:\"view_foc_deal_y421\";s:1:\"0\";s:14:\"cogs_deal_y421\";s:1:\"0\";s:18:\"view_foc_deal_y521\";s:1:\"0\";s:14:\"cogs_deal_y521\";s:1:\"0\";s:10:\"sku_name22\";s:40:\"POWER1 ULTI 10W-50 4T 6X1 HPMK - 3429533\";s:10:\"sku_code22\";s:7:\"3429533\";s:16:\"sku_base_gross22\";s:8:\"559.3221\";s:15:\"sku_base_cogs22\";s:5:\"168.6\";s:12:\"sku_volume22\";s:3:\"100\";s:12:\"foc_volume22\";s:0:\"\";s:17:\"sku_reb_per_ltr22\";s:2:\"60\";s:14:\"sku_gm_level22\";s:1:\"Y\";s:13:\"total_input22\";s:2:\"60\";s:18:\"view_foc_prv_ref22\";s:0:\"\";s:14:\"cogs_prv_ref22\";s:0:\"\";s:26:\"product_target_incentive22\";s:1:\"0\";s:31:\"product_target_incentive_pool22\";s:1:\"0\";s:18:\"view_foc_deal_y122\";s:1:\"0\";s:14:\"cogs_deal_y122\";s:1:\"0\";s:18:\"view_foc_deal_y222\";s:1:\"0\";s:14:\"cogs_deal_y222\";s:1:\"0\";s:18:\"view_foc_deal_y322\";s:1:\"0\";s:14:\"cogs_deal_y322\";s:1:\"0\";s:18:\"view_foc_deal_y422\";s:1:\"0\";s:14:\"cogs_deal_y422\";s:1:\"0\";s:18:\"view_foc_deal_y522\";s:1:\"0\";s:14:\"cogs_deal_y522\";s:1:\"0\";s:10:\"sku_name23\";s:40:\"POWER1 ULTI SB 15W-50 6X1HP MK - 3429588\";s:10:\"sku_code23\";s:7:\"3429588\";s:16:\"sku_base_gross23\";s:8:\"549.7627\";s:15:\"sku_base_cogs23\";s:6:\"182.32\";s:12:\"sku_volume23\";s:3:\"100\";s:12:\"foc_volume23\";s:0:\"\";s:17:\"sku_reb_per_ltr23\";s:2:\"60\";s:14:\"sku_gm_level23\";s:1:\"Y\";s:13:\"total_input23\";s:2:\"60\";s:18:\"view_foc_prv_ref23\";s:0:\"\";s:14:\"cogs_prv_ref23\";s:0:\"\";s:26:\"product_target_incentive23\";s:1:\"0\";s:31:\"product_target_incentive_pool23\";s:1:\"0\";s:18:\"view_foc_deal_y123\";s:1:\"0\";s:14:\"cogs_deal_y123\";s:1:\"0\";s:18:\"view_foc_deal_y223\";s:1:\"0\";s:14:\"cogs_deal_y223\";s:1:\"0\";s:18:\"view_foc_deal_y323\";s:1:\"0\";s:14:\"cogs_deal_y323\";s:1:\"0\";s:18:\"view_foc_deal_y423\";s:1:\"0\";s:14:\"cogs_deal_y423\";s:1:\"0\";s:18:\"view_foc_deal_y523\";s:1:\"0\";s:14:\"cogs_deal_y523\";s:1:\"0\";s:10:\"sku_name24\";s:40:\"POWER1 ULTI SB 20W50, 6X1HP7MK - 3429585\";s:10:\"sku_code24\";s:7:\"3429585\";s:16:\"sku_base_gross24\";s:8:\"549.7627\";s:15:\"sku_base_cogs24\";s:6:\"263.97\";s:12:\"sku_volume24\";s:3:\"100\";s:12:\"foc_volume24\";s:0:\"\";s:17:\"sku_reb_per_ltr24\";s:2:\"60\";s:14:\"sku_gm_level24\";s:1:\"Y\";s:13:\"total_input24\";s:2:\"60\";s:18:\"view_foc_prv_ref24\";s:0:\"\";s:14:\"cogs_prv_ref24\";s:0:\"\";s:26:\"product_target_incentive24\";s:1:\"0\";s:31:\"product_target_incentive_pool24\";s:1:\"0\";s:18:\"view_foc_deal_y124\";s:1:\"0\";s:14:\"cogs_deal_y124\";s:1:\"0\";s:18:\"view_foc_deal_y224\";s:1:\"0\";s:14:\"cogs_deal_y224\";s:1:\"0\";s:18:\"view_foc_deal_y324\";s:1:\"0\";s:14:\"cogs_deal_y324\";s:1:\"0\";s:18:\"view_foc_deal_y424\";s:1:\"0\";s:14:\"cogs_deal_y424\";s:1:\"0\";s:18:\"view_foc_deal_y524\";s:1:\"0\";s:14:\"cogs_deal_y524\";s:1:\"0\";s:10:\"tot_volume\";s:4:\"8400\";s:14:\"tot_foc_volume\";s:1:\"0\";s:15:\"cost_foc_volume\";s:1:\"0\";s:14:\"sku_lvl_rebate\";s:5:\"32.51\";s:13:\"reason_for_ar\";s:0:\"\";s:17:\"tot_db_commission\";N;s:10:\"sku_name25\";s:26:\"ACT SCTR H+SCTR GO 12X.92L\";s:16:\"sku_base_trans25\";s:3:\"1.3\";s:10:\"sku_code25\";s:7:\"3439165\";s:16:\"sku_base_gross25\";s:1:\"0\";s:15:\"sku_base_cogs25\";s:1:\"0\";s:12:\"sku_volume25\";s:1:\"0\";s:12:\"foc_volume25\";s:0:\"\";s:17:\"sku_reb_per_ltr25\";s:2:\"30\";s:14:\"sku_gm_level25\";s:1:\"Y\";s:18:\"view_foc_prv_ref25\";s:0:\"\";s:14:\"cogs_prv_ref25\";s:0:\"\";s:18:\"view_foc_deal_y125\";s:1:\"0\";s:14:\"cogs_deal_y125\";s:1:\"0\";s:18:\"view_foc_deal_y225\";s:1:\"0\";s:14:\"cogs_deal_y225\";s:1:\"0\";s:18:\"view_foc_deal_y325\";s:1:\"0\";s:14:\"cogs_deal_y325\";s:1:\"0\";s:18:\"view_foc_deal_y425\";s:1:\"0\";s:14:\"cogs_deal_y425\";s:1:\"0\";s:18:\"view_foc_deal_y525\";s:1:\"0\";s:14:\"cogs_deal_y525\";s:1:\"0\";s:10:\"sku_name26\";s:26:\"ACT SCTR H+SCTR GO 12X.92L\";s:16:\"sku_base_trans26\";s:3:\"1.3\";s:10:\"sku_code26\";s:7:\"3439165\";s:16:\"sku_base_gross26\";s:1:\"0\";s:15:\"sku_base_cogs26\";s:1:\"0\";s:12:\"sku_volume26\";s:1:\"0\";s:12:\"foc_volume26\";s:0:\"\";s:17:\"sku_reb_per_ltr26\";s:2:\"30\";s:14:\"sku_gm_level26\";s:1:\"Y\";s:18:\"view_foc_prv_ref26\";s:0:\"\";s:14:\"cogs_prv_ref26\";s:0:\"\";s:18:\"view_foc_deal_y126\";s:1:\"0\";s:14:\"cogs_deal_y126\";s:1:\"0\";s:18:\"view_foc_deal_y226\";s:1:\"0\";s:14:\"cogs_deal_y226\";s:1:\"0\";s:18:\"view_foc_deal_y326\";s:1:\"0\";s:14:\"cogs_deal_y326\";s:1:\"0\";s:18:\"view_foc_deal_y426\";s:1:\"0\";s:14:\"cogs_deal_y426\";s:1:\"0\";s:18:\"view_foc_deal_y526\";s:1:\"0\";s:14:\"cogs_deal_y526\";s:1:\"0\";s:10:\"sku_name27\";s:29:\"ACTIVSCT+GEAR12x.8ML+12x.12ML\";s:16:\"sku_base_trans27\";s:3:\"1.3\";s:10:\"sku_code27\";s:7:\"3440692\";s:16:\"sku_base_gross27\";s:1:\"0\";s:15:\"sku_base_cogs27\";s:1:\"0\";s:12:\"sku_volume27\";s:1:\"0\";s:12:\"foc_volume27\";s:0:\"\";s:17:\"sku_reb_per_ltr27\";s:2:\"30\";s:14:\"sku_gm_level27\";s:1:\"Y\";s:18:\"view_foc_prv_ref27\";s:0:\"\";s:14:\"cogs_prv_ref27\";s:0:\"\";s:18:\"view_foc_deal_y127\";s:1:\"0\";s:14:\"cogs_deal_y127\";s:1:\"0\";s:18:\"view_foc_deal_y227\";s:1:\"0\";s:14:\"cogs_deal_y227\";s:1:\"0\";s:18:\"view_foc_deal_y327\";s:1:\"0\";s:14:\"cogs_deal_y327\";s:1:\"0\";s:18:\"view_foc_deal_y427\";s:1:\"0\";s:14:\"cogs_deal_y427\";s:1:\"0\";s:18:\"view_foc_deal_y527\";s:1:\"0\";s:14:\"cogs_deal_y527\";s:1:\"0\";s:10:\"sku_name28\";s:30:\"ACTSCTR+SCTR GO,12X.6L+.12L MK\";s:16:\"sku_base_trans28\";s:3:\"1.3\";s:10:\"sku_code28\";s:7:\"3440696\";s:16:\"sku_base_gross28\";s:1:\"0\";s:15:\"sku_base_cogs28\";s:1:\"0\";s:12:\"sku_volume28\";s:1:\"0\";s:12:\"foc_volume28\";s:0:\"\";s:17:\"sku_reb_per_ltr28\";s:2:\"30\";s:14:\"sku_gm_level28\";s:1:\"Y\";s:18:\"view_foc_prv_ref28\";s:0:\"\";s:14:\"cogs_prv_ref28\";s:0:\"\";s:18:\"view_foc_deal_y128\";s:1:\"0\";s:14:\"cogs_deal_y128\";s:1:\"0\";s:18:\"view_foc_deal_y228\";s:1:\"0\";s:14:\"cogs_deal_y228\";s:1:\"0\";s:18:\"view_foc_deal_y328\";s:1:\"0\";s:14:\"cogs_deal_y328\";s:1:\"0\";s:18:\"view_foc_deal_y428\";s:1:\"0\";s:14:\"cogs_deal_y428\";s:1:\"0\";s:18:\"view_foc_deal_y528\";s:1:\"0\";s:14:\"cogs_deal_y528\";s:1:\"0\";}",
+    "customerLevelInputs": {
+      "target_incentive_total": "84000",
+      "target_incentive_rs_lts": "10",
+      "marketing_input_total": "",
+      "marketing_input_rs_lts": "",
+      "sign_on_bonus_total": "0",
+      "sign_on_bonus_rs_lts": "0",
+      "any_other_total": "0",
+      "any_otherrs_rs_lts": "0",
+      "Total_total": "84000",
+      "Total_rs_lts": "10",
+      "focus_brand_rs": "0",
+      "focus_brand_rs_per_ltr": "NaN",
+      "synthetic_counter": 0
+    },
+    "currentProposed": {
+      "previous_contract_exist": null,
+      "existing_remark": "",
+      "volume_kl_current": "",
+      "volume_kl_proposed": "8400",
+      "period_from_current": "",
+      "period_from_proposed": "01-06-2025",
+      "period_to_current": "",
+      "period_to_proposed": "31-05-2027",
+      "months_current": "",
+      "months_proposed": "24",
+      "kl_pm_current": 0,
+      "kl_pm_propsed": 350,
+      "synth_share_current": "",
+      "synth_share_proposed": 10.714285714285714,
+      "AR_SEOL_current": "",
+      "AR_SEOL_proposed": "0",
+      "marketing_current": "",
+      "marketing_proposed": "",
+      "others_current": "",
+      "others_proposed": "0",
+      "rs_l_investment_current": 0,
+      "rs_l_investment_proposed": 10,
+      "gmpl_current": "",
+      "gmpl_proposed": 106.1632827380952,
+      "target_incentive_current": "",
+      "target_incentive_proposed": "84000",
+      "sign_on_bonus_current": "",
+      "sign_on_bonus_proposed": "0",
+      "total_investment_current": "",
+      "total_investment_proposed": 84000,
+      "target_incentive_comment_vol": [
+        "2100",
+        "4200",
+        "6300",
+        "8400"
+      ],
+      "target_incentive_comment_amt": [
+        "21000",
+        "21000",
+        "21000",
+        "21000"
+      ],
+      "target_incentive_comment_month": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "any_other_comment": "",
+      "marketing_disbursement_options": "Y"
+    },
+    "previousSkus": [],
+    "skus": [
+      {
+        "skuCode": "3412701",
+        "skuName": "ACTIV 4T 10W-30, 20X.9L MK - 3412701",
+        "baseGross": 271.5851,
+        "baseCogs": 118.87,
+        "volume": 4000,
+        "rebatePerLtr": 35,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3414742",
+        "skuName": "ACTIV 4T 20W-40, 20X.9L MC MK - 3414742",
+        "baseGross": 262.128,
+        "baseCogs": 133.01,
+        "volume": 950,
+        "rebatePerLtr": 11,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3429572",
+        "skuName": "ACTIV CRUISE 20W-50 20X1HP7 MK - 3429572",
+        "baseGross": 330.7627,
+        "baseCogs": 132.07,
+        "volume": 50,
+        "rebatePerLtr": 30,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3425934",
+        "skuName": "ACTIV CRUISE 4T 15W50,4X2.5PMK - 3425934",
+        "baseGross": 288.1271,
+        "baseCogs": 127.88,
+        "volume": 50,
+        "rebatePerLtr": 30,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3421858",
+        "skuName": "ACTIV ESSENTIAL 10W30,20X.9 MK - 3421858",
+        "baseGross": 263.0424,
+        "baseCogs": 115.96,
+        "volume": 500,
+        "rebatePerLtr": 30,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3431292",
+        "skuName": "ACTIV ESSENTIAL 20W40,20X.9LMK - 3431292",
+        "baseGross": 234.9068,
+        "baseCogs": 133.66,
+        "volume": 500,
+        "rebatePerLtr": 30,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3429579",
+        "skuName": "ACTIV HONDA 10W-30 20X.8HP7 MK - 3429579",
+        "baseGross": 352.2034,
+        "baseCogs": 162.2,
+        "volume": 50,
+        "rebatePerLtr": 30,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3420431",
+        "skuName": "ACTIV SCOOTER 10W30 4AT 12X.8F - 3420431",
+        "baseGross": 270,
+        "baseCogs": 123.12,
+        "volume": 1000,
+        "rebatePerLtr": 30,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3434629",
+        "skuName": "ACTIV SCOOTER 5W304AT,12X.6L - 3434629",
+        "baseGross": 412.5847,
+        "baseCogs": 153.57,
+        "volume": 50,
+        "rebatePerLtr": 30,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3429581",
+        "skuName": "ACTIV SCT HONDA 10W3020X.8HPMK - 3429581",
+        "baseGross": 350.3983,
+        "baseCogs": 169.28,
+        "volume": 50,
+        "rebatePerLtr": 30,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3421200",
+        "skuName": "BRAKE FLUID DOT 3 (C), 20X1L M - 3421200",
+        "baseGross": 360.9746,
+        "baseCogs": 331.15,
+        "volume": 50,
+        "rebatePerLtr": 20,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3370240",
+        "skuName": "BRAKE FLUID DOT 4 20X1L - 3370240",
+        "baseGross": 241.27,
+        "baseCogs": 361.72,
+        "volume": 50,
+        "rebatePerLtr": 20,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3420343",
+        "skuName": "FORK OIL 20W, 20X.35L MK - 3420343",
+        "baseGross": 339.2119,
+        "baseCogs": 131.98,
+        "volume": 50,
+        "rebatePerLtr": 20,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3420870",
+        "skuName": "GREASE AP 3, 120X.05K MK - 3420870",
+        "baseGross": 436.8559,
+        "baseCogs": 189.32,
+        "volume": 50,
+        "rebatePerLtr": 20,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3416953",
+        "skuName": "GTX 20W-50, 20X.5L B MK - 3416953",
+        "baseGross": 298.3475,
+        "baseCogs": 141.5,
+        "volume": 50,
+        "rebatePerLtr": 11,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3412840",
+        "skuName": "GTX ESSENTIAL SG 20W-50, 20X.5 - 3412840",
+        "baseGross": 217.322,
+        "baseCogs": 136.88,
+        "volume": 50,
+        "rebatePerLtr": 11,
+        "gmLevel": "N"
+      },
+      {
+        "skuCode": "3429759",
+        "skuName": "POWER1 4T 10W-30, 10X.9L H MK - 3429759",
+        "baseGross": 409.4068,
+        "baseCogs": 123.42,
+        "volume": 100,
+        "rebatePerLtr": 50,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3429754",
+        "skuName": "POWER1 4T 10W-40, 10X1L H MK - 3429754",
+        "baseGross": 411.4661,
+        "baseCogs": 125.26,
+        "volume": 100,
+        "rebatePerLtr": 50,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3424534",
+        "skuName": "POWER1 CRUISE 4T 15W-50,4X2.5H - 3424534",
+        "baseGross": 351.8559,
+        "baseCogs": 135.28,
+        "volume": 100,
+        "rebatePerLtr": 50,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3429740",
+        "skuName": "POWER1 CRUISE4 20W50,10X1 H MK - 3429740",
+        "baseGross": 405.5339,
+        "baseCogs": 136.18,
+        "volume": 100,
+        "rebatePerLtr": 50,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3429583",
+        "skuName": "POWER1 ULT SCTR 5W40 6X.8HPMK - 3429583",
+        "baseGross": 453.4661,
+        "baseCogs": 157.13,
+        "volume": 100,
+        "rebatePerLtr": 60,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3429531",
+        "skuName": "POWER1 ULTI 10W-40 4T 6X1HP MK - 3429531",
+        "baseGross": 454.3644,
+        "baseCogs": 151.91,
+        "volume": 100,
+        "rebatePerLtr": 60,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3429533",
+        "skuName": "POWER1 ULTI 10W-50 4T 6X1 HPMK - 3429533",
+        "baseGross": 559.3221,
+        "baseCogs": 168.6,
+        "volume": 100,
+        "rebatePerLtr": 60,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3429588",
+        "skuName": "POWER1 ULTI SB 15W-50 6X1HP MK - 3429588",
+        "baseGross": 549.7627,
+        "baseCogs": 182.32,
+        "volume": 100,
+        "rebatePerLtr": 60,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3429585",
+        "skuName": "POWER1 ULTI SB 20W50, 6X1HP7MK - 3429585",
+        "baseGross": 549.7627,
+        "baseCogs": 263.97,
+        "volume": 100,
+        "rebatePerLtr": 60,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3439165",
+        "skuName": "ACT SCTR H+SCTR GO 12X.92L",
+        "baseGross": 0,
+        "baseCogs": 0,
+        "volume": 0,
+        "rebatePerLtr": 30,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3439165",
+        "skuName": "ACT SCTR H+SCTR GO 12X.92L",
+        "baseGross": 0,
+        "baseCogs": 0,
+        "volume": 0,
+        "rebatePerLtr": 30,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3440692",
+        "skuName": "ACTIVSCT+GEAR12x.8ML+12x.12ML",
+        "baseGross": 0,
+        "baseCogs": 0,
+        "volume": 0,
+        "rebatePerLtr": 30,
+        "gmLevel": "Y"
+      },
+      {
+        "skuCode": "3440696",
+        "skuName": "ACTSCTR+SCTR GO,12X.6L+.12L MK",
+        "baseGross": 0,
+        "baseCogs": 0,
+        "volume": 0,
+        "rebatePerLtr": 30,
+        "gmLevel": "Y"
+      }
+    ],
+    "offerId": 15815,
+    "offerCode": "BIKEPOINTS-01138172-15815",
+    "offerType": "WBC",
+    "offerStatus": "P",
+    "startDate": "2025-05-31",
+    "endDate": "2027-05-30",
+    "contractTenure": "24",
+    "contractVolume": 8400,
+    "volumeCommitment": 8400,
+    "previousCommitment": 8400,
+    "previousActual": 0,
+    "previousInvestment": 84000,
+    "investmentRate": 10,
+    "gmpl": 106.1632827380952,
+    "gmplDofa": "",
+    "totalCustLvlInput": 0,
+    "totalNetPrice": 0,
+    "executiveCode": "01174821",
+    "createdDate": "2025-05-31",
+    "latestUpdatedDate": "2025-05-31",
+    "executiveName": "Akshiv Avikshit",
+    "executive_name": "Akshiv Avikshit",
+    "bp_sales_rep_text": "Akshiv Avikshit",
+    "state": "EMH",
+    "cust_state": "EMH",
+    "customerName": "  BIKE POINT NEW BALAJI AUTOMOBILES",
+    "customer_name_text": "  BIKE POINT NEW BALAJI AUTOMOBILES",
+    "volPerMonth": 350,
+    "volumePM": 350
+  },
+  "offerHistory": [
+    {
+      "offer_id": 15815,
+      "offer_code": "BIKEPOINTS-01138172-15815",
+      "stream": "WBC",
+      "executive_code": "01174821",
+      "start_date": "2025-05-31",
+      "end_date": "2027-05-30",
+      "contract_tenure": "24",
+      "tot_volume_commitment": "8400",
+      "offer_status": "P",
+      "total_gross_margin": "0",
+      "gmpl_dofa": "106.1632827380952",
+      "remark": "",
+      "proposal_id": "",
+      "customer_level_input_text": "a:13:{s:22:\"target_incentive_total\";s:5:\"84000\";s:23:\"target_incentive_rs_lts\";s:2:\"10\";s:21:\"marketing_input_total\";s:0:\"\";s:22:\"marketing_input_rs_lts\";s:0:\"\";s:19:\"sign_on_bonus_total\";s:1:\"0\";s:20:\"sign_on_bonus_rs_lts\";s:1:\"0\";s:15:\"any_other_total\";s:1:\"0\";s:18:\"any_otherrs_rs_lts\";s:1:\"0\";s:11:\"Total_total\";s:5:\"84000\";s:12:\"Total_rs_lts\";s:2:\"10\";s:14:\"focus_brand_rs\";s:1:\"0\";s:22:\"focus_brand_rs_per_ltr\";s:3:\"NaN\";s:17:\"synthetic_counter\";i:0;}",
+      "current_proposed_text": "a:35:{s:23:\"previous_contract_exist\";N;s:15:\"existing_remark\";s:0:\"\";s:17:\"volume_kl_current\";s:0:\"\";s:18:\"volume_kl_proposed\";s:4:\"8400\";s:19:\"period_from_current\";s:0:\"\";s:20:\"period_from_proposed\";s:10:\"01-06-2025\";s:17:\"period_to_current\";s:0:\"\";s:18:\"period_to_proposed\";s:10:\"31-05-2027\";s:14:\"months_current\";s:0:\"\";s:15:\"months_proposed\";s:2:\"24\";s:13:\"kl_pm_current\";i:0;s:13:\"kl_pm_propsed\";i:350;s:19:\"synth_share_current\";s:0:\"\";s:20:\"synth_share_proposed\";d:10.714285714285714;s:15:\"AR_SEOL_current\";s:0:\"\";s:16:\"AR_SEOL_proposed\";s:1:\"0\";s:17:\"marketing_current\";s:0:\"\";s:18:\"marketing_proposed\";s:0:\"\";s:14:\"others_current\";s:0:\"\";s:15:\"others_proposed\";s:1:\"0\";s:23:\"rs_l_investment_current\";i:0;s:24:\"rs_l_investment_proposed\";i:10;s:12:\"gmpl_current\";s:0:\"\";s:13:\"gmpl_proposed\";d:106.16328273809521;s:24:\"target_incentive_current\";s:0:\"\";s:25:\"target_incentive_proposed\";s:5:\"84000\";s:21:\"sign_on_bonus_current\";s:0:\"\";s:22:\"sign_on_bonus_proposed\";s:1:\"0\";s:24:\"total_investment_current\";s:0:\"\";s:25:\"total_investment_proposed\";i:84000;s:28:\"target_incentive_comment_vol\";a:4:{i:0;s:4:\"2100\";i:1;s:4:\"4200\";i:2;s:4:\"6300\";i:3;s:4:\"8400\";}s:28:\"target_incentive_comment_amt\";a:4:{i:0;s:5:\"21000\";i:1;s:5:\"21000\";i:2;s:5:\"21000\";i:3;s:5:\"21000\";}s:30:\"target_incentive_comment_month\";a:4:{i:0;s:1:\"6\";i:1;s:2:\"12\";i:2;s:2:\"18\";i:3;s:2:\"24\";}s:17:\"any_other_comment\";s:0:\"\";s:30:\"marketing_disbursement_options\";s:1:\"Y\";}",
+      "previous_sku_details": "",
+      "sku_text": "a:703:{s:11:\"sku_counter\";i:29;s:15:\"sku_base_trans0\";s:3:\"1.3\";s:15:\"sku_base_trans1\";s:3:\"1.3\";s:15:\"sku_base_trans2\";s:3:\"1.3\";s:15:\"sku_base_trans3\";s:3:\"1.3\";s:15:\"sku_base_trans4\";s:3:\"1.3\";s:15:\"sku_base_trans5\";s:3:\"1.3\";s:15:\"sku_base_trans6\";s:3:\"1.3\";s:15:\"sku_base_trans7\";s:3:\"1.3\";s:15:\"sku_base_trans8\";s:3:\"1.3\";s:15:\"sku_base_trans9\";s:3:\"1.3\";s:16:\"sku_base_trans10\";s:3:\"1.3\";s:16:\"sku_base_trans11\";s:3:\"1.3\";s:16:\"sku_base_trans12\";s:3:\"1.3\";s:16:\"sku_base_trans13\";s:3:\"1.3\";s:16:\"sku_base_trans14\";s:3:\"1.3\";s:16:\"sku_base_trans15\";s:3:\"1.3\";s:16:\"sku_base_trans16\";s:3:\"1.3\";s:16:\"sku_base_trans17\";s:3:\"1.3\";s:16:\"sku_base_trans18\";s:3:\"1.3\";s:16:\"sku_base_trans19\";s:3:\"1.3\";s:16:\"sku_base_trans20\";s:3:\"1.3\";s:16:\"sku_base_trans21\";s:3:\"1.3\";s:16:\"sku_base_trans22\";s:3:\"1.3\";s:16:\"sku_base_trans23\";s:3:\"1.3\";s:16:\"sku_base_trans24\";s:3:\"1.3\";s:9:\"sku_name0\";s:36:\"ACTIV 4T 10W-30, 20X.9L MK - 3412701\";s:9:\"sku_code0\";s:7:\"3412701\";s:15:\"sku_base_gross0\";s:8:\"271.5851\";s:14:\"sku_base_cogs0\";s:6:\"118.87\";s:11:\"sku_volume0\";s:4:\"4000\";s:11:\"foc_volume0\";s:0:\"\";s:16:\"sku_reb_per_ltr0\";s:2:\"35\";s:13:\"sku_gm_level0\";s:1:\"N\";s:12:\"total_input0\";s:2:\"35\";s:17:\"view_foc_prv_ref0\";s:0:\"\";s:13:\"cogs_prv_ref0\";s:0:\"\";s:14:\"t_cogs_prv_ref\";s:0:\"\";s:13:\"t_foc_prv_ref\";s:1:\"0\";s:25:\"product_target_incentive0\";s:1:\"0\";s:30:\"product_target_incentive_pool0\";s:1:\"0\";s:17:\"view_foc_deal_y10\";s:1:\"0\";s:13:\"cogs_deal_y10\";s:1:\"0\";s:13:\"t_foc_deal_y1\";s:1:\"0\";s:14:\"t_cogs_deal_y1\";s:1:\"0\";s:17:\"view_foc_deal_y20\";s:1:\"0\";s:13:\"cogs_deal_y20\";s:1:\"0\";s:13:\"t_foc_deal_y2\";s:1:\"0\";s:14:\"t_cogs_deal_y2\";s:1:\"0\";s:17:\"view_foc_deal_y30\";s:1:\"0\";s:13:\"cogs_deal_y30\";s:1:\"0\";s:13:\"t_foc_deal_y3\";s:1:\"0\";s:14:\"t_cogs_deal_y3\";s:1:\"0\";s:17:\"view_foc_deal_y40\";s:1:\"0\";s:13:\"cogs_deal_y40\";s:1:\"0\";s:13:\"t_foc_deal_y4\";s:1:\"0\";s:14:\"t_cogs_deal_y4\";s:1:\"0\";s:17:\"view_foc_deal_y50\";s:1:\"0\";s:13:\"cogs_deal_y50\";s:1:\"0\";s:13:\"t_foc_deal_y5\";s:1:\"0\";s:14:\"t_cogs_deal_y5\";s:1:\"0\";s:9:\"sku_name1\";s:39:\"ACTIV 4T 20W-40, 20X.9L MC MK - 3414742\";s:9:\"sku_code1\";s:7:\"3414742\";s:15:\"sku_base_gross1\";s:7:\"262.128\";s:14:\"sku_base_cogs1\";s:6:\"133.01\";s:11:\"sku_volume1\";s:3:\"950\";s:11:\"foc_volume1\";s:0:\"\";s:16:\"sku_reb_per_ltr1\";s:2:\"11\";s:13:\"sku_gm_level1\";s:1:\"N\";s:12:\"total_input1\";s:2:\"11\";s:17:\"view_foc_prv_ref1\";s:0:\"\";s:13:\"cogs_prv_ref1\";s:0:\"\";s:25:\"product_target_incentive1\";s:1:\"0\";s:30:\"product_target_incentive_pool1\";s:1:\"0\";s:17:\"view_foc_deal_y11\";s:1:\"0\";s:13:\"cogs_deal_y11\";s:1:\"0\";s:17:\"view_foc_deal_y21\";s:1:\"0\";s:13:\"cogs_deal_y21\";s:1:\"0\";s:17:\"view_foc_deal_y31\";s:1:\"0\";s:13:\"cogs_deal_y31\";s:1:\"0\";s:17:\"view_foc_deal_y41\";s:1:\"0\";s:13:\"cogs_deal_y41\";s:1:\"0\";s:17:\"view_foc_deal_y51\";s:1:\"0\";s:13:\"cogs_deal_y51\";s:1:\"0\";s:9:\"sku_name2\";s:40:\"ACTIV CRUISE 20W-50 20X1HP7 MK - 3429572\";s:9:\"sku_code2\";s:7:\"3429572\";s:15:\"sku_base_gross2\";s:8:\"330.7627\";s:14:\"sku_base_cogs2\";s:6:\"132.07\";s:11:\"sku_volume2\";s:2:\"50\";s:11:\"foc_volume2\";s:0:\"\";s:16:\"sku_reb_per_ltr2\";s:2:\"30\";s:13:\"sku_gm_level2\";s:1:\"N\";s:12:\"total_input2\";s:2:\"30\";s:17:\"view_foc_prv_ref2\";s:0:\"\";s:13:\"cogs_prv_ref2\";s:0:\"\";s:25:\"product_target_incentive2\";s:1:\"0\";s:30:\"product_target_incentive_pool2\";s:1:\"0\";s:17:\"view_foc_deal_y12\";s:1:\"0\";s:13:\"cogs_deal_y12\";s:1:\"0\";s:17:\"view_foc_deal_y22\";s:1:\"0\";s:13:\"cogs_deal_y22\";s:1:\"0\";s:17:\"view_foc_deal_y32\";s:1:\"0\";s:13:\"cogs_deal_y32\";s:1:\"0\";s:17:\"view_foc_deal_y42\";s:1:\"0\";s:13:\"cogs_deal_y42\";s:1:\"0\";s:17:\"view_foc_deal_y52\";s:1:\"0\";s:13:\"cogs_deal_y52\";s:1:\"0\";s:9:\"sku_name3\";s:40:\"ACTIV CRUISE 4T 15W50,4X2.5PMK - 3425934\";s:9:\"sku_code3\";s:7:\"3425934\";s:15:\"sku_base_gross3\";s:8:\"288.1271\";s:14:\"sku_base_cogs3\";s:6:\"127.88\";s:11:\"sku_volume3\";s:2:\"50\";s:11:\"foc_volume3\";s:0:\"\";s:16:\"sku_reb_per_ltr3\";s:2:\"30\";s:13:\"sku_gm_level3\";s:1:\"N\";s:12:\"total_input3\";s:2:\"30\";s:17:\"view_foc_prv_ref3\";s:0:\"\";s:13:\"cogs_prv_ref3\";s:0:\"\";s:25:\"product_target_incentive3\";s:1:\"0\";s:30:\"product_target_incentive_pool3\";s:1:\"0\";s:17:\"view_foc_deal_y13\";s:1:\"0\";s:13:\"cogs_deal_y13\";s:1:\"0\";s:17:\"view_foc_deal_y23\";s:1:\"0\";s:13:\"cogs_deal_y23\";s:1:\"0\";s:17:\"view_foc_deal_y33\";s:1:\"0\";s:13:\"cogs_deal_y33\";s:1:\"0\";s:17:\"view_foc_deal_y43\";s:1:\"0\";s:13:\"cogs_deal_y43\";s:1:\"0\";s:17:\"view_foc_deal_y53\";s:1:\"0\";s:13:\"cogs_deal_y53\";s:1:\"0\";s:9:\"sku_name4\";s:40:\"ACTIV ESSENTIAL 10W30,20X.9 MK - 3421858\";s:9:\"sku_code4\";s:7:\"3421858\";s:15:\"sku_base_gross4\";s:8:\"263.0424\";s:14:\"sku_base_cogs4\";s:6:\"115.96\";s:11:\"sku_volume4\";s:3:\"500\";s:11:\"foc_volume4\";s:0:\"\";s:16:\"sku_reb_per_ltr4\";s:2:\"30\";s:13:\"sku_gm_level4\";s:1:\"N\";s:12:\"total_input4\";s:2:\"30\";s:17:\"view_foc_prv_ref4\";s:0:\"\";s:13:\"cogs_prv_ref4\";s:0:\"\";s:25:\"product_target_incentive4\";s:1:\"0\";s:30:\"product_target_incentive_pool4\";s:1:\"0\";s:17:\"view_foc_deal_y14\";s:1:\"0\";s:13:\"cogs_deal_y14\";s:1:\"0\";s:17:\"view_foc_deal_y24\";s:1:\"0\";s:13:\"cogs_deal_y24\";s:1:\"0\";s:17:\"view_foc_deal_y34\";s:1:\"0\";s:13:\"cogs_deal_y34\";s:1:\"0\";s:17:\"view_foc_deal_y44\";s:1:\"0\";s:13:\"cogs_deal_y44\";s:1:\"0\";s:17:\"view_foc_deal_y54\";s:1:\"0\";s:13:\"cogs_deal_y54\";s:1:\"0\";s:9:\"sku_name5\";s:40:\"ACTIV ESSENTIAL 20W40,20X.9LMK - 3431292\";s:9:\"sku_code5\";s:7:\"3431292\";s:15:\"sku_base_gross5\";s:8:\"234.9068\";s:14:\"sku_base_cogs5\";s:6:\"133.66\";s:11:\"sku_volume5\";s:3:\"500\";s:11:\"foc_volume5\";s:0:\"\";s:16:\"sku_reb_per_ltr5\";s:2:\"30\";s:13:\"sku_gm_level5\";s:1:\"N\";s:12:\"total_input5\";s:2:\"30\";s:17:\"view_foc_prv_ref5\";s:0:\"\";s:13:\"cogs_prv_ref5\";s:0:\"\";s:25:\"product_target_incentive5\";s:1:\"0\";s:30:\"product_target_incentive_pool5\";s:1:\"0\";s:17:\"view_foc_deal_y15\";s:1:\"0\";s:13:\"cogs_deal_y15\";s:1:\"0\";s:17:\"view_foc_deal_y25\";s:1:\"0\";s:13:\"cogs_deal_y25\";s:1:\"0\";s:17:\"view_foc_deal_y35\";s:1:\"0\";s:13:\"cogs_deal_y35\";s:1:\"0\";s:17:\"view_foc_deal_y45\";s:1:\"0\";s:13:\"cogs_deal_y45\";s:1:\"0\";s:17:\"view_foc_deal_y55\";s:1:\"0\";s:13:\"cogs_deal_y55\";s:1:\"0\";s:9:\"sku_name6\";s:40:\"ACTIV HONDA 10W-30 20X.8HP7 MK - 3429579\";s:9:\"sku_code6\";s:7:\"3429579\";s:15:\"sku_base_gross6\";s:8:\"352.2034\";s:14:\"sku_base_cogs6\";s:5:\"162.2\";s:11:\"sku_volume6\";s:2:\"50\";s:11:\"foc_volume6\";s:0:\"\";s:16:\"sku_reb_per_ltr6\";s:2:\"30\";s:13:\"sku_gm_level6\";s:1:\"N\";s:12:\"total_input6\";s:2:\"30\";s:17:\"view_foc_prv_ref6\";s:0:\"\";s:13:\"cogs_prv_ref6\";s:0:\"\";s:25:\"product_target_incentive6\";s:1:\"0\";s:30:\"product_target_incentive_pool6\";s:1:\"0\";s:17:\"view_foc_deal_y16\";s:1:\"0\";s:13:\"cogs_deal_y16\";s:1:\"0\";s:17:\"view_foc_deal_y26\";s:1:\"0\";s:13:\"cogs_deal_y26\";s:1:\"0\";s:17:\"view_foc_deal_y36\";s:1:\"0\";s:13:\"cogs_deal_y36\";s:1:\"0\";s:17:\"view_foc_deal_y46\";s:1:\"0\";s:13:\"cogs_deal_y46\";s:1:\"0\";s:17:\"view_foc_deal_y56\";s:1:\"0\";s:13:\"cogs_deal_y56\";s:1:\"0\";s:9:\"sku_name7\";s:40:\"ACTIV SCOOTER 10W30 4AT 12X.8F - 3420431\";s:9:\"sku_code7\";s:7:\"3420431\";s:15:\"sku_base_gross7\";s:3:\"270\";s:14:\"sku_base_cogs7\";s:6:\"123.12\";s:11:\"sku_volume7\";s:4:\"1000\";s:11:\"foc_volume7\";s:0:\"\";s:16:\"sku_reb_per_ltr7\";s:2:\"30\";s:13:\"sku_gm_level7\";s:1:\"N\";s:12:\"total_input7\";s:2:\"30\";s:17:\"view_foc_prv_ref7\";s:0:\"\";s:13:\"cogs_prv_ref7\";s:0:\"\";s:25:\"product_target_incentive7\";s:1:\"0\";s:30:\"product_target_incentive_pool7\";s:1:\"0\";s:17:\"view_foc_deal_y17\";s:1:\"0\";s:13:\"cogs_deal_y17\";s:1:\"0\";s:17:\"view_foc_deal_y27\";s:1:\"0\";s:13:\"cogs_deal_y27\";s:1:\"0\";s:17:\"view_foc_deal_y37\";s:1:\"0\";s:13:\"cogs_deal_y37\";s:1:\"0\";s:17:\"view_foc_deal_y47\";s:1:\"0\";s:13:\"cogs_deal_y47\";s:1:\"0\";s:17:\"view_foc_deal_y57\";s:1:\"0\";s:13:\"cogs_deal_y57\";s:1:\"0\";s:9:\"sku_name8\";s:38:\"ACTIV SCOOTER 5W304AT,12X.6L - 3434629\";s:9:\"sku_code8\";s:7:\"3434629\";s:15:\"sku_base_gross8\";s:8:\"412.5847\";s:14:\"sku_base_cogs8\";s:6:\"153.57\";s:11:\"sku_volume8\";s:2:\"50\";s:11:\"foc_volume8\";s:0:\"\";s:16:\"sku_reb_per_ltr8\";s:2:\"30\";s:13:\"sku_gm_level8\";s:1:\"N\";s:12:\"total_input8\";s:2:\"30\";s:17:\"view_foc_prv_ref8\";s:0:\"\";s:13:\"cogs_prv_ref8\";s:0:\"\";s:25:\"product_target_incentive8\";s:1:\"0\";s:30:\"product_target_incentive_pool8\";s:1:\"0\";s:17:\"view_foc_deal_y18\";s:1:\"0\";s:13:\"cogs_deal_y18\";s:1:\"0\";s:17:\"view_foc_deal_y28\";s:1:\"0\";s:13:\"cogs_deal_y28\";s:1:\"0\";s:17:\"view_foc_deal_y38\";s:1:\"0\";s:13:\"cogs_deal_y38\";s:1:\"0\";s:17:\"view_foc_deal_y48\";s:1:\"0\";s:13:\"cogs_deal_y48\";s:1:\"0\";s:17:\"view_foc_deal_y58\";s:1:\"0\";s:13:\"cogs_deal_y58\";s:1:\"0\";s:9:\"sku_name9\";s:40:\"ACTIV SCT HONDA 10W3020X.8HPMK - 3429581\";s:9:\"sku_code9\";s:7:\"3429581\";s:15:\"sku_base_gross9\";s:8:\"350.3983\";s:14:\"sku_base_cogs9\";s:6:\"169.28\";s:11:\"sku_volume9\";s:2:\"50\";s:11:\"foc_volume9\";s:0:\"\";s:16:\"sku_reb_per_ltr9\";s:2:\"30\";s:13:\"sku_gm_level9\";s:1:\"N\";s:12:\"total_input9\";s:2:\"30\";s:17:\"view_foc_prv_ref9\";s:0:\"\";s:13:\"cogs_prv_ref9\";s:0:\"\";s:25:\"product_target_incentive9\";s:1:\"0\";s:30:\"product_target_incentive_pool9\";s:1:\"0\";s:17:\"view_foc_deal_y19\";s:1:\"0\";s:13:\"cogs_deal_y19\";s:1:\"0\";s:17:\"view_foc_deal_y29\";s:1:\"0\";s:13:\"cogs_deal_y29\";s:1:\"0\";s:17:\"view_foc_deal_y39\";s:1:\"0\";s:13:\"cogs_deal_y39\";s:1:\"0\";s:17:\"view_foc_deal_y49\";s:1:\"0\";s:13:\"cogs_deal_y49\";s:1:\"0\";s:17:\"view_foc_deal_y59\";s:1:\"0\";s:13:\"cogs_deal_y59\";s:1:\"0\";s:10:\"sku_name10\";s:40:\"BRAKE FLUID DOT 3 (C), 20X1L M - 3421200\";s:10:\"sku_code10\";s:7:\"3421200\";s:16:\"sku_base_gross10\";s:8:\"360.9746\";s:15:\"sku_base_cogs10\";s:6:\"331.15\";s:12:\"sku_volume10\";s:2:\"50\";s:12:\"foc_volume10\";s:0:\"\";s:17:\"sku_reb_per_ltr10\";s:2:\"20\";s:14:\"sku_gm_level10\";s:1:\"N\";s:13:\"total_input10\";s:2:\"20\";s:18:\"view_foc_prv_ref10\";s:0:\"\";s:14:\"cogs_prv_ref10\";s:0:\"\";s:26:\"product_target_incentive10\";s:1:\"0\";s:31:\"product_target_incentive_pool10\";s:1:\"0\";s:18:\"view_foc_deal_y110\";s:1:\"0\";s:14:\"cogs_deal_y110\";s:1:\"0\";s:18:\"view_foc_deal_y210\";s:1:\"0\";s:14:\"cogs_deal_y210\";s:1:\"0\";s:18:\"view_foc_deal_y310\";s:1:\"0\";s:14:\"cogs_deal_y310\";s:1:\"0\";s:18:\"view_foc_deal_y410\";s:1:\"0\";s:14:\"cogs_deal_y410\";s:1:\"0\";s:18:\"view_foc_deal_y510\";s:1:\"0\";s:14:\"cogs_deal_y510\";s:1:\"0\";s:10:\"sku_name11\";s:33:\"BRAKE FLUID DOT 4 20X1L - 3370240\";s:10:\"sku_code11\";s:7:\"3370240\";s:16:\"sku_base_gross11\";s:6:\"241.27\";s:15:\"sku_base_cogs11\";s:6:\"361.72\";s:12:\"sku_volume11\";s:2:\"50\";s:12:\"foc_volume11\";s:0:\"\";s:17:\"sku_reb_per_ltr11\";s:2:\"20\";s:14:\"sku_gm_level11\";s:1:\"N\";s:13:\"total_input11\";s:2:\"20\";s:18:\"view_foc_prv_ref11\";s:0:\"\";s:14:\"cogs_prv_ref11\";s:0:\"\";s:26:\"product_target_incentive11\";s:1:\"0\";s:31:\"product_target_incentive_pool11\";s:1:\"0\";s:18:\"view_foc_deal_y111\";s:1:\"0\";s:14:\"cogs_deal_y111\";s:1:\"0\";s:18:\"view_foc_deal_y211\";s:1:\"0\";s:14:\"cogs_deal_y211\";s:1:\"0\";s:18:\"view_foc_deal_y311\";s:1:\"0\";s:14:\"cogs_deal_y311\";s:1:\"0\";s:18:\"view_foc_deal_y411\";s:1:\"0\";s:14:\"cogs_deal_y411\";s:1:\"0\";s:18:\"view_foc_deal_y511\";s:1:\"0\";s:14:\"cogs_deal_y511\";s:1:\"0\";s:10:\"sku_name12\";s:34:\"FORK OIL 20W, 20X.35L MK - 3420343\";s:10:\"sku_code12\";s:7:\"3420343\";s:16:\"sku_base_gross12\";s:8:\"339.2119\";s:15:\"sku_base_cogs12\";s:6:\"131.98\";s:12:\"sku_volume12\";s:2:\"50\";s:12:\"foc_volume12\";s:0:\"\";s:17:\"sku_reb_per_ltr12\";s:2:\"20\";s:14:\"sku_gm_level12\";s:1:\"N\";s:13:\"total_input12\";s:2:\"20\";s:18:\"view_foc_prv_ref12\";s:0:\"\";s:14:\"cogs_prv_ref12\";s:0:\"\";s:26:\"product_target_incentive12\";s:1:\"0\";s:31:\"product_target_incentive_pool12\";s:1:\"0\";s:18:\"view_foc_deal_y112\";s:1:\"0\";s:14:\"cogs_deal_y112\";s:1:\"0\";s:18:\"view_foc_deal_y212\";s:1:\"0\";s:14:\"cogs_deal_y212\";s:1:\"0\";s:18:\"view_foc_deal_y312\";s:1:\"0\";s:14:\"cogs_deal_y312\";s:1:\"0\";s:18:\"view_foc_deal_y412\";s:1:\"0\";s:14:\"cogs_deal_y412\";s:1:\"0\";s:18:\"view_foc_deal_y512\";s:1:\"0\";s:14:\"cogs_deal_y512\";s:1:\"0\";s:10:\"sku_name13\";s:34:\"GREASE AP 3, 120X.05K MK - 3420870\";s:10:\"sku_code13\";s:7:\"3420870\";s:16:\"sku_base_gross13\";s:8:\"436.8559\";s:15:\"sku_base_cogs13\";s:6:\"189.32\";s:12:\"sku_volume13\";s:2:\"50\";s:12:\"foc_volume13\";s:0:\"\";s:17:\"sku_reb_per_ltr13\";s:2:\"20\";s:14:\"sku_gm_level13\";s:1:\"N\";s:13:\"total_input13\";s:2:\"20\";s:18:\"view_foc_prv_ref13\";s:0:\"\";s:14:\"cogs_prv_ref13\";s:0:\"\";s:26:\"product_target_incentive13\";s:1:\"0\";s:31:\"product_target_incentive_pool13\";s:1:\"0\";s:18:\"view_foc_deal_y113\";s:1:\"0\";s:14:\"cogs_deal_y113\";s:1:\"0\";s:18:\"view_foc_deal_y213\";s:1:\"0\";s:14:\"cogs_deal_y213\";s:1:\"0\";s:18:\"view_foc_deal_y313\";s:1:\"0\";s:14:\"cogs_deal_y313\";s:1:\"0\";s:18:\"view_foc_deal_y413\";s:1:\"0\";s:14:\"cogs_deal_y413\";s:1:\"0\";s:18:\"view_foc_deal_y513\";s:1:\"0\";s:14:\"cogs_deal_y513\";s:1:\"0\";s:10:\"sku_name14\";s:33:\"GTX 20W-50, 20X.5L B MK - 3416953\";s:10:\"sku_code14\";s:7:\"3416953\";s:16:\"sku_base_gross14\";s:8:\"298.3475\";s:15:\"sku_base_cogs14\";s:5:\"141.5\";s:12:\"sku_volume14\";s:2:\"50\";s:12:\"foc_volume14\";s:0:\"\";s:17:\"sku_reb_per_ltr14\";s:2:\"11\";s:14:\"sku_gm_level14\";s:1:\"N\";s:13:\"total_input14\";s:2:\"11\";s:18:\"view_foc_prv_ref14\";s:0:\"\";s:14:\"cogs_prv_ref14\";s:0:\"\";s:26:\"product_target_incentive14\";s:1:\"0\";s:31:\"product_target_incentive_pool14\";s:1:\"0\";s:18:\"view_foc_deal_y114\";s:1:\"0\";s:14:\"cogs_deal_y114\";s:1:\"0\";s:18:\"view_foc_deal_y214\";s:1:\"0\";s:14:\"cogs_deal_y214\";s:1:\"0\";s:18:\"view_foc_deal_y314\";s:1:\"0\";s:14:\"cogs_deal_y314\";s:1:\"0\";s:18:\"view_foc_deal_y414\";s:1:\"0\";s:14:\"cogs_deal_y414\";s:1:\"0\";s:18:\"view_foc_deal_y514\";s:1:\"0\";s:14:\"cogs_deal_y514\";s:1:\"0\";s:10:\"sku_name15\";s:40:\"GTX ESSENTIAL SG 20W-50, 20X.5 - 3412840\";s:10:\"sku_code15\";s:7:\"3412840\";s:16:\"sku_base_gross15\";s:7:\"217.322\";s:15:\"sku_base_cogs15\";s:6:\"136.88\";s:12:\"sku_volume15\";s:2:\"50\";s:12:\"foc_volume15\";s:0:\"\";s:17:\"sku_reb_per_ltr15\";s:2:\"11\";s:14:\"sku_gm_level15\";s:1:\"N\";s:13:\"total_input15\";s:2:\"11\";s:18:\"view_foc_prv_ref15\";s:0:\"\";s:14:\"cogs_prv_ref15\";s:0:\"\";s:26:\"product_target_incentive15\";s:1:\"0\";s:31:\"product_target_incentive_pool15\";s:1:\"0\";s:18:\"view_foc_deal_y115\";s:1:\"0\";s:14:\"cogs_deal_y115\";s:1:\"0\";s:18:\"view_foc_deal_y215\";s:1:\"0\";s:14:\"cogs_deal_y215\";s:1:\"0\";s:18:\"view_foc_deal_y315\";s:1:\"0\";s:14:\"cogs_deal_y315\";s:1:\"0\";s:18:\"view_foc_deal_y415\";s:1:\"0\";s:14:\"cogs_deal_y415\";s:1:\"0\";s:18:\"view_foc_deal_y515\";s:1:\"0\";s:14:\"cogs_deal_y515\";s:1:\"0\";s:10:\"sku_name16\";s:39:\"POWER1 4T 10W-30, 10X.9L H MK - 3429759\";s:10:\"sku_code16\";s:7:\"3429759\";s:16:\"sku_base_gross16\";s:8:\"409.4068\";s:15:\"sku_base_cogs16\";s:6:\"123.42\";s:12:\"sku_volume16\";s:3:\"100\";s:12:\"foc_volume16\";s:0:\"\";s:17:\"sku_reb_per_ltr16\";s:2:\"50\";s:14:\"sku_gm_level16\";s:1:\"Y\";s:13:\"total_input16\";s:2:\"50\";s:18:\"view_foc_prv_ref16\";s:0:\"\";s:14:\"cogs_prv_ref16\";s:0:\"\";s:26:\"product_target_incentive16\";s:1:\"0\";s:31:\"product_target_incentive_pool16\";s:1:\"0\";s:18:\"view_foc_deal_y116\";s:1:\"0\";s:14:\"cogs_deal_y116\";s:1:\"0\";s:18:\"view_foc_deal_y216\";s:1:\"0\";s:14:\"cogs_deal_y216\";s:1:\"0\";s:18:\"view_foc_deal_y316\";s:1:\"0\";s:14:\"cogs_deal_y316\";s:1:\"0\";s:18:\"view_foc_deal_y416\";s:1:\"0\";s:14:\"cogs_deal_y416\";s:1:\"0\";s:18:\"view_foc_deal_y516\";s:1:\"0\";s:14:\"cogs_deal_y516\";s:1:\"0\";s:10:\"sku_name17\";s:38:\"POWER1 4T 10W-40, 10X1L H MK - 3429754\";s:10:\"sku_code17\";s:7:\"3429754\";s:16:\"sku_base_gross17\";s:8:\"411.4661\";s:15:\"sku_base_cogs17\";s:6:\"125.26\";s:12:\"sku_volume17\";s:3:\"100\";s:12:\"foc_volume17\";s:0:\"\";s:17:\"sku_reb_per_ltr17\";s:2:\"50\";s:14:\"sku_gm_level17\";s:1:\"Y\";s:13:\"total_input17\";s:2:\"50\";s:18:\"view_foc_prv_ref17\";s:0:\"\";s:14:\"cogs_prv_ref17\";s:0:\"\";s:26:\"product_target_incentive17\";s:1:\"0\";s:31:\"product_target_incentive_pool17\";s:1:\"0\";s:18:\"view_foc_deal_y117\";s:1:\"0\";s:14:\"cogs_deal_y117\";s:1:\"0\";s:18:\"view_foc_deal_y217\";s:1:\"0\";s:14:\"cogs_deal_y217\";s:1:\"0\";s:18:\"view_foc_deal_y317\";s:1:\"0\";s:14:\"cogs_deal_y317\";s:1:\"0\";s:18:\"view_foc_deal_y417\";s:1:\"0\";s:14:\"cogs_deal_y417\";s:1:\"0\";s:18:\"view_foc_deal_y517\";s:1:\"0\";s:14:\"cogs_deal_y517\";s:1:\"0\";s:10:\"sku_name18\";s:40:\"POWER1 CRUISE 4T 15W-50,4X2.5H - 3424534\";s:10:\"sku_code18\";s:7:\"3424534\";s:16:\"sku_base_gross18\";s:8:\"351.8559\";s:15:\"sku_base_cogs18\";s:6:\"135.28\";s:12:\"sku_volume18\";s:3:\"100\";s:12:\"foc_volume18\";s:0:\"\";s:17:\"sku_reb_per_ltr18\";s:2:\"50\";s:14:\"sku_gm_level18\";s:1:\"Y\";s:13:\"total_input18\";s:2:\"50\";s:18:\"view_foc_prv_ref18\";s:0:\"\";s:14:\"cogs_prv_ref18\";s:0:\"\";s:26:\"product_target_incentive18\";s:1:\"0\";s:31:\"product_target_incentive_pool18\";s:1:\"0\";s:18:\"view_foc_deal_y118\";s:1:\"0\";s:14:\"cogs_deal_y118\";s:1:\"0\";s:18:\"view_foc_deal_y218\";s:1:\"0\";s:14:\"cogs_deal_y218\";s:1:\"0\";s:18:\"view_foc_deal_y318\";s:1:\"0\";s:14:\"cogs_deal_y318\";s:1:\"0\";s:18:\"view_foc_deal_y418\";s:1:\"0\";s:14:\"cogs_deal_y418\";s:1:\"0\";s:18:\"view_foc_deal_y518\";s:1:\"0\";s:14:\"cogs_deal_y518\";s:1:\"0\";s:10:\"sku_name19\";s:40:\"POWER1 CRUISE4 20W50,10X1 H MK - 3429740\";s:10:\"sku_code19\";s:7:\"3429740\";s:16:\"sku_base_gross19\";s:8:\"405.5339\";s:15:\"sku_base_cogs19\";s:6:\"136.18\";s:12:\"sku_volume19\";s:3:\"100\";s:12:\"foc_volume19\";s:0:\"\";s:17:\"sku_reb_per_ltr19\";s:2:\"50\";s:14:\"sku_gm_level19\";s:1:\"Y\";s:13:\"total_input19\";s:2:\"50\";s:18:\"view_foc_prv_ref19\";s:0:\"\";s:14:\"cogs_prv_ref19\";s:0:\"\";s:26:\"product_target_incentive19\";s:1:\"0\";s:31:\"product_target_incentive_pool19\";s:1:\"0\";s:18:\"view_foc_deal_y119\";s:1:\"0\";s:14:\"cogs_deal_y119\";s:1:\"0\";s:18:\"view_foc_deal_y219\";s:1:\"0\";s:14:\"cogs_deal_y219\";s:1:\"0\";s:18:\"view_foc_deal_y319\";s:1:\"0\";s:14:\"cogs_deal_y319\";s:1:\"0\";s:18:\"view_foc_deal_y419\";s:1:\"0\";s:14:\"cogs_deal_y419\";s:1:\"0\";s:18:\"view_foc_deal_y519\";s:1:\"0\";s:14:\"cogs_deal_y519\";s:1:\"0\";s:10:\"sku_name20\";s:39:\"POWER1 ULT SCTR 5W40 6X.8HPMK - 3429583\";s:10:\"sku_code20\";s:7:\"3429583\";s:16:\"sku_base_gross20\";s:8:\"453.4661\";s:15:\"sku_base_cogs20\";s:6:\"157.13\";s:12:\"sku_volume20\";s:3:\"100\";s:12:\"foc_volume20\";s:0:\"\";s:17:\"sku_reb_per_ltr20\";s:2:\"60\";s:14:\"sku_gm_level20\";s:1:\"Y\";s:13:\"total_input20\";s:2:\"60\";s:18:\"view_foc_prv_ref20\";s:0:\"\";s:14:\"cogs_prv_ref20\";s:0:\"\";s:26:\"product_target_incentive20\";s:1:\"0\";s:31:\"product_target_incentive_pool20\";s:1:\"0\";s:18:\"view_foc_deal_y120\";s:1:\"0\";s:14:\"cogs_deal_y120\";s:1:\"0\";s:18:\"view_foc_deal_y220\";s:1:\"0\";s:14:\"cogs_deal_y220\";s:1:\"0\";s:18:\"view_foc_deal_y320\";s:1:\"0\";s:14:\"cogs_deal_y320\";s:1:\"0\";s:18:\"view_foc_deal_y420\";s:1:\"0\";s:14:\"cogs_deal_y420\";s:1:\"0\";s:18:\"view_foc_deal_y520\";s:1:\"0\";s:14:\"cogs_deal_y520\";s:1:\"0\";s:10:\"sku_name21\";s:40:\"POWER1 ULTI 10W-40 4T 6X1HP MK - 3429531\";s:10:\"sku_code21\";s:7:\"3429531\";s:16:\"sku_base_gross21\";s:8:\"454.3644\";s:15:\"sku_base_cogs21\";s:6:\"151.91\";s:12:\"sku_volume21\";s:3:\"100\";s:12:\"foc_volume21\";s:0:\"\";s:17:\"sku_reb_per_ltr21\";s:2:\"60\";s:14:\"sku_gm_level21\";s:1:\"Y\";s:13:\"total_input21\";s:2:\"60\";s:18:\"view_foc_prv_ref21\";s:0:\"\";s:14:\"cogs_prv_ref21\";s:0:\"\";s:26:\"product_target_incentive21\";s:1:\"0\";s:31:\"product_target_incentive_pool21\";s:1:\"0\";s:18:\"view_foc_deal_y121\";s:1:\"0\";s:14:\"cogs_deal_y121\";s:1:\"0\";s:18:\"view_foc_deal_y221\";s:1:\"0\";s:14:\"cogs_deal_y221\";s:1:\"0\";s:18:\"view_foc_deal_y321\";s:1:\"0\";s:14:\"cogs_deal_y321\";s:1:\"0\";s:18:\"view_foc_deal_y421\";s:1:\"0\";s:14:\"cogs_deal_y421\";s:1:\"0\";s:18:\"view_foc_deal_y521\";s:1:\"0\";s:14:\"cogs_deal_y521\";s:1:\"0\";s:10:\"sku_name22\";s:40:\"POWER1 ULTI 10W-50 4T 6X1 HPMK - 3429533\";s:10:\"sku_code22\";s:7:\"3429533\";s:16:\"sku_base_gross22\";s:8:\"559.3221\";s:15:\"sku_base_cogs22\";s:5:\"168.6\";s:12:\"sku_volume22\";s:3:\"100\";s:12:\"foc_volume22\";s:0:\"\";s:17:\"sku_reb_per_ltr22\";s:2:\"60\";s:14:\"sku_gm_level22\";s:1:\"Y\";s:13:\"total_input22\";s:2:\"60\";s:18:\"view_foc_prv_ref22\";s:0:\"\";s:14:\"cogs_prv_ref22\";s:0:\"\";s:26:\"product_target_incentive22\";s:1:\"0\";s:31:\"product_target_incentive_pool22\";s:1:\"0\";s:18:\"view_foc_deal_y122\";s:1:\"0\";s:14:\"cogs_deal_y122\";s:1:\"0\";s:18:\"view_foc_deal_y222\";s:1:\"0\";s:14:\"cogs_deal_y222\";s:1:\"0\";s:18:\"view_foc_deal_y322\";s:1:\"0\";s:14:\"cogs_deal_y322\";s:1:\"0\";s:18:\"view_foc_deal_y422\";s:1:\"0\";s:14:\"cogs_deal_y422\";s:1:\"0\";s:18:\"view_foc_deal_y522\";s:1:\"0\";s:14:\"cogs_deal_y522\";s:1:\"0\";s:10:\"sku_name23\";s:40:\"POWER1 ULTI SB 15W-50 6X1HP MK - 3429588\";s:10:\"sku_code23\";s:7:\"3429588\";s:16:\"sku_base_gross23\";s:8:\"549.7627\";s:15:\"sku_base_cogs23\";s:6:\"182.32\";s:12:\"sku_volume23\";s:3:\"100\";s:12:\"foc_volume23\";s:0:\"\";s:17:\"sku_reb_per_ltr23\";s:2:\"60\";s:14:\"sku_gm_level23\";s:1:\"Y\";s:13:\"total_input23\";s:2:\"60\";s:18:\"view_foc_prv_ref23\";s:0:\"\";s:14:\"cogs_prv_ref23\";s:0:\"\";s:26:\"product_target_incentive23\";s:1:\"0\";s:31:\"product_target_incentive_pool23\";s:1:\"0\";s:18:\"view_foc_deal_y123\";s:1:\"0\";s:14:\"cogs_deal_y123\";s:1:\"0\";s:18:\"view_foc_deal_y223\";s:1:\"0\";s:14:\"cogs_deal_y223\";s:1:\"0\";s:18:\"view_foc_deal_y323\";s:1:\"0\";s:14:\"cogs_deal_y323\";s:1:\"0\";s:18:\"view_foc_deal_y423\";s:1:\"0\";s:14:\"cogs_deal_y423\";s:1:\"0\";s:18:\"view_foc_deal_y523\";s:1:\"0\";s:14:\"cogs_deal_y523\";s:1:\"0\";s:10:\"sku_name24\";s:40:\"POWER1 ULTI SB 20W50, 6X1HP7MK - 3429585\";s:10:\"sku_code24\";s:7:\"3429585\";s:16:\"sku_base_gross24\";s:8:\"549.7627\";s:15:\"sku_base_cogs24\";s:6:\"263.97\";s:12:\"sku_volume24\";s:3:\"100\";s:12:\"foc_volume24\";s:0:\"\";s:17:\"sku_reb_per_ltr24\";s:2:\"60\";s:14:\"sku_gm_level24\";s:1:\"Y\";s:13:\"total_input24\";s:2:\"60\";s:18:\"view_foc_prv_ref24\";s:0:\"\";s:14:\"cogs_prv_ref24\";s:0:\"\";s:26:\"product_target_incentive24\";s:1:\"0\";s:31:\"product_target_incentive_pool24\";s:1:\"0\";s:18:\"view_foc_deal_y124\";s:1:\"0\";s:14:\"cogs_deal_y124\";s:1:\"0\";s:18:\"view_foc_deal_y224\";s:1:\"0\";s:14:\"cogs_deal_y224\";s:1:\"0\";s:18:\"view_foc_deal_y324\";s:1:\"0\";s:14:\"cogs_deal_y324\";s:1:\"0\";s:18:\"view_foc_deal_y424\";s:1:\"0\";s:14:\"cogs_deal_y424\";s:1:\"0\";s:18:\"view_foc_deal_y524\";s:1:\"0\";s:14:\"cogs_deal_y524\";s:1:\"0\";s:10:\"tot_volume\";s:4:\"8400\";s:14:\"tot_foc_volume\";s:1:\"0\";s:15:\"cost_foc_volume\";s:1:\"0\";s:14:\"sku_lvl_rebate\";s:5:\"32.51\";s:13:\"reason_for_ar\";s:0:\"\";s:17:\"tot_db_commission\";N;s:10:\"sku_name25\";s:26:\"ACT SCTR H+SCTR GO 12X.92L\";s:16:\"sku_base_trans25\";s:3:\"1.3\";s:10:\"sku_code25\";s:7:\"3439165\";s:16:\"sku_base_gross25\";s:1:\"0\";s:15:\"sku_base_cogs25\";s:1:\"0\";s:12:\"sku_volume25\";s:1:\"0\";s:12:\"foc_volume25\";s:0:\"\";s:17:\"sku_reb_per_ltr25\";s:2:\"30\";s:14:\"sku_gm_level25\";s:1:\"Y\";s:18:\"view_foc_prv_ref25\";s:0:\"\";s:14:\"cogs_prv_ref25\";s:0:\"\";s:18:\"view_foc_deal_y125\";s:1:\"0\";s:14:\"cogs_deal_y125\";s:1:\"0\";s:18:\"view_foc_deal_y225\";s:1:\"0\";s:14:\"cogs_deal_y225\";s:1:\"0\";s:18:\"view_foc_deal_y325\";s:1:\"0\";s:14:\"cogs_deal_y325\";s:1:\"0\";s:18:\"view_foc_deal_y425\";s:1:\"0\";s:14:\"cogs_deal_y425\";s:1:\"0\";s:18:\"view_foc_deal_y525\";s:1:\"0\";s:14:\"cogs_deal_y525\";s:1:\"0\";s:10:\"sku_name26\";s:26:\"ACT SCTR H+SCTR GO 12X.92L\";s:16:\"sku_base_trans26\";s:3:\"1.3\";s:10:\"sku_code26\";s:7:\"3439165\";s:16:\"sku_base_gross26\";s:1:\"0\";s:15:\"sku_base_cogs26\";s:1:\"0\";s:12:\"sku_volume26\";s:1:\"0\";s:12:\"foc_volume26\";s:0:\"\";s:17:\"sku_reb_per_ltr26\";s:2:\"30\";s:14:\"sku_gm_level26\";s:1:\"Y\";s:18:\"view_foc_prv_ref26\";s:0:\"\";s:14:\"cogs_prv_ref26\";s:0:\"\";s:18:\"view_foc_deal_y126\";s:1:\"0\";s:14:\"cogs_deal_y126\";s:1:\"0\";s:18:\"view_foc_deal_y226\";s:1:\"0\";s:14:\"cogs_deal_y226\";s:1:\"0\";s:18:\"view_foc_deal_y326\";s:1:\"0\";s:14:\"cogs_deal_y326\";s:1:\"0\";s:18:\"view_foc_deal_y426\";s:1:\"0\";s:14:\"cogs_deal_y426\";s:1:\"0\";s:18:\"view_foc_deal_y526\";s:1:\"0\";s:14:\"cogs_deal_y526\";s:1:\"0\";s:10:\"sku_name27\";s:29:\"ACTIVSCT+GEAR12x.8ML+12x.12ML\";s:16:\"sku_base_trans27\";s:3:\"1.3\";s:10:\"sku_code27\";s:7:\"3440692\";s:16:\"sku_base_gross27\";s:1:\"0\";s:15:\"sku_base_cogs27\";s:1:\"0\";s:12:\"sku_volume27\";s:1:\"0\";s:12:\"foc_volume27\";s:0:\"\";s:17:\"sku_reb_per_ltr27\";s:2:\"30\";s:14:\"sku_gm_level27\";s:1:\"Y\";s:18:\"view_foc_prv_ref27\";s:0:\"\";s:14:\"cogs_prv_ref27\";s:0:\"\";s:18:\"view_foc_deal_y127\";s:1:\"0\";s:14:\"cogs_deal_y127\";s:1:\"0\";s:18:\"view_foc_deal_y227\";s:1:\"0\";s:14:\"cogs_deal_y227\";s:1:\"0\";s:18:\"view_foc_deal_y327\";s:1:\"0\";s:14:\"cogs_deal_y327\";s:1:\"0\";s:18:\"view_foc_deal_y427\";s:1:\"0\";s:14:\"cogs_deal_y427\";s:1:\"0\";s:18:\"view_foc_deal_y527\";s:1:\"0\";s:14:\"cogs_deal_y527\";s:1:\"0\";s:10:\"sku_name28\";s:30:\"ACTSCTR+SCTR GO,12X.6L+.12L MK\";s:16:\"sku_base_trans28\";s:3:\"1.3\";s:10:\"sku_code28\";s:7:\"3440696\";s:16:\"sku_base_gross28\";s:1:\"0\";s:15:\"sku_base_cogs28\";s:1:\"0\";s:12:\"sku_volume28\";s:1:\"0\";s:12:\"foc_volume28\";s:0:\"\";s:17:\"sku_reb_per_ltr28\";s:2:\"30\";s:14:\"sku_gm_level28\";s:1:\"Y\";s:18:\"view_foc_prv_ref28\";s:0:\"\";s:14:\"cogs_prv_ref28\";s:0:\"\";s:18:\"view_foc_deal_y128\";s:1:\"0\";s:14:\"cogs_deal_y128\";s:1:\"0\";s:18:\"view_foc_deal_y228\";s:1:\"0\";s:14:\"cogs_deal_y228\";s:1:\"0\";s:18:\"view_foc_deal_y328\";s:1:\"0\";s:14:\"cogs_deal_y328\";s:1:\"0\";s:18:\"view_foc_deal_y428\";s:1:\"0\";s:14:\"cogs_deal_y428\";s:1:\"0\";s:18:\"view_foc_deal_y528\";s:1:\"0\";s:14:\"cogs_deal_y528\";s:1:\"0\";}",
+      "customerLevelInputs": {
+        "target_incentive_total": "84000",
+        "target_incentive_rs_lts": "10",
+        "marketing_input_total": "",
+        "marketing_input_rs_lts": "",
+        "sign_on_bonus_total": "0",
+        "sign_on_bonus_rs_lts": "0",
+        "any_other_total": "0",
+        "any_otherrs_rs_lts": "0",
+        "Total_total": "84000",
+        "Total_rs_lts": "10",
+        "focus_brand_rs": "0",
+        "focus_brand_rs_per_ltr": "NaN",
+        "synthetic_counter": 0
+      },
+      "currentProposed": {
+        "previous_contract_exist": null,
+        "existing_remark": "",
+        "volume_kl_current": "",
+        "volume_kl_proposed": "8400",
+        "period_from_current": "",
+        "period_from_proposed": "01-06-2025",
+        "period_to_current": "",
+        "period_to_proposed": "31-05-2027",
+        "months_current": "",
+        "months_proposed": "24",
+        "kl_pm_current": 0,
+        "kl_pm_propsed": 350,
+        "synth_share_current": "",
+        "synth_share_proposed": 10.714285714285714,
+        "AR_SEOL_current": "",
+        "AR_SEOL_proposed": "0",
+        "marketing_current": "",
+        "marketing_proposed": "",
+        "others_current": "",
+        "others_proposed": "0",
+        "rs_l_investment_current": 0,
+        "rs_l_investment_proposed": 10,
+        "gmpl_current": "",
+        "gmpl_proposed": 106.1632827380952,
+        "target_incentive_current": "",
+        "target_incentive_proposed": "84000",
+        "sign_on_bonus_current": "",
+        "sign_on_bonus_proposed": "0",
+        "total_investment_current": "",
+        "total_investment_proposed": 84000,
+        "target_incentive_comment_vol": [
+          "2100",
+          "4200",
+          "6300",
+          "8400"
+        ],
+        "target_incentive_comment_amt": [
+          "21000",
+          "21000",
+          "21000",
+          "21000"
+        ],
+        "target_incentive_comment_month": [
+          "6",
+          "12",
+          "18",
+          "24"
+        ],
+        "any_other_comment": "",
+        "marketing_disbursement_options": "Y"
+      },
+      "previousSkus": [],
+      "skus": [
+        {
+          "skuCode": "3412701",
+          "skuName": "ACTIV 4T 10W-30, 20X.9L MK - 3412701",
+          "baseGross": 271.5851,
+          "baseCogs": 118.87,
+          "volume": 4000,
+          "rebatePerLtr": 35,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3414742",
+          "skuName": "ACTIV 4T 20W-40, 20X.9L MC MK - 3414742",
+          "baseGross": 262.128,
+          "baseCogs": 133.01,
+          "volume": 950,
+          "rebatePerLtr": 11,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3429572",
+          "skuName": "ACTIV CRUISE 20W-50 20X1HP7 MK - 3429572",
+          "baseGross": 330.7627,
+          "baseCogs": 132.07,
+          "volume": 50,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3425934",
+          "skuName": "ACTIV CRUISE 4T 15W50,4X2.5PMK - 3425934",
+          "baseGross": 288.1271,
+          "baseCogs": 127.88,
+          "volume": 50,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3421858",
+          "skuName": "ACTIV ESSENTIAL 10W30,20X.9 MK - 3421858",
+          "baseGross": 263.0424,
+          "baseCogs": 115.96,
+          "volume": 500,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3431292",
+          "skuName": "ACTIV ESSENTIAL 20W40,20X.9LMK - 3431292",
+          "baseGross": 234.9068,
+          "baseCogs": 133.66,
+          "volume": 500,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3429579",
+          "skuName": "ACTIV HONDA 10W-30 20X.8HP7 MK - 3429579",
+          "baseGross": 352.2034,
+          "baseCogs": 162.2,
+          "volume": 50,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3420431",
+          "skuName": "ACTIV SCOOTER 10W30 4AT 12X.8F - 3420431",
+          "baseGross": 270,
+          "baseCogs": 123.12,
+          "volume": 1000,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3434629",
+          "skuName": "ACTIV SCOOTER 5W304AT,12X.6L - 3434629",
+          "baseGross": 412.5847,
+          "baseCogs": 153.57,
+          "volume": 50,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3429581",
+          "skuName": "ACTIV SCT HONDA 10W3020X.8HPMK - 3429581",
+          "baseGross": 350.3983,
+          "baseCogs": 169.28,
+          "volume": 50,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3421200",
+          "skuName": "BRAKE FLUID DOT 3 (C), 20X1L M - 3421200",
+          "baseGross": 360.9746,
+          "baseCogs": 331.15,
+          "volume": 50,
+          "rebatePerLtr": 20,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3370240",
+          "skuName": "BRAKE FLUID DOT 4 20X1L - 3370240",
+          "baseGross": 241.27,
+          "baseCogs": 361.72,
+          "volume": 50,
+          "rebatePerLtr": 20,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3420343",
+          "skuName": "FORK OIL 20W, 20X.35L MK - 3420343",
+          "baseGross": 339.2119,
+          "baseCogs": 131.98,
+          "volume": 50,
+          "rebatePerLtr": 20,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3420870",
+          "skuName": "GREASE AP 3, 120X.05K MK - 3420870",
+          "baseGross": 436.8559,
+          "baseCogs": 189.32,
+          "volume": 50,
+          "rebatePerLtr": 20,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3416953",
+          "skuName": "GTX 20W-50, 20X.5L B MK - 3416953",
+          "baseGross": 298.3475,
+          "baseCogs": 141.5,
+          "volume": 50,
+          "rebatePerLtr": 11,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3412840",
+          "skuName": "GTX ESSENTIAL SG 20W-50, 20X.5 - 3412840",
+          "baseGross": 217.322,
+          "baseCogs": 136.88,
+          "volume": 50,
+          "rebatePerLtr": 11,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3429759",
+          "skuName": "POWER1 4T 10W-30, 10X.9L H MK - 3429759",
+          "baseGross": 409.4068,
+          "baseCogs": 123.42,
+          "volume": 100,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429754",
+          "skuName": "POWER1 4T 10W-40, 10X1L H MK - 3429754",
+          "baseGross": 411.4661,
+          "baseCogs": 125.26,
+          "volume": 100,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3424534",
+          "skuName": "POWER1 CRUISE 4T 15W-50,4X2.5H - 3424534",
+          "baseGross": 351.8559,
+          "baseCogs": 135.28,
+          "volume": 100,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429740",
+          "skuName": "POWER1 CRUISE4 20W50,10X1 H MK - 3429740",
+          "baseGross": 405.5339,
+          "baseCogs": 136.18,
+          "volume": 100,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429583",
+          "skuName": "POWER1 ULT SCTR 5W40 6X.8HPMK - 3429583",
+          "baseGross": 453.4661,
+          "baseCogs": 157.13,
+          "volume": 100,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429531",
+          "skuName": "POWER1 ULTI 10W-40 4T 6X1HP MK - 3429531",
+          "baseGross": 454.3644,
+          "baseCogs": 151.91,
+          "volume": 100,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429533",
+          "skuName": "POWER1 ULTI 10W-50 4T 6X1 HPMK - 3429533",
+          "baseGross": 559.3221,
+          "baseCogs": 168.6,
+          "volume": 100,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429588",
+          "skuName": "POWER1 ULTI SB 15W-50 6X1HP MK - 3429588",
+          "baseGross": 549.7627,
+          "baseCogs": 182.32,
+          "volume": 100,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429585",
+          "skuName": "POWER1 ULTI SB 20W50, 6X1HP7MK - 3429585",
+          "baseGross": 549.7627,
+          "baseCogs": 263.97,
+          "volume": 100,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3439165",
+          "skuName": "ACT SCTR H+SCTR GO 12X.92L",
+          "baseGross": 0,
+          "baseCogs": 0,
+          "volume": 0,
+          "rebatePerLtr": 30,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3439165",
+          "skuName": "ACT SCTR H+SCTR GO 12X.92L",
+          "baseGross": 0,
+          "baseCogs": 0,
+          "volume": 0,
+          "rebatePerLtr": 30,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3440692",
+          "skuName": "ACTIVSCT+GEAR12x.8ML+12x.12ML",
+          "baseGross": 0,
+          "baseCogs": 0,
+          "volume": 0,
+          "rebatePerLtr": 30,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3440696",
+          "skuName": "ACTSCTR+SCTR GO,12X.6L+.12L MK",
+          "baseGross": 0,
+          "baseCogs": 0,
+          "volume": 0,
+          "rebatePerLtr": 30,
+          "gmLevel": "Y"
+        }
+      ],
+      "offerId": 15815,
+      "offerCode": "BIKEPOINTS-01138172-15815",
+      "offerType": "WBC",
+      "offerStatus": "P",
+      "startDate": "2025-05-31",
+      "endDate": "2027-05-30",
+      "contractTenure": "24",
+      "contractVolume": 8400,
+      "volumeCommitment": 8400,
+      "previousCommitment": 8400,
+      "previousActual": 0,
+      "previousInvestment": 84000,
+      "investmentRate": 10,
+      "gmpl": 106.1632827380952,
+      "gmplDofa": "",
+      "totalCustLvlInput": 0,
+      "totalNetPrice": 0,
+      "executiveCode": "01174821",
+      "createdDate": "2025-05-31",
+      "latestUpdatedDate": "2025-05-31",
+      "executiveName": "Akshiv Avikshit",
+      "executive_name": "Akshiv Avikshit",
+      "bp_sales_rep_text": "Akshiv Avikshit",
+      "state": "EMH",
+      "cust_state": "EMH",
+      "customerName": "  BIKE POINT NEW BALAJI AUTOMOBILES",
+      "customer_name_text": "  BIKE POINT NEW BALAJI AUTOMOBILES",
+      "volPerMonth": 350,
+      "volumePM": 350
+    },
+    {
+      "offer_id": 12176,
+      "offer_code": "BIKEPOINTS-01138172-12176",
+      "stream": "WBC",
+      "executive_code": "01174821",
+      "start_date": "2023-06-30",
+      "end_date": "2025-06-29",
+      "contract_tenure": "24",
+      "tot_volume_commitment": "7200",
+      "offer_status": "P",
+      "total_gross_margin": "0",
+      "gmpl_dofa": "120.84426805555556",
+      "remark": "",
+      "proposal_id": "",
+      "customer_level_input_text": "a:13:{s:22:\"target_incentive_total\";s:6:\"100000\";s:23:\"target_incentive_rs_lts\";s:5:\"13.89\";s:21:\"marketing_input_total\";s:0:\"\";s:22:\"marketing_input_rs_lts\";s:0:\"\";s:19:\"sign_on_bonus_total\";s:1:\"0\";s:20:\"sign_on_bonus_rs_lts\";s:1:\"0\";s:15:\"any_other_total\";s:1:\"0\";s:18:\"any_otherrs_rs_lts\";s:1:\"0\";s:11:\"Total_total\";s:6:\"100000\";s:12:\"Total_rs_lts\";s:5:\"13.89\";s:14:\"focus_brand_rs\";s:1:\"0\";s:22:\"focus_brand_rs_per_ltr\";s:3:\"NaN\";s:17:\"synthetic_counter\";i:0;}",
+      "current_proposed_text": "a:35:{s:23:\"previous_contract_exist\";N;s:15:\"existing_remark\";s:0:\"\";s:17:\"volume_kl_current\";s:0:\"\";s:18:\"volume_kl_proposed\";s:4:\"7200\";s:19:\"period_from_current\";s:0:\"\";s:20:\"period_from_proposed\";s:10:\"01-07-2023\";s:17:\"period_to_current\";s:0:\"\";s:18:\"period_to_proposed\";s:10:\"30-06-2025\";s:14:\"months_current\";s:0:\"\";s:15:\"months_proposed\";s:2:\"24\";s:13:\"kl_pm_current\";i:0;s:13:\"kl_pm_propsed\";i:300;s:19:\"synth_share_current\";s:0:\"\";s:20:\"synth_share_proposed\";d:19.444444444444446418174266000278294086456298828125;s:15:\"AR_SEOL_current\";s:0:\"\";s:16:\"AR_SEOL_proposed\";s:1:\"0\";s:17:\"marketing_current\";s:0:\"\";s:18:\"marketing_proposed\";s:0:\"\";s:14:\"others_current\";s:0:\"\";s:15:\"others_proposed\";s:1:\"0\";s:23:\"rs_l_investment_current\";i:0;s:24:\"rs_l_investment_proposed\";d:13.888888888888889283634853200055658817291259765625;s:12:\"gmpl_current\";s:0:\"\";s:13:\"gmpl_proposed\";d:120.8442680555555597265993128530681133270263671875;s:24:\"target_incentive_current\";s:0:\"\";s:25:\"target_incentive_proposed\";s:6:\"100000\";s:21:\"sign_on_bonus_current\";s:0:\"\";s:22:\"sign_on_bonus_proposed\";s:1:\"0\";s:24:\"total_investment_current\";s:0:\"\";s:25:\"total_investment_proposed\";i:100000;s:28:\"target_incentive_comment_vol\";a:4:{i:0;s:4:\"1800\";i:1;s:4:\"3600\";i:2;s:4:\"5400\";i:3;s:4:\"7200\";}s:28:\"target_incentive_comment_amt\";a:4:{i:0;s:5:\"25000\";i:1;s:5:\"25000\";i:2;s:5:\"25000\";i:3;s:5:\"25000\";}s:30:\"target_incentive_comment_month\";a:4:{i:0;s:1:\"6\";i:1;s:2:\"12\";i:2;s:2:\"18\";i:3;s:2:\"24\";}s:17:\"any_other_comment\";s:0:\"\";s:30:\"marketing_disbursement_options\";s:1:\"Y\";}",
+      "previous_sku_details": "",
+      "sku_text": "a:502:{s:11:\"sku_counter\";i:23;s:15:\"sku_base_trans0\";s:3:\"1.3\";s:15:\"sku_base_trans1\";s:3:\"1.3\";s:15:\"sku_base_trans2\";s:3:\"1.3\";s:15:\"sku_base_trans3\";s:3:\"1.3\";s:15:\"sku_base_trans4\";s:3:\"1.3\";s:15:\"sku_base_trans5\";s:3:\"1.3\";s:15:\"sku_base_trans6\";s:3:\"1.3\";s:15:\"sku_base_trans7\";s:3:\"1.3\";s:15:\"sku_base_trans8\";s:3:\"1.3\";s:15:\"sku_base_trans9\";s:3:\"1.3\";s:16:\"sku_base_trans10\";s:3:\"1.3\";s:16:\"sku_base_trans11\";s:3:\"1.3\";s:16:\"sku_base_trans12\";s:3:\"1.3\";s:16:\"sku_base_trans13\";s:3:\"1.3\";s:16:\"sku_base_trans14\";s:3:\"1.3\";s:16:\"sku_base_trans15\";s:3:\"1.3\";s:16:\"sku_base_trans16\";s:3:\"1.3\";s:16:\"sku_base_trans17\";s:3:\"1.3\";s:16:\"sku_base_trans18\";s:3:\"1.3\";s:16:\"sku_base_trans19\";s:3:\"1.3\";s:16:\"sku_base_trans20\";s:3:\"1.3\";s:16:\"sku_base_trans21\";s:3:\"1.3\";s:16:\"sku_base_trans22\";s:3:\"1.3\";s:9:\"sku_name0\";s:36:\"ACTIV 4T 10W-30, 20X.9L MK - 3412701\";s:9:\"sku_code0\";s:7:\"3412701\";s:15:\"sku_base_gross0\";s:8:\"271.5851\";s:14:\"sku_base_cogs0\";s:6:\"123.77\";s:11:\"sku_volume0\";s:4:\"1100\";s:11:\"foc_volume0\";s:0:\"\";s:16:\"sku_reb_per_ltr0\";s:2:\"35\";s:13:\"sku_gm_level0\";s:1:\"N\";s:17:\"view_foc_prv_ref0\";s:0:\"\";s:13:\"cogs_prv_ref0\";s:0:\"\";s:14:\"t_cogs_prv_ref\";s:0:\"\";s:13:\"t_foc_prv_ref\";s:1:\"0\";s:17:\"view_foc_deal_y10\";s:1:\"0\";s:13:\"cogs_deal_y10\";s:1:\"0\";s:13:\"t_foc_deal_y1\";s:1:\"0\";s:14:\"t_cogs_deal_y1\";s:1:\"0\";s:17:\"view_foc_deal_y20\";s:1:\"0\";s:13:\"cogs_deal_y20\";s:1:\"0\";s:13:\"t_foc_deal_y2\";s:1:\"0\";s:14:\"t_cogs_deal_y2\";s:1:\"0\";s:17:\"view_foc_deal_y30\";s:1:\"0\";s:13:\"cogs_deal_y30\";s:1:\"0\";s:13:\"t_foc_deal_y3\";s:1:\"0\";s:14:\"t_cogs_deal_y3\";s:1:\"0\";s:17:\"view_foc_deal_y40\";s:1:\"0\";s:13:\"cogs_deal_y40\";s:1:\"0\";s:13:\"t_foc_deal_y4\";s:1:\"0\";s:14:\"t_cogs_deal_y4\";s:1:\"0\";s:17:\"view_foc_deal_y50\";s:1:\"0\";s:13:\"cogs_deal_y50\";s:1:\"0\";s:13:\"t_foc_deal_y5\";s:1:\"0\";s:14:\"t_cogs_deal_y5\";s:1:\"0\";s:9:\"sku_name1\";s:39:\"ACTIV 4T 20W-40, 20X.9L MC MK - 3414742\";s:9:\"sku_code1\";s:7:\"3414742\";s:15:\"sku_base_gross1\";s:7:\"262.128\";s:14:\"sku_base_cogs1\";s:5:\"92.83\";s:11:\"sku_volume1\";s:3:\"800\";s:11:\"foc_volume1\";s:0:\"\";s:16:\"sku_reb_per_ltr1\";s:2:\"10\";s:13:\"sku_gm_level1\";s:1:\"N\";s:17:\"view_foc_prv_ref1\";s:0:\"\";s:13:\"cogs_prv_ref1\";s:0:\"\";s:17:\"view_foc_deal_y11\";s:1:\"0\";s:13:\"cogs_deal_y11\";s:1:\"0\";s:17:\"view_foc_deal_y21\";s:1:\"0\";s:13:\"cogs_deal_y21\";s:1:\"0\";s:17:\"view_foc_deal_y31\";s:1:\"0\";s:13:\"cogs_deal_y31\";s:1:\"0\";s:17:\"view_foc_deal_y41\";s:1:\"0\";s:13:\"cogs_deal_y41\";s:1:\"0\";s:17:\"view_foc_deal_y51\";s:1:\"0\";s:13:\"cogs_deal_y51\";s:1:\"0\";s:9:\"sku_name2\";s:40:\"ACTIV 4T 20W-50, 10X1.2L P3 MK - 3418623\";s:9:\"sku_code2\";s:7:\"3418623\";s:15:\"sku_base_gross2\";s:6:\"262.92\";s:14:\"sku_base_cogs2\";s:6:\"102.98\";s:11:\"sku_volume2\";s:3:\"600\";s:11:\"foc_volume2\";s:0:\"\";s:16:\"sku_reb_per_ltr2\";s:2:\"35\";s:13:\"sku_gm_level2\";s:1:\"N\";s:17:\"view_foc_prv_ref2\";s:0:\"\";s:13:\"cogs_prv_ref2\";s:0:\"\";s:17:\"view_foc_deal_y12\";s:1:\"0\";s:13:\"cogs_deal_y12\";s:1:\"0\";s:17:\"view_foc_deal_y22\";s:1:\"0\";s:13:\"cogs_deal_y22\";s:1:\"0\";s:17:\"view_foc_deal_y32\";s:1:\"0\";s:13:\"cogs_deal_y32\";s:1:\"0\";s:17:\"view_foc_deal_y42\";s:1:\"0\";s:13:\"cogs_deal_y42\";s:1:\"0\";s:17:\"view_foc_deal_y52\";s:1:\"0\";s:13:\"cogs_deal_y52\";s:1:\"0\";s:9:\"sku_name3\";s:40:\"ACTIV CRUISE 4T 15W50,4X2.5PMK - 3425934\";s:9:\"sku_code3\";s:7:\"3425934\";s:15:\"sku_base_gross3\";s:8:\"288.1271\";s:14:\"sku_base_cogs3\";s:6:\"138.36\";s:11:\"sku_volume3\";s:3:\"600\";s:11:\"foc_volume3\";s:0:\"\";s:16:\"sku_reb_per_ltr3\";s:2:\"35\";s:13:\"sku_gm_level3\";s:1:\"N\";s:17:\"view_foc_prv_ref3\";s:0:\"\";s:13:\"cogs_prv_ref3\";s:0:\"\";s:17:\"view_foc_deal_y13\";s:1:\"0\";s:13:\"cogs_deal_y13\";s:1:\"0\";s:17:\"view_foc_deal_y23\";s:1:\"0\";s:13:\"cogs_deal_y23\";s:1:\"0\";s:17:\"view_foc_deal_y33\";s:1:\"0\";s:13:\"cogs_deal_y33\";s:1:\"0\";s:17:\"view_foc_deal_y43\";s:1:\"0\";s:13:\"cogs_deal_y43\";s:1:\"0\";s:17:\"view_foc_deal_y53\";s:1:\"0\";s:13:\"cogs_deal_y53\";s:1:\"0\";s:9:\"sku_name4\";s:40:\"ACTIV HONDA 10W-30 20X.8HP7 MK - 3429579\";s:9:\"sku_code4\";s:7:\"3429579\";s:15:\"sku_base_gross4\";s:8:\"350.3305\";s:14:\"sku_base_cogs4\";s:6:\"184.82\";s:11:\"sku_volume4\";s:3:\"600\";s:11:\"foc_volume4\";s:0:\"\";s:16:\"sku_reb_per_ltr4\";s:2:\"35\";s:13:\"sku_gm_level4\";s:1:\"N\";s:17:\"view_foc_prv_ref4\";s:0:\"\";s:13:\"cogs_prv_ref4\";s:0:\"\";s:17:\"view_foc_deal_y14\";s:1:\"0\";s:13:\"cogs_deal_y14\";s:1:\"0\";s:17:\"view_foc_deal_y24\";s:1:\"0\";s:13:\"cogs_deal_y24\";s:1:\"0\";s:17:\"view_foc_deal_y34\";s:1:\"0\";s:13:\"cogs_deal_y34\";s:1:\"0\";s:17:\"view_foc_deal_y44\";s:1:\"0\";s:13:\"cogs_deal_y44\";s:1:\"0\";s:17:\"view_foc_deal_y54\";s:1:\"0\";s:13:\"cogs_deal_y54\";s:1:\"0\";s:9:\"sku_name5\";s:40:\"ACTIV SCOOTER 10W-30 4-AT, 10X - 3418554\";s:9:\"sku_code5\";s:7:\"3418554\";s:15:\"sku_base_gross5\";s:5:\"239.5\";s:14:\"sku_base_cogs5\";s:5:\"93.16\";s:11:\"sku_volume5\";s:3:\"600\";s:11:\"foc_volume5\";s:0:\"\";s:16:\"sku_reb_per_ltr5\";s:2:\"35\";s:13:\"sku_gm_level5\";s:1:\"N\";s:17:\"view_foc_prv_ref5\";s:0:\"\";s:13:\"cogs_prv_ref5\";s:0:\"\";s:17:\"view_foc_deal_y15\";s:1:\"0\";s:13:\"cogs_deal_y15\";s:1:\"0\";s:17:\"view_foc_deal_y25\";s:1:\"0\";s:13:\"cogs_deal_y25\";s:1:\"0\";s:17:\"view_foc_deal_y35\";s:1:\"0\";s:13:\"cogs_deal_y35\";s:1:\"0\";s:17:\"view_foc_deal_y45\";s:1:\"0\";s:13:\"cogs_deal_y45\";s:1:\"0\";s:17:\"view_foc_deal_y55\";s:1:\"0\";s:13:\"cogs_deal_y55\";s:1:\"0\";s:9:\"sku_name6\";s:40:\"ACTIV ESSENTIAL 10W30,20X.9HMK - 3429702\";s:9:\"sku_code6\";s:7:\"3429702\";s:15:\"sku_base_gross6\";s:6:\"230.67\";s:14:\"sku_base_cogs6\";s:5:\"124.2\";s:11:\"sku_volume6\";s:3:\"250\";s:11:\"foc_volume6\";s:0:\"\";s:16:\"sku_reb_per_ltr6\";s:2:\"20\";s:13:\"sku_gm_level6\";s:1:\"N\";s:17:\"view_foc_prv_ref6\";s:0:\"\";s:13:\"cogs_prv_ref6\";s:0:\"\";s:17:\"view_foc_deal_y16\";s:1:\"0\";s:13:\"cogs_deal_y16\";s:1:\"0\";s:17:\"view_foc_deal_y26\";s:1:\"0\";s:13:\"cogs_deal_y26\";s:1:\"0\";s:17:\"view_foc_deal_y36\";s:1:\"0\";s:13:\"cogs_deal_y36\";s:1:\"0\";s:17:\"view_foc_deal_y46\";s:1:\"0\";s:13:\"cogs_deal_y46\";s:1:\"0\";s:17:\"view_foc_deal_y56\";s:1:\"0\";s:13:\"cogs_deal_y56\";s:1:\"0\";s:9:\"sku_name7\";s:40:\"ACTIV ESSENTIAL 20W40,20X.9LMK - 3431292\";s:9:\"sku_code7\";s:7:\"3431292\";s:15:\"sku_base_gross7\";s:8:\"234.9068\";s:14:\"sku_base_cogs7\";s:6:\"129.44\";s:11:\"sku_volume7\";s:3:\"250\";s:11:\"foc_volume7\";s:0:\"\";s:16:\"sku_reb_per_ltr7\";s:2:\"20\";s:13:\"sku_gm_level7\";s:1:\"N\";s:17:\"view_foc_prv_ref7\";s:0:\"\";s:13:\"cogs_prv_ref7\";s:0:\"\";s:17:\"view_foc_deal_y17\";s:1:\"0\";s:13:\"cogs_deal_y17\";s:1:\"0\";s:17:\"view_foc_deal_y27\";s:1:\"0\";s:13:\"cogs_deal_y27\";s:1:\"0\";s:17:\"view_foc_deal_y37\";s:1:\"0\";s:13:\"cogs_deal_y37\";s:1:\"0\";s:17:\"view_foc_deal_y47\";s:1:\"0\";s:13:\"cogs_deal_y47\";s:1:\"0\";s:17:\"view_foc_deal_y57\";s:1:\"0\";s:13:\"cogs_deal_y57\";s:1:\"0\";s:9:\"sku_name8\";s:40:\"ACTIV CRUISE 20W-50,10X1.2L MK - 3422286\";s:9:\"sku_code8\";s:7:\"3422286\";s:15:\"sku_base_gross8\";s:8:\"335.6186\";s:14:\"sku_base_cogs8\";s:6:\"105.27\";s:11:\"sku_volume8\";s:3:\"600\";s:11:\"foc_volume8\";s:0:\"\";s:16:\"sku_reb_per_ltr8\";s:2:\"35\";s:13:\"sku_gm_level8\";s:1:\"N\";s:17:\"view_foc_prv_ref8\";s:0:\"\";s:13:\"cogs_prv_ref8\";s:0:\"\";s:17:\"view_foc_deal_y18\";s:1:\"0\";s:13:\"cogs_deal_y18\";s:1:\"0\";s:17:\"view_foc_deal_y28\";s:1:\"0\";s:13:\"cogs_deal_y28\";s:1:\"0\";s:17:\"view_foc_deal_y38\";s:1:\"0\";s:13:\"cogs_deal_y38\";s:1:\"0\";s:17:\"view_foc_deal_y48\";s:1:\"0\";s:13:\"cogs_deal_y48\";s:1:\"0\";s:17:\"view_foc_deal_y58\";s:1:\"0\";s:13:\"cogs_deal_y58\";s:1:\"0\";s:9:\"sku_name9\";s:39:\"POWER1 4T 10W-30, 10X.9L H MK - 3429759\";s:9:\"sku_code9\";s:7:\"3429759\";s:15:\"sku_base_gross9\";s:8:\"409.4068\";s:14:\"sku_base_cogs9\";s:5:\"150.9\";s:11:\"sku_volume9\";s:3:\"100\";s:11:\"foc_volume9\";s:0:\"\";s:16:\"sku_reb_per_ltr9\";s:2:\"50\";s:13:\"sku_gm_level9\";s:1:\"Y\";s:17:\"view_foc_prv_ref9\";s:0:\"\";s:13:\"cogs_prv_ref9\";s:0:\"\";s:17:\"view_foc_deal_y19\";s:1:\"0\";s:13:\"cogs_deal_y19\";s:1:\"0\";s:17:\"view_foc_deal_y29\";s:1:\"0\";s:13:\"cogs_deal_y29\";s:1:\"0\";s:17:\"view_foc_deal_y39\";s:1:\"0\";s:13:\"cogs_deal_y39\";s:1:\"0\";s:17:\"view_foc_deal_y49\";s:1:\"0\";s:13:\"cogs_deal_y49\";s:1:\"0\";s:17:\"view_foc_deal_y59\";s:1:\"0\";s:13:\"cogs_deal_y59\";s:1:\"0\";s:10:\"sku_name10\";s:36:\"POWER1 4T 10W-40, 10X1L MK - 3420024\";s:10:\"sku_code10\";s:7:\"3420024\";s:16:\"sku_base_gross10\";s:8:\"359.3475\";s:15:\"sku_base_cogs10\";s:6:\"143.55\";s:12:\"sku_volume10\";s:3:\"100\";s:12:\"foc_volume10\";s:0:\"\";s:17:\"sku_reb_per_ltr10\";s:2:\"50\";s:14:\"sku_gm_level10\";s:1:\"Y\";s:18:\"view_foc_prv_ref10\";s:0:\"\";s:14:\"cogs_prv_ref10\";s:0:\"\";s:18:\"view_foc_deal_y110\";s:1:\"0\";s:14:\"cogs_deal_y110\";s:1:\"0\";s:18:\"view_foc_deal_y210\";s:1:\"0\";s:14:\"cogs_deal_y210\";s:1:\"0\";s:18:\"view_foc_deal_y310\";s:1:\"0\";s:14:\"cogs_deal_y310\";s:1:\"0\";s:18:\"view_foc_deal_y410\";s:1:\"0\";s:14:\"cogs_deal_y410\";s:1:\"0\";s:18:\"view_foc_deal_y510\";s:1:\"0\";s:14:\"cogs_deal_y510\";s:1:\"0\";s:10:\"sku_name11\";s:38:\"POWER1 4T 15W-40, 10X1L H MK - 3429753\";s:10:\"sku_code11\";s:7:\"3429753\";s:16:\"sku_base_gross11\";s:8:\"418.2627\";s:15:\"sku_base_cogs11\";s:6:\"150.53\";s:12:\"sku_volume11\";s:3:\"200\";s:12:\"foc_volume11\";s:0:\"\";s:17:\"sku_reb_per_ltr11\";s:2:\"50\";s:14:\"sku_gm_level11\";s:1:\"Y\";s:18:\"view_foc_prv_ref11\";s:0:\"\";s:14:\"cogs_prv_ref11\";s:0:\"\";s:18:\"view_foc_deal_y111\";s:1:\"0\";s:14:\"cogs_deal_y111\";s:1:\"0\";s:18:\"view_foc_deal_y211\";s:1:\"0\";s:14:\"cogs_deal_y211\";s:1:\"0\";s:18:\"view_foc_deal_y311\";s:1:\"0\";s:14:\"cogs_deal_y311\";s:1:\"0\";s:18:\"view_foc_deal_y411\";s:1:\"0\";s:14:\"cogs_deal_y411\";s:1:\"0\";s:18:\"view_foc_deal_y511\";s:1:\"0\";s:14:\"cogs_deal_y511\";s:1:\"0\";s:10:\"sku_name12\";s:40:\"POWER1 CRUISE 4T 15W-50,4X2.5H - 3424534\";s:10:\"sku_code12\";s:7:\"3424534\";s:16:\"sku_base_gross12\";s:8:\"351.8559\";s:15:\"sku_base_cogs12\";s:6:\"136.66\";s:12:\"sku_volume12\";s:3:\"100\";s:12:\"foc_volume12\";s:0:\"\";s:17:\"sku_reb_per_ltr12\";s:2:\"50\";s:14:\"sku_gm_level12\";s:1:\"Y\";s:18:\"view_foc_prv_ref12\";s:0:\"\";s:14:\"cogs_prv_ref12\";s:0:\"\";s:18:\"view_foc_deal_y112\";s:1:\"0\";s:14:\"cogs_deal_y112\";s:1:\"0\";s:18:\"view_foc_deal_y212\";s:1:\"0\";s:14:\"cogs_deal_y212\";s:1:\"0\";s:18:\"view_foc_deal_y312\";s:1:\"0\";s:14:\"cogs_deal_y312\";s:1:\"0\";s:18:\"view_foc_deal_y412\";s:1:\"0\";s:14:\"cogs_deal_y412\";s:1:\"0\";s:18:\"view_foc_deal_y512\";s:1:\"0\";s:14:\"cogs_deal_y512\";s:1:\"0\";s:10:\"sku_name13\";s:40:\"POWER1 CRUISE4 20W50,10X1 H MK - 3429740\";s:10:\"sku_code13\";s:7:\"3429740\";s:16:\"sku_base_gross13\";s:8:\"405.5339\";s:15:\"sku_base_cogs13\";s:6:\"157.11\";s:12:\"sku_volume13\";s:3:\"200\";s:12:\"foc_volume13\";s:0:\"\";s:17:\"sku_reb_per_ltr13\";s:2:\"50\";s:14:\"sku_gm_level13\";s:1:\"Y\";s:18:\"view_foc_prv_ref13\";s:0:\"\";s:14:\"cogs_prv_ref13\";s:0:\"\";s:18:\"view_foc_deal_y113\";s:1:\"0\";s:14:\"cogs_deal_y113\";s:1:\"0\";s:18:\"view_foc_deal_y213\";s:1:\"0\";s:14:\"cogs_deal_y213\";s:1:\"0\";s:18:\"view_foc_deal_y313\";s:1:\"0\";s:14:\"cogs_deal_y313\";s:1:\"0\";s:18:\"view_foc_deal_y413\";s:1:\"0\";s:14:\"cogs_deal_y413\";s:1:\"0\";s:18:\"view_foc_deal_y513\";s:1:\"0\";s:14:\"cogs_deal_y513\";s:1:\"0\";s:10:\"sku_name14\";s:40:\"POWER1 RACING4T10W50,4X1.5L MK - 3430601\";s:10:\"sku_code14\";s:7:\"3430601\";s:16:\"sku_base_gross14\";s:3:\"533\";s:15:\"sku_base_cogs14\";s:6:\"245.99\";s:12:\"sku_volume14\";s:3:\"100\";s:12:\"foc_volume14\";s:0:\"\";s:17:\"sku_reb_per_ltr14\";s:2:\"50\";s:14:\"sku_gm_level14\";s:1:\"N\";s:18:\"view_foc_prv_ref14\";s:0:\"\";s:14:\"cogs_prv_ref14\";s:0:\"\";s:18:\"view_foc_deal_y114\";s:1:\"0\";s:14:\"cogs_deal_y114\";s:1:\"0\";s:18:\"view_foc_deal_y214\";s:1:\"0\";s:14:\"cogs_deal_y214\";s:1:\"0\";s:18:\"view_foc_deal_y314\";s:1:\"0\";s:14:\"cogs_deal_y314\";s:1:\"0\";s:18:\"view_foc_deal_y414\";s:1:\"0\";s:14:\"cogs_deal_y414\";s:1:\"0\";s:18:\"view_foc_deal_y514\";s:1:\"0\";s:14:\"cogs_deal_y514\";s:1:\"0\";s:10:\"sku_name15\";s:40:\"POWER1 ULTI 10W-40 4T 6X1HP MK - 3429531\";s:10:\"sku_code15\";s:7:\"3429531\";s:16:\"sku_base_gross15\";s:8:\"445.7203\";s:15:\"sku_base_cogs15\";s:6:\"172.06\";s:12:\"sku_volume15\";s:3:\"100\";s:12:\"foc_volume15\";s:0:\"\";s:17:\"sku_reb_per_ltr15\";s:2:\"60\";s:14:\"sku_gm_level15\";s:1:\"Y\";s:18:\"view_foc_prv_ref15\";s:0:\"\";s:14:\"cogs_prv_ref15\";s:0:\"\";s:18:\"view_foc_deal_y115\";s:1:\"0\";s:14:\"cogs_deal_y115\";s:1:\"0\";s:18:\"view_foc_deal_y215\";s:1:\"0\";s:14:\"cogs_deal_y215\";s:1:\"0\";s:18:\"view_foc_deal_y315\";s:1:\"0\";s:14:\"cogs_deal_y315\";s:1:\"0\";s:18:\"view_foc_deal_y415\";s:1:\"0\";s:14:\"cogs_deal_y415\";s:1:\"0\";s:18:\"view_foc_deal_y515\";s:1:\"0\";s:14:\"cogs_deal_y515\";s:1:\"0\";s:10:\"sku_name16\";s:40:\"POWER1 ULTI 10W-50 4T 6X1 HPMK - 3429533\";s:10:\"sku_code16\";s:7:\"3429533\";s:16:\"sku_base_gross16\";s:8:\"541.1186\";s:15:\"sku_base_cogs16\";s:5:\"190.7\";s:12:\"sku_volume16\";s:3:\"100\";s:12:\"foc_volume16\";s:0:\"\";s:17:\"sku_reb_per_ltr16\";s:2:\"60\";s:14:\"sku_gm_level16\";s:1:\"Y\";s:18:\"view_foc_prv_ref16\";s:0:\"\";s:14:\"cogs_prv_ref16\";s:0:\"\";s:18:\"view_foc_deal_y116\";s:1:\"0\";s:14:\"cogs_deal_y116\";s:1:\"0\";s:18:\"view_foc_deal_y216\";s:1:\"0\";s:14:\"cogs_deal_y216\";s:1:\"0\";s:18:\"view_foc_deal_y316\";s:1:\"0\";s:14:\"cogs_deal_y316\";s:1:\"0\";s:18:\"view_foc_deal_y416\";s:1:\"0\";s:14:\"cogs_deal_y416\";s:1:\"0\";s:18:\"view_foc_deal_y516\";s:1:\"0\";s:14:\"cogs_deal_y516\";s:1:\"0\";s:10:\"sku_name17\";s:39:\"POWER1 ULT SCTR 5W40 6X.8HPMK - 3429583\";s:10:\"sku_code17\";s:7:\"3429583\";s:16:\"sku_base_gross17\";s:7:\"444.822\";s:15:\"sku_base_cogs17\";s:6:\"165.03\";s:12:\"sku_volume17\";s:3:\"100\";s:12:\"foc_volume17\";s:0:\"\";s:17:\"sku_reb_per_ltr17\";s:2:\"60\";s:14:\"sku_gm_level17\";s:1:\"Y\";s:18:\"view_foc_prv_ref17\";s:0:\"\";s:14:\"cogs_prv_ref17\";s:0:\"\";s:18:\"view_foc_deal_y117\";s:1:\"0\";s:14:\"cogs_deal_y117\";s:1:\"0\";s:18:\"view_foc_deal_y217\";s:1:\"0\";s:14:\"cogs_deal_y217\";s:1:\"0\";s:18:\"view_foc_deal_y317\";s:1:\"0\";s:14:\"cogs_deal_y317\";s:1:\"0\";s:18:\"view_foc_deal_y417\";s:1:\"0\";s:14:\"cogs_deal_y417\";s:1:\"0\";s:18:\"view_foc_deal_y517\";s:1:\"0\";s:14:\"cogs_deal_y517\";s:1:\"0\";s:10:\"sku_name18\";s:40:\"POWER1 ULTI SB 15W-50 6X1HP MK - 3429588\";s:10:\"sku_code18\";s:7:\"3429588\";s:16:\"sku_base_gross18\";s:8:\"541.1186\";s:15:\"sku_base_cogs18\";s:6:\"182.07\";s:12:\"sku_volume18\";s:3:\"200\";s:12:\"foc_volume18\";s:0:\"\";s:17:\"sku_reb_per_ltr18\";s:2:\"60\";s:14:\"sku_gm_level18\";s:1:\"Y\";s:18:\"view_foc_prv_ref18\";s:0:\"\";s:14:\"cogs_prv_ref18\";s:0:\"\";s:18:\"view_foc_deal_y118\";s:1:\"0\";s:14:\"cogs_deal_y118\";s:1:\"0\";s:18:\"view_foc_deal_y218\";s:1:\"0\";s:14:\"cogs_deal_y218\";s:1:\"0\";s:18:\"view_foc_deal_y318\";s:1:\"0\";s:14:\"cogs_deal_y318\";s:1:\"0\";s:18:\"view_foc_deal_y418\";s:1:\"0\";s:14:\"cogs_deal_y418\";s:1:\"0\";s:18:\"view_foc_deal_y518\";s:1:\"0\";s:14:\"cogs_deal_y518\";s:1:\"0\";s:10:\"sku_name19\";s:40:\"POWER1 ULTI SB 20W50, 6X1HP7MK - 3429585\";s:10:\"sku_code19\";s:7:\"3429585\";s:16:\"sku_base_gross19\";s:8:\"541.1186\";s:15:\"sku_base_cogs19\";s:6:\"264.49\";s:12:\"sku_volume19\";s:3:\"200\";s:12:\"foc_volume19\";s:0:\"\";s:17:\"sku_reb_per_ltr19\";s:2:\"60\";s:14:\"sku_gm_level19\";s:1:\"Y\";s:18:\"view_foc_prv_ref19\";s:0:\"\";s:14:\"cogs_prv_ref19\";s:0:\"\";s:18:\"view_foc_deal_y119\";s:1:\"0\";s:14:\"cogs_deal_y119\";s:1:\"0\";s:18:\"view_foc_deal_y219\";s:1:\"0\";s:14:\"cogs_deal_y219\";s:1:\"0\";s:18:\"view_foc_deal_y319\";s:1:\"0\";s:14:\"cogs_deal_y319\";s:1:\"0\";s:18:\"view_foc_deal_y419\";s:1:\"0\";s:14:\"cogs_deal_y419\";s:1:\"0\";s:18:\"view_foc_deal_y519\";s:1:\"0\";s:14:\"cogs_deal_y519\";s:1:\"0\";s:10:\"sku_name20\";s:34:\"FORK OIL 20W 20X350ML PL - 3372873\";s:10:\"sku_code20\";s:7:\"3372873\";s:16:\"sku_base_gross20\";s:6:\"334.96\";s:15:\"sku_base_cogs20\";s:6:\"141.51\";s:12:\"sku_volume20\";s:3:\"100\";s:12:\"foc_volume20\";s:0:\"\";s:17:\"sku_reb_per_ltr20\";s:2:\"30\";s:14:\"sku_gm_level20\";s:1:\"N\";s:18:\"view_foc_prv_ref20\";s:0:\"\";s:14:\"cogs_prv_ref20\";s:0:\"\";s:18:\"view_foc_deal_y120\";s:1:\"0\";s:14:\"cogs_deal_y120\";s:1:\"0\";s:18:\"view_foc_deal_y220\";s:1:\"0\";s:14:\"cogs_deal_y220\";s:1:\"0\";s:18:\"view_foc_deal_y320\";s:1:\"0\";s:14:\"cogs_deal_y320\";s:1:\"0\";s:18:\"view_foc_deal_y420\";s:1:\"0\";s:14:\"cogs_deal_y420\";s:1:\"0\";s:18:\"view_foc_deal_y520\";s:1:\"0\";s:14:\"cogs_deal_y520\";s:1:\"0\";s:10:\"sku_name21\";s:34:\"GREASE AP 3, 120X.05K MK - 3420870\";s:10:\"sku_code21\";s:7:\"3420870\";s:16:\"sku_base_gross21\";s:8:\"423.4238\";s:15:\"sku_base_cogs21\";s:6:\"348.84\";s:12:\"sku_volume21\";s:3:\"100\";s:12:\"foc_volume21\";s:0:\"\";s:17:\"sku_reb_per_ltr21\";s:2:\"30\";s:14:\"sku_gm_level21\";s:1:\"N\";s:18:\"view_foc_prv_ref21\";s:0:\"\";s:14:\"cogs_prv_ref21\";s:0:\"\";s:18:\"view_foc_deal_y121\";s:1:\"0\";s:14:\"cogs_deal_y121\";s:1:\"0\";s:18:\"view_foc_deal_y221\";s:1:\"0\";s:14:\"cogs_deal_y221\";s:1:\"0\";s:18:\"view_foc_deal_y321\";s:1:\"0\";s:14:\"cogs_deal_y321\";s:1:\"0\";s:18:\"view_foc_deal_y421\";s:1:\"0\";s:14:\"cogs_deal_y421\";s:1:\"0\";s:18:\"view_foc_deal_y521\";s:1:\"0\";s:14:\"cogs_deal_y521\";s:1:\"0\";s:10:\"sku_name22\";s:39:\"BRAKE FLUID DOT 3 (C), 20X.5L - 3421202\";s:10:\"sku_code22\";s:7:\"3421202\";s:16:\"sku_base_gross22\";s:8:\"373.0255\";s:15:\"sku_base_cogs22\";s:6:\"226.01\";s:12:\"sku_volume22\";s:3:\"100\";s:12:\"foc_volume22\";s:0:\"\";s:17:\"sku_reb_per_ltr22\";s:2:\"30\";s:14:\"sku_gm_level22\";s:1:\"N\";s:18:\"view_foc_prv_ref22\";s:0:\"\";s:14:\"cogs_prv_ref22\";s:0:\"\";s:18:\"view_foc_deal_y122\";s:1:\"0\";s:14:\"cogs_deal_y122\";s:1:\"0\";s:18:\"view_foc_deal_y222\";s:1:\"0\";s:14:\"cogs_deal_y222\";s:1:\"0\";s:18:\"view_foc_deal_y322\";s:1:\"0\";s:14:\"cogs_deal_y322\";s:1:\"0\";s:18:\"view_foc_deal_y422\";s:1:\"0\";s:14:\"cogs_deal_y422\";s:1:\"0\";s:18:\"view_foc_deal_y522\";s:1:\"0\";s:14:\"cogs_deal_y522\";s:1:\"0\";s:10:\"tot_volume\";s:4:\"7200\";s:14:\"tot_foc_volume\";s:1:\"0\";s:15:\"cost_foc_volume\";s:1:\"0\";s:14:\"sku_lvl_rebate\";s:5:\"35.07\";s:13:\"reason_for_ar\";s:0:\"\";s:17:\"tot_db_commission\";N;}",
+      "customerLevelInputs": {
+        "target_incentive_total": "100000",
+        "target_incentive_rs_lts": "13.89",
+        "marketing_input_total": "",
+        "marketing_input_rs_lts": "",
+        "sign_on_bonus_total": "0",
+        "sign_on_bonus_rs_lts": "0",
+        "any_other_total": "0",
+        "any_otherrs_rs_lts": "0",
+        "Total_total": "100000",
+        "Total_rs_lts": "13.89",
+        "focus_brand_rs": "0",
+        "focus_brand_rs_per_ltr": "NaN",
+        "synthetic_counter": 0
+      },
+      "currentProposed": {
+        "previous_contract_exist": null,
+        "existing_remark": "",
+        "volume_kl_current": "",
+        "volume_kl_proposed": "7200",
+        "period_from_current": "",
+        "period_from_proposed": "01-07-2023",
+        "period_to_current": "",
+        "period_to_proposed": "30-06-2025",
+        "months_current": "",
+        "months_proposed": "24",
+        "kl_pm_current": 0,
+        "kl_pm_propsed": 300,
+        "synth_share_current": "",
+        "synth_share_proposed": 19.444444444444446,
+        "AR_SEOL_current": "",
+        "AR_SEOL_proposed": "0",
+        "marketing_current": "",
+        "marketing_proposed": "",
+        "others_current": "",
+        "others_proposed": "0",
+        "rs_l_investment_current": 0,
+        "rs_l_investment_proposed": 13.88888888888889,
+        "gmpl_current": "",
+        "gmpl_proposed": 120.84426805555556,
+        "target_incentive_current": "",
+        "target_incentive_proposed": "100000",
+        "sign_on_bonus_current": "",
+        "sign_on_bonus_proposed": "0",
+        "total_investment_current": "",
+        "total_investment_proposed": 100000,
+        "target_incentive_comment_vol": [
+          "1800",
+          "3600",
+          "5400",
+          "7200"
+        ],
+        "target_incentive_comment_amt": [
+          "25000",
+          "25000",
+          "25000",
+          "25000"
+        ],
+        "target_incentive_comment_month": [
+          "6",
+          "12",
+          "18",
+          "24"
+        ],
+        "any_other_comment": "",
+        "marketing_disbursement_options": "Y"
+      },
+      "previousSkus": [],
+      "skus": [
+        {
+          "skuCode": "3412701",
+          "skuName": "ACTIV 4T 10W-30, 20X.9L MK - 3412701",
+          "baseGross": 271.5851,
+          "baseCogs": 123.77,
+          "volume": 1100,
+          "rebatePerLtr": 35,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3414742",
+          "skuName": "ACTIV 4T 20W-40, 20X.9L MC MK - 3414742",
+          "baseGross": 262.128,
+          "baseCogs": 92.83,
+          "volume": 800,
+          "rebatePerLtr": 10,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3418623",
+          "skuName": "ACTIV 4T 20W-50, 10X1.2L P3 MK - 3418623",
+          "baseGross": 262.92,
+          "baseCogs": 102.98,
+          "volume": 600,
+          "rebatePerLtr": 35,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3425934",
+          "skuName": "ACTIV CRUISE 4T 15W50,4X2.5PMK - 3425934",
+          "baseGross": 288.1271,
+          "baseCogs": 138.36,
+          "volume": 600,
+          "rebatePerLtr": 35,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3429579",
+          "skuName": "ACTIV HONDA 10W-30 20X.8HP7 MK - 3429579",
+          "baseGross": 350.3305,
+          "baseCogs": 184.82,
+          "volume": 600,
+          "rebatePerLtr": 35,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3418554",
+          "skuName": "ACTIV SCOOTER 10W-30 4-AT, 10X - 3418554",
+          "baseGross": 239.5,
+          "baseCogs": 93.16,
+          "volume": 600,
+          "rebatePerLtr": 35,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3429702",
+          "skuName": "ACTIV ESSENTIAL 10W30,20X.9HMK - 3429702",
+          "baseGross": 230.67,
+          "baseCogs": 124.2,
+          "volume": 250,
+          "rebatePerLtr": 20,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3431292",
+          "skuName": "ACTIV ESSENTIAL 20W40,20X.9LMK - 3431292",
+          "baseGross": 234.9068,
+          "baseCogs": 129.44,
+          "volume": 250,
+          "rebatePerLtr": 20,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3422286",
+          "skuName": "ACTIV CRUISE 20W-50,10X1.2L MK - 3422286",
+          "baseGross": 335.6186,
+          "baseCogs": 105.27,
+          "volume": 600,
+          "rebatePerLtr": 35,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3429759",
+          "skuName": "POWER1 4T 10W-30, 10X.9L H MK - 3429759",
+          "baseGross": 409.4068,
+          "baseCogs": 150.9,
+          "volume": 100,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3420024",
+          "skuName": "POWER1 4T 10W-40, 10X1L MK - 3420024",
+          "baseGross": 359.3475,
+          "baseCogs": 143.55,
+          "volume": 100,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429753",
+          "skuName": "POWER1 4T 15W-40, 10X1L H MK - 3429753",
+          "baseGross": 418.2627,
+          "baseCogs": 150.53,
+          "volume": 200,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3424534",
+          "skuName": "POWER1 CRUISE 4T 15W-50,4X2.5H - 3424534",
+          "baseGross": 351.8559,
+          "baseCogs": 136.66,
+          "volume": 100,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429740",
+          "skuName": "POWER1 CRUISE4 20W50,10X1 H MK - 3429740",
+          "baseGross": 405.5339,
+          "baseCogs": 157.11,
+          "volume": 200,
+          "rebatePerLtr": 50,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3430601",
+          "skuName": "POWER1 RACING4T10W50,4X1.5L MK - 3430601",
+          "baseGross": 533,
+          "baseCogs": 245.99,
+          "volume": 100,
+          "rebatePerLtr": 50,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3429531",
+          "skuName": "POWER1 ULTI 10W-40 4T 6X1HP MK - 3429531",
+          "baseGross": 445.7203,
+          "baseCogs": 172.06,
+          "volume": 100,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429533",
+          "skuName": "POWER1 ULTI 10W-50 4T 6X1 HPMK - 3429533",
+          "baseGross": 541.1186,
+          "baseCogs": 190.7,
+          "volume": 100,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429583",
+          "skuName": "POWER1 ULT SCTR 5W40 6X.8HPMK - 3429583",
+          "baseGross": 444.822,
+          "baseCogs": 165.03,
+          "volume": 100,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429588",
+          "skuName": "POWER1 ULTI SB 15W-50 6X1HP MK - 3429588",
+          "baseGross": 541.1186,
+          "baseCogs": 182.07,
+          "volume": 200,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3429585",
+          "skuName": "POWER1 ULTI SB 20W50, 6X1HP7MK - 3429585",
+          "baseGross": 541.1186,
+          "baseCogs": 264.49,
+          "volume": 200,
+          "rebatePerLtr": 60,
+          "gmLevel": "Y"
+        },
+        {
+          "skuCode": "3372873",
+          "skuName": "FORK OIL 20W 20X350ML PL - 3372873",
+          "baseGross": 334.96,
+          "baseCogs": 141.51,
+          "volume": 100,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3420870",
+          "skuName": "GREASE AP 3, 120X.05K MK - 3420870",
+          "baseGross": 423.4238,
+          "baseCogs": 348.84,
+          "volume": 100,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        },
+        {
+          "skuCode": "3421202",
+          "skuName": "BRAKE FLUID DOT 3 (C), 20X.5L - 3421202",
+          "baseGross": 373.0255,
+          "baseCogs": 226.01,
+          "volume": 100,
+          "rebatePerLtr": 30,
+          "gmLevel": "N"
+        }
+      ],
+      "offerId": 12176,
+      "offerCode": "BIKEPOINTS-01138172-12176",
+      "offerType": "WBC",
+      "offerStatus": "P",
+      "startDate": "2023-06-30",
+      "endDate": "2025-06-29",
+      "contractTenure": "24",
+      "contractVolume": 7200,
+      "volumeCommitment": 7200,
+      "previousCommitment": 7200,
+      "previousActual": 0,
+      "previousInvestment": 100000,
+      "investmentRate": 13.89,
+      "gmpl": 120.84426805555556,
+      "gmplDofa": "",
+      "totalCustLvlInput": 0,
+      "totalNetPrice": 0,
+      "executiveCode": "01174821",
+      "createdDate": "2023-06-30",
+      "latestUpdatedDate": "2023-06-30",
+      "executiveName": "Akshiv Avikshit",
+      "executive_name": "Akshiv Avikshit",
+      "bp_sales_rep_text": "Akshiv Avikshit",
+      "state": "EMH",
+      "cust_state": "EMH",
+      "customerName": "BIKE POINT NEW BALAJI AUTOMOBILES",
+      "customer_name_text": "BIKE POINT NEW BALAJI AUTOMOBILES",
+      "volPerMonth": 300,
+      "volumePM": 300
+    },
+    {
+      "offer_id": 15815,
+      "offer_code": "HD-01110022-15815",
+      "stream": "HD",
+      "executive_code": "1122942",
+      "start_date": "2021-08-31",
+      "end_date": "2021-10-30",
+      "contract_tenure": "2",
+      "tot_volume_commitment": "4820",
+      "offer_status": "D",
+      "total_gross_margin": "24.84",
+      "gmpl_dofa": "GM",
+      "remark": "Price increase taken is in range of Rs. 15 - 25 / ltr in 2 phases.  Ist was in April and second one  was implemented in the month of June. In this ODT we have implemented further Rs 10 avg increase in a lot of grades which make the overall PI from this customer to Rs 30.  Please approve the ODT till Oct and we are not able to get further increase from them now.",
+      "proposal_id": "",
+      "customer_level_input_text": "a:5:{s:16:\"target_incentive\";s:1:\"0\";s:9:\"target_rs\";a:1:{i:0;s:0:\"\";}s:10:\"target_ltr\";a:1:{i:0;s:0:\"\";}s:9:\"csa_exist\";s:0:\"\";s:7:\"csa_val\";s:1:\"4\";}",
+      "current_proposed_text": "a:2:{s:16:\"existing_details\";a:6:{s:6:\"volume\";s:8:\"5,788.00\";s:4:\"from\";s:10:\"06/01/2021\";s:2:\"to\";s:10:\"07/31/2021\";s:22:\"total_cust_level_input\";s:4:\"0.00\";s:6:\"nsv_pl\";s:3:\"136\";s:4:\"gmpl\";s:5:\"24.82\";}s:14:\"actual_details\";a:6:{s:6:\"volume\";s:7:\"2730.00\";s:4:\"from\";s:10:\"2021-06-01\";s:2:\"to\";s:10:\"2021-07-31\";s:22:\"total_cust_level_input\";s:4:\"0.00\";s:6:\"nsv_pl\";s:6:\"136.00\";s:4:\"gmpl\";s:5:\"24.82\";}}",
+      "previous_sku_details": "",
+      "sku_text": "a:25:{i:0;a:1:{s:8:\"sku_code\";a:16:{i:0;s:7:\"3347322\";i:1;s:7:\"3363996\";i:2;s:7:\"3363998\";i:3;s:7:\"3378123\";i:4;s:7:\"3379985\";i:5;s:7:\"3379990\";i:6;s:7:\"3387605\";i:7;s:7:\"3391967\";i:8;s:7:\"3394254\";i:9;s:7:\"3416794\";i:10;s:7:\"3417839\";i:11;s:7:\"3417935\";i:12;s:7:\"3411966\";i:13;s:7:\"3413096\";i:14;s:7:\"3417814\";i:15;s:7:\"3418177\";}}i:1;a:1:{s:8:\"sku_name\";a:16:{i:0;s:35:\"RX SAE 10W-210 - 210 L/Kg (3347322)\";i:1;s:30:\"HYSPIN VG 68 210L PL (3363996)\";i:2;s:30:\"HYSPIN VG 46 210L PL (3363998)\";i:3;s:55:\"CASTROL RX SUPER MAX 15W-40-210LTM - 210 L/Kg (3378123)\";i:4;s:41:\"HYSPIN AWH 68 SC-210 - 210 L/Kg (3379985)\";i:5;s:38:\"HYSPIN AWH 46 SUPER CLN 210L (3379990)\";i:6;s:51:\"VECTON 15W40 CI-4 PLUS/E7 210L - 210 L/Kg (3387605)\";i:7;s:37:\"BALL BEAR GRS EPL 1  180N MK(3391967)\";i:8;s:40:\"TRIBOL GR 3020/1000-00 PD  18K (3394254)\";i:9;s:34:\"CRB PRIMA 20W-40, 20L MK (3416794)\";i:10;s:37:\"CRB TURBOMAX 15W40 CI4+ 210L(3417839)\";i:11;s:36:\"TRANSMAX MANUAL 90, 210L MK(3417935)\";i:12;s:36:\"CRB PLUS 20W-40, 210L N MK (3411966)\";i:13;s:23:\"RX 10, 20L MK (3413096)\";i:14;s:37:\"CRB TURBOMAX 15W40 CH4 210L (3417814)\";i:15;s:37:\"TRANSMAX ATF DEX/MERC, 210L (3418177)\";}}i:2;a:1:{s:21:\"previous_contract_vol\";a:16:{i:0;s:4:\"1800\";i:1;s:3:\"210\";i:2;s:3:\"210\";i:3;s:4:\"1800\";i:4;s:3:\"210\";i:5;s:3:\"210\";i:6;s:3:\"210\";i:7;s:3:\"180\";i:8;s:2:\"18\";i:9;s:3:\"100\";i:10;s:3:\"630\";i:11;s:3:\"210\";i:12;s:0:\"\";i:13;s:0:\"\";i:14;s:0:\"\";i:15;s:0:\"\";}}i:3;a:1:{s:13:\"previous_disc\";a:16:{i:0;s:5:\"84.76\";i:1;s:5:\"73.32\";i:2;s:5:\"78.32\";i:3;s:5:\"67.00\";i:4;s:6:\"113.60\";i:5;s:6:\"114.26\";i:6;s:5:\"84.43\";i:7;s:6:\"138.93\";i:8;s:6:\"791.00\";i:9;s:5:\"67.28\";i:10;s:5:\"68.92\";i:11;s:5:\"70.98\";i:12;s:0:\"\";i:13;s:0:\"\";i:14;s:0:\"\";i:15;s:0:\"\";}}i:4;a:1:{s:20:\"previous_offer_price\";a:16:{i:0;s:3:\"158\";i:1;s:3:\"135\";i:2;s:3:\"130\";i:3;s:3:\"145\";i:4;s:3:\"148\";i:5;s:3:\"140\";i:6;s:3:\"162\";i:7;s:3:\"187\";i:8;s:3:\"830\";i:9;s:3:\"135\";i:10;s:3:\"158\";i:11;s:3:\"150\";i:12;s:0:\"\";i:13;s:0:\"\";i:14;s:0:\"\";i:15;s:0:\"\";}}i:5;a:1:{s:19:\"previous_actual_vol\";a:16:{i:0;s:2:\"NA\";i:1;s:2:\"NA\";i:2;s:2:\"NA\";i:3;s:2:\"NA\";i:4;s:6:\"420.00\";i:5;s:7:\"1470.00\";i:6;s:6:\"840.00\";i:7;s:2:\"NA\";i:8;s:2:\"NA\";i:9;s:2:\"NA\";i:10;s:2:\"NA\";i:11;s:2:\"NA\";i:12;s:0:\"\";i:13;s:0:\"\";i:14;s:0:\"\";i:15;s:0:\"\";}}i:6;a:1:{s:10:\"list_price\";a:16:{i:0;s:16:\"242.763101694915\";i:1;s:6:\"208.32\";i:2;s:6:\"208.32\";i:3;s:16:\"212.004711864407\";i:4;s:5:\"261.6\";i:5;s:6:\"254.26\";i:6;s:16:\"246.432779661017\";i:7;s:6:\"325.93\";i:8;s:4:\"1621\";i:9;s:16:\"202.280305084746\";i:10;s:8:\"226.9215\";i:11;s:16:\"220.979974576271\";i:12;s:15:\"237.80536440678\";i:13;s:16:\"249.927889830508\";i:14;s:16:\"208.048627118644\";i:15;s:6:\"226.85\";}}i:7;a:1:{s:22:\"last_price_change_date\";a:16:{i:0;s:11:\"01-05-2021\t\";i:1;s:11:\"01-08-2021\t\";i:2;s:11:\"01-08-2021\t\";i:3;s:11:\"01-06-2021\t\";i:4;s:11:\"01-11-2017\t\";i:5;s:11:\"01-02-2019\t\";i:6;s:11:\"01-01-2019\t\";i:7;s:11:\"01-07-2021\t\";i:8;s:11:\"27-04-2018\t\";i:9;s:36:\"No Price increase in past 12 months\t\";i:10;s:11:\"01-08-2021\t\";i:11;s:11:\"01-08-2021\t\";i:12;s:0:\"\";i:13;s:0:\"\";i:14;s:0:\"\";i:15;s:0:\"\";}}i:8;a:1:{s:12:\"contract_vol\";a:16:{i:0;s:4:\"1000\";i:1;s:3:\"210\";i:2;s:3:\"210\";i:3;s:4:\"1000\";i:4;s:3:\"210\";i:5;s:3:\"210\";i:6;s:3:\"210\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:3:\"100\";i:10;s:3:\"630\";i:11;s:3:\"210\";i:12;s:3:\"210\";i:13;s:3:\"200\";i:14;s:3:\"210\";i:15;s:3:\"210\";}}i:9;a:1:{s:10:\"sku_rebate\";a:16:{i:0;s:5:\"80.76\";i:1;s:5:\"69.32\";i:2;s:5:\"75.32\";i:3;s:5:\"57.00\";i:4;s:6:\"111.60\";i:5;s:6:\"110.26\";i:6;s:5:\"78.43\";i:7;s:6:\"134.93\";i:8;s:6:\"776.00\";i:9;s:5:\"62.28\";i:10;s:5:\"56.92\";i:11;s:5:\"45.98\";i:12;s:5:\"80.81\";i:13;s:5:\"99.93\";i:14;s:5:\"58.05\";i:15;s:5:\"69.85\";}}i:10;a:1:{s:9:\"net_price\";a:16:{i:0;s:3:\"162\";i:1;s:3:\"139\";i:2;s:3:\"133\";i:3;s:3:\"155\";i:4;s:3:\"150\";i:5;s:3:\"144\";i:6;s:3:\"168\";i:7;s:3:\"191\";i:8;s:3:\"845\";i:9;s:3:\"140\";i:10;s:3:\"170\";i:11;s:3:\"175\";i:12;s:3:\"157\";i:13;s:3:\"150\";i:14;s:3:\"150\";i:15;s:3:\"157\";}}i:11;a:1:{s:14:\"foc_percentage\";a:16:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";i:6;s:1:\"0\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:1:\"0\";i:10;s:1:\"0\";i:11;s:1:\"0\";i:12;s:1:\"0\";i:13;s:1:\"0\";i:14;s:1:\"0\";i:15;s:1:\"0\";}}i:12;a:1:{s:9:\"foc_value\";a:16:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";i:6;s:1:\"0\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:1:\"0\";i:10;s:1:\"0\";i:11;s:1:\"0\";i:12;s:1:\"0\";i:13;s:1:\"0\";i:14;s:1:\"0\";i:15;s:1:\"0\";}}i:13;a:1:{s:21:\"cust_lvl_input_rs_ltr\";a:16:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";i:6;s:1:\"0\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:1:\"0\";i:10;s:1:\"0\";i:11;s:1:\"0\";i:12;s:1:\"0\";i:13;s:1:\"0\";i:14;s:1:\"0\";i:15;s:1:\"0\";}}i:14;a:1:{s:9:\"db_margin\";a:16:{i:0;s:5:\"17.59\";i:1;s:5:\"15.67\";i:2;s:5:\"15.67\";i:3;s:5:\"15.87\";i:4;s:5:\"18.65\";i:5;s:5:\"18.24\";i:6;s:5:\"17.80\";i:7;s:5:\"22.25\";i:8;s:5:\"94.78\";i:9;s:5:\"15.33\";i:10;s:5:\"16.71\";i:11;s:5:\"16.37\";i:12;s:5:\"17.32\";i:13;s:5:\"18.00\";i:14;s:5:\"15.65\";i:15;s:5:\"16.70\";}}i:15;a:1:{s:4:\"cogs\";a:16:{i:0;s:17:\"115.3010201171378\";i:1;s:17:\"111.0423370786517\";i:2;s:17:\"102.7482996031746\";i:3;s:6:\"102.01\";i:4;s:6:\"118.76\";i:5;s:6:\"106.42\";i:6;s:6:\"133.66\";i:7;s:17:\"169.6300337301587\";i:8;s:5:\"424.8\";i:9;s:6:\"102.29\";i:10;s:6:\"123.62\";i:11;s:17:\"141.2950127551021\";i:12;s:17:\"125.8812731829574\";i:13;s:17:\"117.0395902439024\";i:14;s:17:\"118.0007825159915\";i:15;s:6:\"122.36\";}}i:16;a:1:{s:4:\"gmpl\";a:16:{i:0;s:5:\"29.11\";i:1;s:5:\"12.29\";i:2;s:5:\"14.58\";i:3;s:5:\"37.12\";i:4;s:5:\"12.59\";i:5;s:5:\"19.34\";i:6;s:5:\"16.54\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:5:\"22.38\";i:10;s:5:\"29.67\";i:11;s:5:\"17.33\";i:12;s:5:\"13.79\";i:13;s:5:\"14.96\";i:14;s:5:\"16.35\";i:15;s:5:\"17.94\";}}i:17;a:1:{s:8:\"gmplPool\";a:16:{i:0;s:8:\"29112.08\";i:1;s:7:\"2580.41\";i:2;s:7:\"3062.16\";i:3;s:8:\"37124.71\";i:4;s:7:\"2643.90\";i:5;s:7:\"4061.40\";i:6;s:7:\"3473.98\";i:7;s:4:\"0.00\";i:8;s:4:\"0.00\";i:9;s:7:\"2238.03\";i:10;s:8:\"18693.05\";i:11;s:7:\"3640.34\";i:12;s:7:\"2896.76\";i:13;s:7:\"2991.66\";i:14;s:7:\"3433.05\";i:15;s:7:\"3767.40\";}}i:18;a:1:{s:13:\"your_discount\";a:16:{i:0;s:5:\"33.27\";i:1;s:5:\"33.28\";i:2;s:5:\"36.16\";i:3;s:5:\"26.89\";i:4;s:5:\"42.66\";i:5;s:5:\"43.37\";i:6;s:5:\"31.83\";i:7;s:5:\"41.40\";i:8;s:5:\"47.87\";i:9;s:5:\"30.79\";i:10;s:5:\"25.08\";i:11;s:5:\"20.81\";i:12;s:5:\"33.98\";i:13;s:5:\"39.98\";i:14;s:5:\"27.90\";i:15;s:5:\"30.79\";}}i:19;a:1:{s:14:\"net_hard_floor\";a:16:{i:0;s:3:\"112\";i:1;s:2:\"85\";i:2;s:2:\"85\";i:3;s:3:\"100\";i:4;s:3:\"108\";i:5;s:2:\"99\";i:6;s:3:\"123\";i:7;s:3:\"132\";i:8;s:8:\"432.6194\";i:9;s:6:\"130.89\";i:10;s:3:\"125\";i:11;s:3:\"102\";i:12;s:3:\"104\";i:13;s:6:\"144.63\";i:14;s:3:\"103\";i:15;s:3:\"121\";}}i:20;a:1:{s:10:\"nhf_status\";a:16:{i:0;s:13:\"No NHF Breach\";i:1;s:13:\"No NHF Breach\";i:2;s:13:\"No NHF Breach\";i:3;s:13:\"No NHF Breach\";i:4;s:13:\"No NHF Breach\";i:5;s:13:\"No NHF Breach\";i:6;s:13:\"No NHF Breach\";i:7;s:13:\"No NHF Breach\";i:8;s:13:\"No NHF Breach\";i:9;s:13:\"No NHF Breach\";i:10;s:13:\"No NHF Breach\";i:11;s:13:\"No NHF Breach\";i:12;s:13:\"No NHF Breach\";i:13;s:13:\"No NHF Breach\";i:14;s:13:\"No NHF Breach\";i:15;s:13:\"No NHF Breach\";}}i:21;a:1:{s:6:\"reason\";a:16:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";i:4;s:0:\"\";i:5;s:0:\"\";i:6;s:0:\"\";i:7;s:0:\"\";i:8;s:0:\"\";i:9;s:0:\"\";i:10;s:0:\"\";i:11;s:0:\"\";i:12;s:0:\"\";i:13;s:0:\"\";i:14;s:0:\"\";i:15;s:0:\"\";}}i:22;a:1:{s:9:\"flagOffer\";a:16:{i:0;s:1:\"O\";i:1;s:1:\"O\";i:2;s:1:\"O\";i:3;s:1:\"O\";i:4;s:1:\"O\";i:5;s:1:\"O\";i:6;s:1:\"O\";i:7;s:1:\"O\";i:8;s:1:\"O\";i:9;s:1:\"O\";i:10;s:1:\"O\";i:11;s:1:\"O\";i:12;s:1:\"N\";i:13;s:1:\"N\";i:14;s:1:\"N\";i:15;s:1:\"N\";}}i:23;a:1:{s:18:\"lowest_offer_price\";a:16:{i:0;s:6:\"143.00\";i:1;s:3:\"135\";i:2;s:3:\"130\";i:3;s:3:\"143\";i:4;s:6:\"125.00\";i:5;s:3:\"122\";i:6;s:3:\"144\";i:7;s:6:\"167.00\";i:8;s:3:\"802\";i:9;s:3:\"135\";i:10;s:6:\"135.00\";i:11;s:6:\"120.00\";i:12;s:0:\"\";i:13;s:0:\"\";i:14;s:0:\"\";i:15;s:0:\"\";}}i:24;a:1:{s:27:\"previous_actual_vol_monthly\";N;}}",
+      "customerLevelInputs": {
+        "target_incentive": "0",
+        "target_rs": [
+          ""
+        ],
+        "target_ltr": [
+          ""
+        ],
+        "csa_exist": "",
+        "csa_val": "4"
+      },
+      "currentProposed": {
+        "existing_details": {
+          "volume": "5,788.00",
+          "from": "06/01/2021",
+          "to": "07/31/2021",
+          "total_cust_level_input": "0.00",
+          "nsv_pl": "136",
+          "gmpl": "24.82"
+        },
+        "actual_details": {
+          "volume": "2730.00",
+          "from": "2021-06-01",
+          "to": "2021-07-31",
+          "total_cust_level_input": "0.00",
+          "nsv_pl": "136.00",
+          "gmpl": "24.82"
+        }
+      },
+      "previousSkus": [],
+      "skus": [
+        {
+          "sku_code": [
+            "3347322",
+            "3363996",
+            "3363998",
+            "3378123",
+            "3379985",
+            "3379990",
+            "3387605",
+            "3391967",
+            "3394254",
+            "3416794",
+            "3417839",
+            "3417935",
+            "3411966",
+            "3413096",
+            "3417814",
+            "3418177"
+          ]
+        },
+        {
+          "sku_name": [
+            "RX SAE 10W-210 - 210 L/Kg (3347322)",
+            "HYSPIN VG 68 210L PL (3363996)",
+            "HYSPIN VG 46 210L PL (3363998)",
+            "CASTROL RX SUPER MAX 15W-40-210LTM - 210 L/Kg (3378123)",
+            "HYSPIN AWH 68 SC-210 - 210 L/Kg (3379985)",
+            "HYSPIN AWH 46 SUPER CLN 210L (3379990)",
+            "VECTON 15W40 CI-4 PLUS/E7 210L - 210 L/Kg (3387605)",
+            "BALL BEAR GRS EPL 1  180N MK(3391967)",
+            "TRIBOL GR 3020/1000-00 PD  18K (3394254)",
+            "CRB PRIMA 20W-40, 20L MK (3416794)",
+            "CRB TURBOMAX 15W40 CI4+ 210L(3417839)",
+            "TRANSMAX MANUAL 90, 210L MK(3417935)",
+            "CRB PLUS 20W-40, 210L N MK (3411966)",
+            "RX 10, 20L MK (3413096)",
+            "CRB TURBOMAX 15W40 CH4 210L (3417814)",
+            "TRANSMAX ATF DEX/MERC, 210L (3418177)"
+          ]
+        },
+        {
+          "previous_contract_vol": [
+            "1800",
+            "210",
+            "210",
+            "1800",
+            "210",
+            "210",
+            "210",
+            "180",
+            "18",
+            "100",
+            "630",
+            "210",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "previous_disc": [
+            "84.76",
+            "73.32",
+            "78.32",
+            "67.00",
+            "113.60",
+            "114.26",
+            "84.43",
+            "138.93",
+            "791.00",
+            "67.28",
+            "68.92",
+            "70.98",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "previous_offer_price": [
+            "158",
+            "135",
+            "130",
+            "145",
+            "148",
+            "140",
+            "162",
+            "187",
+            "830",
+            "135",
+            "158",
+            "150",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "previous_actual_vol": [
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "420.00",
+            "1470.00",
+            "840.00",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "list_price": [
+            "242.763101694915",
+            "208.32",
+            "208.32",
+            "212.004711864407",
+            "261.6",
+            "254.26",
+            "246.432779661017",
+            "325.93",
+            "1621",
+            "202.280305084746",
+            "226.9215",
+            "220.979974576271",
+            "237.80536440678",
+            "249.927889830508",
+            "208.048627118644",
+            "226.85"
+          ]
+        },
+        {
+          "last_price_change_date": [
+            "01-05-2021\t",
+            "01-08-2021\t",
+            "01-08-2021\t",
+            "01-06-2021\t",
+            "01-11-2017\t",
+            "01-02-2019\t",
+            "01-01-2019\t",
+            "01-07-2021\t",
+            "27-04-2018\t",
+            "No Price increase in past 12 months\t",
+            "01-08-2021\t",
+            "01-08-2021\t",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "contract_vol": [
+            "1000",
+            "210",
+            "210",
+            "1000",
+            "210",
+            "210",
+            "210",
+            "0",
+            "0",
+            "100",
+            "630",
+            "210",
+            "210",
+            "200",
+            "210",
+            "210"
+          ]
+        },
+        {
+          "sku_rebate": [
+            "80.76",
+            "69.32",
+            "75.32",
+            "57.00",
+            "111.60",
+            "110.26",
+            "78.43",
+            "134.93",
+            "776.00",
+            "62.28",
+            "56.92",
+            "45.98",
+            "80.81",
+            "99.93",
+            "58.05",
+            "69.85"
+          ]
+        },
+        {
+          "net_price": [
+            "162",
+            "139",
+            "133",
+            "155",
+            "150",
+            "144",
+            "168",
+            "191",
+            "845",
+            "140",
+            "170",
+            "175",
+            "157",
+            "150",
+            "150",
+            "157"
+          ]
+        },
+        {
+          "foc_percentage": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "foc_value": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "cust_lvl_input_rs_ltr": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "db_margin": [
+            "17.59",
+            "15.67",
+            "15.67",
+            "15.87",
+            "18.65",
+            "18.24",
+            "17.80",
+            "22.25",
+            "94.78",
+            "15.33",
+            "16.71",
+            "16.37",
+            "17.32",
+            "18.00",
+            "15.65",
+            "16.70"
+          ]
+        },
+        {
+          "cogs": [
+            "115.3010201171378",
+            "111.0423370786517",
+            "102.7482996031746",
+            "102.01",
+            "118.76",
+            "106.42",
+            "133.66",
+            "169.6300337301587",
+            "424.8",
+            "102.29",
+            "123.62",
+            "141.2950127551021",
+            "125.8812731829574",
+            "117.0395902439024",
+            "118.0007825159915",
+            "122.36"
+          ]
+        },
+        {
+          "gmpl": [
+            "29.11",
+            "12.29",
+            "14.58",
+            "37.12",
+            "12.59",
+            "19.34",
+            "16.54",
+            "0",
+            "0",
+            "22.38",
+            "29.67",
+            "17.33",
+            "13.79",
+            "14.96",
+            "16.35",
+            "17.94"
+          ]
+        },
+        {
+          "gmplPool": [
+            "29112.08",
+            "2580.41",
+            "3062.16",
+            "37124.71",
+            "2643.90",
+            "4061.40",
+            "3473.98",
+            "0.00",
+            "0.00",
+            "2238.03",
+            "18693.05",
+            "3640.34",
+            "2896.76",
+            "2991.66",
+            "3433.05",
+            "3767.40"
+          ]
+        },
+        {
+          "your_discount": [
+            "33.27",
+            "33.28",
+            "36.16",
+            "26.89",
+            "42.66",
+            "43.37",
+            "31.83",
+            "41.40",
+            "47.87",
+            "30.79",
+            "25.08",
+            "20.81",
+            "33.98",
+            "39.98",
+            "27.90",
+            "30.79"
+          ]
+        },
+        {
+          "net_hard_floor": [
+            "112",
+            "85",
+            "85",
+            "100",
+            "108",
+            "99",
+            "123",
+            "132",
+            "432.6194",
+            "130.89",
+            "125",
+            "102",
+            "104",
+            "144.63",
+            "103",
+            "121"
+          ]
+        },
+        {
+          "nhf_status": [
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach"
+          ]
+        },
+        {
+          "reason": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "flagOffer": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "N",
+            "N",
+            "N",
+            "N"
+          ]
+        },
+        {
+          "lowest_offer_price": [
+            "143.00",
+            "135",
+            "130",
+            "143",
+            "125.00",
+            "122",
+            "144",
+            "167.00",
+            "802",
+            "135",
+            "135.00",
+            "120.00",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "previous_actual_vol_monthly": null
+        }
+      ],
+      "offerId": 15815,
+      "offerCode": "HD-01110022-15815",
+      "offerType": "HD",
+      "offerStatus": "D",
+      "startDate": "2021-08-31",
+      "endDate": "2021-10-30",
+      "contractTenure": "2",
+      "contractVolume": 4820,
+      "volumeCommitment": 4820,
+      "previousCommitment": 4820,
+      "previousActual": 0,
+      "previousInvestment": 0,
+      "investmentRate": 0,
+      "gmpl": 0,
+      "gmplDofa": "GM",
+      "totalCustLvlInput": 0,
+      "totalNetPrice": 140,
+      "executiveCode": "1122942",
+      "createdDate": "2021-08-31",
+      "latestUpdatedDate": "2021-09-09",
+      "executiveName": "Akshiv Avikshit",
+      "executive_name": "Akshiv Avikshit",
+      "bp_sales_rep_text": "Akshiv Avikshit",
+      "state": "EMH",
+      "cust_state": "EMH",
+      "customerName": "  BIKE POINT NEW BALAJI AUTOMOBILES",
+      "customer_name_text": "  BIKE POINT NEW BALAJI AUTOMOBILES",
+      "volPerMonth": 2410,
+      "volumePM": 2410
+    },
+    {
+      "offer_id": 15815,
+      "offer_code": "ILS-TBD-Ludhiana-DR-15815",
+      "stream": "ILS",
+      "executive_code": "1154548",
+      "start_date": "2020-06-30",
+      "end_date": "2020-09-29",
+      "contract_tenure": "3",
+      "tot_volume_commitment": "5480",
+      "offer_status": "P",
+      "total_gross_margin": "43.43",
+      "gmpl_dofa": "RM",
+      "remark": "Request approval for Rockman Industries",
+      "proposal_id": "",
+      "customer_level_input_text": "a:5:{s:16:\"target_incentive\";s:1:\"0\";s:9:\"target_rs\";a:1:{i:0;s:0:\"\";}s:10:\"target_ltr\";a:1:{i:0;s:0:\"\";}s:9:\"csa_exist\";s:1:\"N\";s:7:\"csa_val\";s:1:\"0\";}",
+      "current_proposed_text": "a:2:{s:16:\"existing_details\";a:6:{s:6:\"volume\";s:4:\"5480\";s:4:\"from\";s:10:\"2020-03-31\";s:2:\"to\";s:10:\"2020-06-30\";s:22:\"total_cust_level_input\";s:1:\"0\";s:6:\"nsv_pl\";s:1:\"0\";s:4:\"gmpl\";s:5:\"43.43\";}s:14:\"actual_details\";a:6:{s:6:\"volume\";s:1:\"0\";s:4:\"from\";s:10:\"2020-03-31\";s:2:\"to\";s:10:\"2020-06-30\";s:22:\"total_cust_level_input\";s:4:\"0.00\";s:6:\"nsv_pl\";s:6:\"145.00\";s:4:\"gmpl\";s:5:\"43.00\";}}",
+      "previous_sku_details": "",
+      "sku_text": "a:25:{i:0;a:1:{s:8:\"sku_code\";a:17:{i:0;s:7:\"3347017\";i:1;s:7:\"3347747\";i:2;s:7:\"3348397\";i:3;s:7:\"3363996\";i:4;s:7:\"3363997\";i:5;s:7:\"3379346\";i:6;s:7:\"3379348\";i:7;s:7:\"3383112\";i:8;s:7:\"3384226\";i:9;s:7:\"3391096\";i:10;s:7:\"3391097\";i:11;s:7:\"3396008\";i:12;s:7:\"3398024\";i:13;s:7:\"3398025\";i:14;s:7:\"3409812\";i:15;s:7:\"3411965\";i:16;s:7:\"3833758\";}}i:1;a:1:{s:8:\"sku_name\";a:17:{i:0;s:16:\"ILOCUT 1945 210L\";i:1;s:19:\"ILOFORM TDN 81 210L\";i:2;s:21:\"ILOFORM TDN 81 N 210L\";i:3;s:20:\"HYSPIN VG 68 210L PL\";i:4;s:20:\"HYSPIN VG 32 210L PL\";i:5;s:19:\"RUSTILO DW 902 195L\";i:6;s:20:\"RUSTILO DW 950  195L\";i:7;s:20:\"ILOFORM 168 IN  210L\";i:8;s:22:\"HYSPIN AWS 100 SC 210L\";i:9;s:26:\"RUSTILO DWX 32 IN, 195L MK\";i:10;s:25:\"RUSTILO DWX 32 IN, 20L MK\";i:11;s:30:\"UNINHIBITED TRANSF OIL,210L MK\";i:12;s:21:\"ALMAREDGE BI, 210L MK\";i:13;s:20:\"ALMAREDGE BI, 20L MK\";i:14;s:24:\"PERFECTO HT 5 D, 210L MK\";i:15;s:25:\"CRB PLUS 20W-40, 20L D MK\";i:16;s:20:\"ALPHA SMR NB 210L ME\";}}i:2;a:1:{s:21:\"previous_contract_vol\";a:17:{i:0;s:3:\"210\";i:1;s:3:\"210\";i:2;s:3:\"210\";i:3;s:3:\"420\";i:4;s:3:\"210\";i:5;s:3:\"195\";i:6;s:3:\"195\";i:7;s:4:\"1680\";i:8;s:2:\"10\";i:9;s:3:\"390\";i:10;s:2:\"20\";i:11;s:3:\"420\";i:12;s:4:\"1050\";i:13;s:2:\"20\";i:14;s:3:\"210\";i:15;s:2:\"20\";i:16;s:2:\"10\";}}i:3;a:1:{s:13:\"previous_disc\";a:17:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";i:6;s:1:\"0\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:1:\"0\";i:10;s:1:\"0\";i:11;s:1:\"0\";i:12;s:1:\"0\";i:13;s:1:\"0\";i:14;s:1:\"0\";i:15;s:1:\"0\";i:16;s:1:\"0\";}}i:4;a:1:{s:20:\"previous_offer_price\";a:17:{i:0;s:3:\"137\";i:1;s:3:\"201\";i:2;s:3:\"201\";i:3;s:2:\"93\";i:4;s:2:\"93\";i:5;s:3:\"158\";i:6;s:3:\"134\";i:7;s:3:\"134\";i:8;s:3:\"140\";i:9;s:3:\"158\";i:10;s:3:\"158\";i:11;s:3:\"138\";i:12;s:3:\"148\";i:13;s:3:\"148\";i:14;s:3:\"135\";i:15;s:6:\"224.54\";i:16;s:3:\"146\";}}i:5;a:1:{s:19:\"previous_actual_vol\";a:17:{i:0;s:2:\"NA\";i:1;s:2:\"NA\";i:2;s:2:\"NA\";i:3;s:2:\"NA\";i:4;s:2:\"NA\";i:5;s:2:\"NA\";i:6;s:2:\"NA\";i:7;s:2:\"NA\";i:8;s:2:\"NA\";i:9;s:2:\"NA\";i:10;s:2:\"NA\";i:11;s:2:\"NA\";i:12;s:2:\"NA\";i:13;s:2:\"NA\";i:14;s:2:\"NA\";i:15;s:2:\"NA\";i:16;s:2:\"NA\";}}i:6;a:1:{s:10:\"list_price\";a:17:{i:0;s:6:\"199.34\";i:1;s:6:\"248.92\";i:2;s:6:\"246.81\";i:3;s:6:\"170.92\";i:4;s:6:\"170.92\";i:5;s:6:\"226.77\";i:6;s:6:\"195.12\";i:7;s:6:\"226.77\";i:8;s:6:\"200.28\";i:9;s:6:\"254.19\";i:10;s:5:\"267.9\";i:11;s:6:\"201.33\";i:12;s:6:\"210.95\";i:13;s:6:\"225.71\";i:14;s:6:\"180.36\";i:15;s:6:\"210.35\";i:16;s:6:\"195.04\";}}i:7;a:1:{s:22:\"last_price_change_date\";a:17:{i:0;s:11:\"01-07-2019\t\";i:1;s:11:\"01-07-2019\t\";i:2;s:36:\"No Price increase in past 12 months\t\";i:3;s:36:\"No Price increase in past 12 months\t\";i:4;s:36:\"No Price increase in past 12 months\t\";i:5;s:11:\"01-07-2019\t\";i:6;s:11:\"01-07-2019\t\";i:7;s:11:\"01-07-2019\t\";i:8;s:11:\"01-07-2019\t\";i:9;s:11:\"01-06-2020\t\";i:10;s:11:\"01-07-2019\t\";i:11;s:11:\"17-12-2019\t\";i:12;s:11:\"01-07-2019\t\";i:13;s:11:\"01-07-2019\t\";i:14;s:11:\"28-11-2019\t\";i:15;s:11:\"01-07-2019\t\";i:16;s:36:\"No Price increase in past 12 months\t\";}}i:8;a:1:{s:12:\"contract_vol\";a:17:{i:0;s:3:\"210\";i:1;s:3:\"210\";i:2;s:3:\"210\";i:3;s:3:\"420\";i:4;s:3:\"210\";i:5;s:3:\"195\";i:6;s:3:\"195\";i:7;s:4:\"1680\";i:8;s:2:\"10\";i:9;s:3:\"390\";i:10;s:2:\"20\";i:11;s:3:\"420\";i:12;s:4:\"1050\";i:13;s:2:\"20\";i:14;s:3:\"210\";i:15;s:2:\"20\";i:16;s:2:\"10\";}}i:9;a:1:{s:10:\"sku_rebate\";a:17:{i:0;s:5:\"62.34\";i:1;s:5:\"47.92\";i:2;s:5:\"45.81\";i:3;s:5:\"77.92\";i:4;s:5:\"77.92\";i:5;s:5:\"68.77\";i:6;s:5:\"61.12\";i:7;s:5:\"92.77\";i:8;s:5:\"60.28\";i:9;s:5:\"96.19\";i:10;s:6:\"109.90\";i:11;s:5:\"63.33\";i:12;s:5:\"62.95\";i:13;s:5:\"77.71\";i:14;s:5:\"45.36\";i:15;s:6:\"-14.19\";i:16;s:5:\"49.04\";}}i:10;a:1:{s:9:\"net_price\";a:17:{i:0;s:3:\"137\";i:1;s:3:\"201\";i:2;s:3:\"201\";i:3;s:2:\"93\";i:4;s:2:\"93\";i:5;s:3:\"158\";i:6;s:3:\"134\";i:7;s:3:\"134\";i:8;s:3:\"140\";i:9;s:3:\"158\";i:10;s:3:\"158\";i:11;s:3:\"138\";i:12;s:3:\"148\";i:13;s:3:\"148\";i:14;s:3:\"135\";i:15;s:6:\"224.54\";i:16;s:3:\"146\";}}i:11;a:1:{s:14:\"foc_percentage\";a:17:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";i:6;s:1:\"0\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:1:\"0\";i:10;s:1:\"0\";i:11;s:1:\"0\";i:12;s:1:\"0\";i:13;s:1:\"0\";i:14;s:1:\"0\";i:15;s:1:\"0\";i:16;s:1:\"0\";}}i:12;a:1:{s:9:\"foc_value\";a:17:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";i:6;s:1:\"0\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:1:\"0\";i:10;s:1:\"0\";i:11;s:1:\"0\";i:12;s:1:\"0\";i:13;s:1:\"0\";i:14;s:1:\"0\";i:15;s:1:\"0\";i:16;s:1:\"0\";}}i:13;a:1:{s:21:\"cust_lvl_input_rs_ltr\";a:17:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";i:6;s:1:\"0\";i:7;s:1:\"0\";i:8;s:1:\"0\";i:9;s:1:\"0\";i:10;s:1:\"0\";i:11;s:1:\"0\";i:12;s:1:\"0\";i:13;s:1:\"0\";i:14;s:1:\"0\";i:15;s:1:\"0\";i:16;s:1:\"0\";}}i:14;a:1:{s:9:\"db_margin\";a:17:{i:0;s:4:\"7.12\";i:1;s:5:\"10.45\";i:2;s:5:\"10.45\";i:3;s:4:\"4.84\";i:4;s:4:\"4.84\";i:5;s:4:\"8.22\";i:6;s:4:\"6.97\";i:7;s:4:\"6.97\";i:8;s:4:\"7.28\";i:9;s:4:\"8.22\";i:10;s:4:\"8.22\";i:11;s:4:\"7.18\";i:12;s:4:\"7.70\";i:13;s:4:\"7.70\";i:14;s:4:\"7.02\";i:15;s:5:\"11.68\";i:16;s:4:\"7.59\";}}i:15;a:1:{s:4:\"cogs\";a:17:{i:0;s:17:\"82.31449270457277\";i:1;s:17:\"83.52897180006273\";i:2;s:17:\"87.64058123557582\";i:3;s:17:\"68.30835961000504\";i:4;s:17:\"67.17184867394695\";i:5;s:17:\"100.9302673153245\";i:6;s:17:\"87.80060637973561\";i:7;s:17:\"96.31658964979286\";i:8;s:17:\"71.12503531941032\";i:9;s:17:\"130.5259818046869\";i:10;s:17:\"134.6609331297219\";i:11;s:17:\"92.00021799307959\";i:12;s:17:\"118.1204636212695\";i:13;s:17:\"118.5671851225697\";i:14;s:17:\"76.15188005154032\";i:15;s:17:\"86.39765480472764\";i:16;s:17:\"93.15794177583696\";}}i:16;a:1:{s:4:\"gmpl\";a:17:{i:0;s:5:\"54.69\";i:1;s:6:\"117.47\";i:2;s:6:\"113.36\";i:3;s:5:\"24.69\";i:4;s:5:\"25.83\";i:5;s:5:\"57.07\";i:6;s:5:\"46.20\";i:7;s:5:\"37.68\";i:8;s:5:\"68.88\";i:9;s:5:\"27.47\";i:10;s:5:\"23.34\";i:11;s:5:\"46.00\";i:12;s:5:\"29.88\";i:13;s:5:\"29.43\";i:14;s:5:\"58.85\";i:15;s:6:\"138.14\";i:16;s:5:\"52.84\";}}i:17;a:1:{s:8:\"gmplPool\";a:17:{i:0;s:8:\"11483.96\";i:1;s:8:\"24668.92\";i:2;s:8:\"23805.48\";i:3;s:8:\"10370.49\";i:4;s:7:\"5423.91\";i:5;s:8:\"11128.60\";i:6;s:7:\"9008.88\";i:7;s:8:\"63308.13\";i:8;s:6:\"688.75\";i:9;s:8:\"10714.87\";i:10;s:6:\"466.78\";i:11;s:8:\"19319.91\";i:12;s:8:\"31373.51\";i:13;s:6:\"588.66\";i:14;s:8:\"12358.11\";i:15;s:7:\"2762.85\";i:16;s:6:\"528.42\";}}i:18;a:1:{s:13:\"your_discount\";a:17:{i:0;s:5:\"31.27\";i:1;s:5:\"19.25\";i:2;s:5:\"18.56\";i:3;s:5:\"45.59\";i:4;s:5:\"45.59\";i:5;s:5:\"30.33\";i:6;s:5:\"31.32\";i:7;s:5:\"40.91\";i:8;s:5:\"30.10\";i:9;s:5:\"37.84\";i:10;s:5:\"41.02\";i:11;s:5:\"31.46\";i:12;s:5:\"29.84\";i:13;s:5:\"34.43\";i:14;s:5:\"25.15\";i:15;s:5:\"-6.75\";i:16;s:5:\"25.14\";}}i:19;a:1:{s:14:\"net_hard_floor\";a:17:{i:0;s:3:\"102\";i:1;s:3:\"108\";i:2;s:3:\"112\";i:3;s:2:\"85\";i:4;s:2:\"84\";i:5;s:3:\"124\";i:6;s:3:\"107\";i:7;s:3:\"119\";i:8;s:2:\"91\";i:9;s:3:\"156\";i:10;s:8:\"166.3909\";i:11;s:6:\"100.86\";i:12;s:3:\"139\";i:13;s:8:\"148.9197\";i:14;s:2:\"94\";i:15;s:6:\"132.01\";i:16;s:3:\"113\";}}i:20;a:1:{s:10:\"nhf_status\";a:17:{i:0;s:13:\"No NHF Breach\";i:1;s:13:\"No NHF Breach\";i:2;s:13:\"No NHF Breach\";i:3;s:13:\"No NHF Breach\";i:4;s:13:\"No NHF Breach\";i:5;s:13:\"No NHF Breach\";i:6;s:13:\"No NHF Breach\";i:7;s:13:\"No NHF Breach\";i:8;s:13:\"No NHF Breach\";i:9;s:13:\"No NHF Breach\";i:10;s:10:\"NHF Breach\";i:11;s:13:\"No NHF Breach\";i:12;s:13:\"No NHF Breach\";i:13;s:10:\"NHF Breach\";i:14;s:13:\"No NHF Breach\";i:15;s:13:\"No NHF Breach\";i:16;s:13:\"No NHF Breach\";}}i:21;a:1:{s:6:\"reason\";a:17:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";i:4;s:0:\"\";i:5;s:0:\"\";i:6;s:0:\"\";i:7;s:0:\"\";i:8;s:0:\"\";i:9;s:0:\"\";i:10;s:28:\"As per our offer at customer\";i:11;s:0:\"\";i:12;s:0:\"\";i:13;s:28:\"As per our offer at customer\";i:14;s:0:\"\";i:15;s:0:\"\";i:16;s:0:\"\";}}i:22;a:1:{s:9:\"flagOffer\";a:17:{i:0;s:1:\"O\";i:1;s:1:\"O\";i:2;s:1:\"O\";i:3;s:1:\"O\";i:4;s:1:\"O\";i:5;s:1:\"O\";i:6;s:1:\"O\";i:7;s:1:\"O\";i:8;s:1:\"O\";i:9;s:1:\"O\";i:10;s:1:\"O\";i:11;s:1:\"O\";i:12;s:1:\"O\";i:13;s:1:\"O\";i:14;s:1:\"O\";i:15;s:1:\"O\";i:16;s:1:\"O\";}}i:23;a:1:{s:18:\"lowest_offer_price\";a:17:{i:0;s:3:\"137\";i:1;s:3:\"201\";i:2;s:3:\"201\";i:3;s:2:\"93\";i:4;s:2:\"93\";i:5;s:3:\"158\";i:6;s:3:\"134\";i:7;s:3:\"134\";i:8;s:3:\"140\";i:9;s:3:\"158\";i:10;s:3:\"158\";i:11;s:3:\"138\";i:12;s:3:\"148\";i:13;s:3:\"148\";i:14;s:3:\"135\";i:15;s:6:\"224.54\";i:16;s:3:\"146\";}}i:24;a:1:{s:27:\"previous_actual_vol_monthly\";a:17:{i:0;s:4:\"0.00\";i:1;s:4:\"0.00\";i:2;s:4:\"0.00\";i:3;s:4:\"0.00\";i:4;s:4:\"0.00\";i:5;s:4:\"0.00\";i:6;s:4:\"0.00\";i:7;s:4:\"0.00\";i:8;s:4:\"0.00\";i:9;s:4:\"0.00\";i:10;s:4:\"0.00\";i:11;s:4:\"0.00\";i:12;s:4:\"0.00\";i:13;s:4:\"0.00\";i:14;s:4:\"0.00\";i:15;s:4:\"0.00\";i:16;s:4:\"0.00\";}}}",
+      "customerLevelInputs": {
+        "target_incentive": "0",
+        "target_rs": [
+          ""
+        ],
+        "target_ltr": [
+          ""
+        ],
+        "csa_exist": "N",
+        "csa_val": "0"
+      },
+      "currentProposed": {
+        "existing_details": {
+          "volume": "5480",
+          "from": "2020-03-31",
+          "to": "2020-06-30",
+          "total_cust_level_input": "0",
+          "nsv_pl": "0",
+          "gmpl": "43.43"
+        },
+        "actual_details": {
+          "volume": "0",
+          "from": "2020-03-31",
+          "to": "2020-06-30",
+          "total_cust_level_input": "0.00",
+          "nsv_pl": "145.00",
+          "gmpl": "43.00"
+        }
+      },
+      "previousSkus": [],
+      "skus": [
+        {
+          "sku_code": [
+            "3347017",
+            "3347747",
+            "3348397",
+            "3363996",
+            "3363997",
+            "3379346",
+            "3379348",
+            "3383112",
+            "3384226",
+            "3391096",
+            "3391097",
+            "3396008",
+            "3398024",
+            "3398025",
+            "3409812",
+            "3411965",
+            "3833758"
+          ]
+        },
+        {
+          "sku_name": [
+            "ILOCUT 1945 210L",
+            "ILOFORM TDN 81 210L",
+            "ILOFORM TDN 81 N 210L",
+            "HYSPIN VG 68 210L PL",
+            "HYSPIN VG 32 210L PL",
+            "RUSTILO DW 902 195L",
+            "RUSTILO DW 950  195L",
+            "ILOFORM 168 IN  210L",
+            "HYSPIN AWS 100 SC 210L",
+            "RUSTILO DWX 32 IN, 195L MK",
+            "RUSTILO DWX 32 IN, 20L MK",
+            "UNINHIBITED TRANSF OIL,210L MK",
+            "ALMAREDGE BI, 210L MK",
+            "ALMAREDGE BI, 20L MK",
+            "PERFECTO HT 5 D, 210L MK",
+            "CRB PLUS 20W-40, 20L D MK",
+            "ALPHA SMR NB 210L ME"
+          ]
+        },
+        {
+          "previous_contract_vol": [
+            "210",
+            "210",
+            "210",
+            "420",
+            "210",
+            "195",
+            "195",
+            "1680",
+            "10",
+            "390",
+            "20",
+            "420",
+            "1050",
+            "20",
+            "210",
+            "20",
+            "10"
+          ]
+        },
+        {
+          "previous_disc": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "previous_offer_price": [
+            "137",
+            "201",
+            "201",
+            "93",
+            "93",
+            "158",
+            "134",
+            "134",
+            "140",
+            "158",
+            "158",
+            "138",
+            "148",
+            "148",
+            "135",
+            "224.54",
+            "146"
+          ]
+        },
+        {
+          "previous_actual_vol": [
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA",
+            "NA"
+          ]
+        },
+        {
+          "list_price": [
+            "199.34",
+            "248.92",
+            "246.81",
+            "170.92",
+            "170.92",
+            "226.77",
+            "195.12",
+            "226.77",
+            "200.28",
+            "254.19",
+            "267.9",
+            "201.33",
+            "210.95",
+            "225.71",
+            "180.36",
+            "210.35",
+            "195.04"
+          ]
+        },
+        {
+          "last_price_change_date": [
+            "01-07-2019\t",
+            "01-07-2019\t",
+            "No Price increase in past 12 months\t",
+            "No Price increase in past 12 months\t",
+            "No Price increase in past 12 months\t",
+            "01-07-2019\t",
+            "01-07-2019\t",
+            "01-07-2019\t",
+            "01-07-2019\t",
+            "01-06-2020\t",
+            "01-07-2019\t",
+            "17-12-2019\t",
+            "01-07-2019\t",
+            "01-07-2019\t",
+            "28-11-2019\t",
+            "01-07-2019\t",
+            "No Price increase in past 12 months\t"
+          ]
+        },
+        {
+          "contract_vol": [
+            "210",
+            "210",
+            "210",
+            "420",
+            "210",
+            "195",
+            "195",
+            "1680",
+            "10",
+            "390",
+            "20",
+            "420",
+            "1050",
+            "20",
+            "210",
+            "20",
+            "10"
+          ]
+        },
+        {
+          "sku_rebate": [
+            "62.34",
+            "47.92",
+            "45.81",
+            "77.92",
+            "77.92",
+            "68.77",
+            "61.12",
+            "92.77",
+            "60.28",
+            "96.19",
+            "109.90",
+            "63.33",
+            "62.95",
+            "77.71",
+            "45.36",
+            "-14.19",
+            "49.04"
+          ]
+        },
+        {
+          "net_price": [
+            "137",
+            "201",
+            "201",
+            "93",
+            "93",
+            "158",
+            "134",
+            "134",
+            "140",
+            "158",
+            "158",
+            "138",
+            "148",
+            "148",
+            "135",
+            "224.54",
+            "146"
+          ]
+        },
+        {
+          "foc_percentage": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "foc_value": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "cust_lvl_input_rs_ltr": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "db_margin": [
+            "7.12",
+            "10.45",
+            "10.45",
+            "4.84",
+            "4.84",
+            "8.22",
+            "6.97",
+            "6.97",
+            "7.28",
+            "8.22",
+            "8.22",
+            "7.18",
+            "7.70",
+            "7.70",
+            "7.02",
+            "11.68",
+            "7.59"
+          ]
+        },
+        {
+          "cogs": [
+            "82.31449270457277",
+            "83.52897180006273",
+            "87.64058123557582",
+            "68.30835961000504",
+            "67.17184867394695",
+            "100.9302673153245",
+            "87.80060637973561",
+            "96.31658964979286",
+            "71.12503531941032",
+            "130.5259818046869",
+            "134.6609331297219",
+            "92.00021799307959",
+            "118.1204636212695",
+            "118.5671851225697",
+            "76.15188005154032",
+            "86.39765480472764",
+            "93.15794177583696"
+          ]
+        },
+        {
+          "gmpl": [
+            "54.69",
+            "117.47",
+            "113.36",
+            "24.69",
+            "25.83",
+            "57.07",
+            "46.20",
+            "37.68",
+            "68.88",
+            "27.47",
+            "23.34",
+            "46.00",
+            "29.88",
+            "29.43",
+            "58.85",
+            "138.14",
+            "52.84"
+          ]
+        },
+        {
+          "gmplPool": [
+            "11483.96",
+            "24668.92",
+            "23805.48",
+            "10370.49",
+            "5423.91",
+            "11128.60",
+            "9008.88",
+            "63308.13",
+            "688.75",
+            "10714.87",
+            "466.78",
+            "19319.91",
+            "31373.51",
+            "588.66",
+            "12358.11",
+            "2762.85",
+            "528.42"
+          ]
+        },
+        {
+          "your_discount": [
+            "31.27",
+            "19.25",
+            "18.56",
+            "45.59",
+            "45.59",
+            "30.33",
+            "31.32",
+            "40.91",
+            "30.10",
+            "37.84",
+            "41.02",
+            "31.46",
+            "29.84",
+            "34.43",
+            "25.15",
+            "-6.75",
+            "25.14"
+          ]
+        },
+        {
+          "net_hard_floor": [
+            "102",
+            "108",
+            "112",
+            "85",
+            "84",
+            "124",
+            "107",
+            "119",
+            "91",
+            "156",
+            "166.3909",
+            "100.86",
+            "139",
+            "148.9197",
+            "94",
+            "132.01",
+            "113"
+          ]
+        },
+        {
+          "nhf_status": [
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach"
+          ]
+        },
+        {
+          "reason": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "As per our offer at customer",
+            "",
+            "",
+            "As per our offer at customer",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "flagOffer": [
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O",
+            "O"
+          ]
+        },
+        {
+          "lowest_offer_price": [
+            "137",
+            "201",
+            "201",
+            "93",
+            "93",
+            "158",
+            "134",
+            "134",
+            "140",
+            "158",
+            "158",
+            "138",
+            "148",
+            "148",
+            "135",
+            "224.54",
+            "146"
+          ]
+        },
+        {
+          "previous_actual_vol_monthly": [
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00"
+          ]
+        }
+      ],
+      "offerId": 15815,
+      "offerCode": "ILS-TBD-Ludhiana-DR-15815",
+      "offerType": "ILS",
+      "offerStatus": "P",
+      "startDate": "2020-06-30",
+      "endDate": "2020-09-29",
+      "contractTenure": "3",
+      "contractVolume": 5480,
+      "volumeCommitment": 5480,
+      "previousCommitment": 5480,
+      "previousActual": 0,
+      "previousInvestment": 0,
+      "investmentRate": 0,
+      "gmpl": 0,
+      "gmplDofa": "RM",
+      "totalCustLvlInput": 0,
+      "totalNetPrice": 141,
+      "executiveCode": "1154548",
+      "createdDate": "2020-06-30",
+      "latestUpdatedDate": "2020-06-29",
+      "executiveName": "Akshiv Avikshit",
+      "executive_name": "Akshiv Avikshit",
+      "bp_sales_rep_text": "Akshiv Avikshit",
+      "state": "EMH",
+      "cust_state": "EMH",
+      "customerName": "  BIKE POINT NEW BALAJI AUTOMOBILES",
+      "customer_name_text": "  BIKE POINT NEW BALAJI AUTOMOBILES",
+      "volPerMonth": 1827,
+      "volumePM": 1827
+    },
+    {
+      "offer_id": 12176,
+      "offer_code": "HD-TBD_Andhra_Temp-12176",
+      "stream": "HD",
+      "executive_code": "01125828",
+      "start_date": "2020-04-30",
+      "end_date": "2021-04-29",
+      "contract_tenure": "12",
+      "tot_volume_commitment": "8640",
+      "offer_status": "D",
+      "total_gross_margin": "41.45",
+      "gmpl_dofa": "RM",
+      "remark": "",
+      "proposal_id": "",
+      "customer_level_input_text": "a:5:{s:16:\"target_incentive\";s:1:\"0\";s:9:\"target_rs\";a:1:{i:0;s:0:\"\";}s:10:\"target_ltr\";a:1:{i:0;s:0:\"\";}s:9:\"csa_exist\";s:0:\"\";s:7:\"csa_val\";s:1:\"4\";}",
+      "current_proposed_text": "a:2:{s:16:\"existing_details\";a:6:{s:6:\"volume\";s:0:\"\";s:4:\"from\";s:0:\"\";s:2:\"to\";s:0:\"\";s:22:\"total_cust_level_input\";s:0:\"\";s:6:\"nsv_pl\";s:0:\"\";s:4:\"gmpl\";s:0:\"\";}s:14:\"actual_details\";a:6:{s:6:\"volume\";s:0:\"\";s:4:\"from\";s:0:\"\";s:2:\"to\";s:0:\"\";s:22:\"total_cust_level_input\";s:0:\"\";s:6:\"nsv_pl\";s:0:\"\";s:4:\"gmpl\";s:0:\"\";}}",
+      "previous_sku_details": "",
+      "sku_text": "a:25:{i:0;a:1:{s:8:\"sku_code\";a:6:{i:0;s:7:\"3417814\";i:1;s:7:\"3417935\";i:2;s:7:\"3418198\";i:3;s:7:\"3365039\";i:4;s:7:\"3365036\";i:5;s:7:\"3371771\";}}i:1;a:1:{s:8:\"sku_name\";a:6:{i:0;s:37:\"CRB TURBOMAX 15W40 CH4 210L (3417814)\";i:1;s:37:\"TRANSMAX MANUAL 90, 210L MK (3417935)\";i:2;s:36:\"TRANSMAX AXLE 140, 210L MK (3418198)\";i:3;s:38:\"HYSPIN HEAVY DUTY 46 210L ME (3365039)\";i:4;s:38:\"HYSPIN HEAVY DUTY 68 210L ME (3365036)\";i:5;s:33:\"PREMIUM LONGLIFE  180KG (3371771)\";}}i:2;a:1:{s:21:\"previous_contract_vol\";N;}i:3;a:1:{s:13:\"previous_disc\";N;}i:4;a:1:{s:20:\"previous_offer_price\";N;}i:5;a:1:{s:19:\"previous_actual_vol\";N;}i:6;a:1:{s:10:\"list_price\";a:6:{i:0;s:6:\"192.55\";i:1;s:7:\"181.256\";i:2;s:8:\"191.1368\";i:3;s:6:\"157.29\";i:4;s:6:\"157.29\";i:5;s:6:\"225.53\";}}i:7;a:1:{s:22:\"last_price_change_date\";N;}i:8;a:1:{s:12:\"contract_vol\";a:6:{i:0;s:4:\"1260\";i:1;s:4:\"1260\";i:2;s:4:\"1260\";i:3;s:4:\"2520\";i:4;s:4:\"1260\";i:5;s:4:\"1080\";}}i:9;a:1:{s:10:\"sku_rebate\";a:6:{i:0;s:5:\"42.55\";i:1;s:5:\"27.26\";i:2;s:5:\"25.14\";i:3;s:5:\"47.29\";i:4;s:5:\"45.29\";i:5;s:5:\"47.53\";}}i:10;a:1:{s:9:\"net_price\";a:6:{i:0;s:3:\"150\";i:1;s:3:\"154\";i:2;s:3:\"166\";i:3;s:3:\"110\";i:4;s:3:\"112\";i:5;s:3:\"178\";}}i:11;a:1:{s:14:\"foc_percentage\";a:6:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";}}i:12;a:1:{s:9:\"foc_value\";a:6:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";}}i:13;a:1:{s:21:\"cust_lvl_input_rs_ltr\";a:6:{i:0;s:1:\"0\";i:1;s:1:\"0\";i:2;s:1:\"0\";i:3;s:1:\"0\";i:4;s:1:\"0\";i:5;s:1:\"0\";}}i:14;a:1:{s:9:\"db_margin\";a:6:{i:0;s:5:\"14.78\";i:1;s:5:\"14.15\";i:2;s:5:\"14.70\";i:3;s:5:\"12.81\";i:4;s:5:\"12.81\";i:5;s:5:\"16.63\";}}i:15;a:1:{s:4:\"cogs\";a:6:{i:0;s:15:\"83.273165410183\";i:1;s:16:\"83.9128683990393\";i:2;s:7:\"91.7354\";i:3;s:17:\"71.18553478060041\";i:4;s:16:\"71.0357513877138\";i:5;s:16:\"118.650484096966\";}}i:16;a:1:{s:4:\"gmpl\";a:6:{i:0;s:5:\"51.95\";i:1;s:5:\"55.93\";i:2;s:5:\"59.56\";i:3;s:5:\"26.00\";i:4;s:5:\"28.15\";i:5;s:5:\"42.72\";}}i:17;a:1:{s:8:\"gmplPool\";a:6:{i:0;s:8:\"65453.01\";i:1;s:8:\"70475.75\";i:2;s:8:\"75047.36\";i:3;s:8:\"65531.25\";i:4;s:8:\"35474.35\";i:5;s:8:\"46137.08\";}}i:18;a:1:{s:13:\"your_discount\";a:6:{i:0;s:5:\"22.10\";i:1;s:5:\"15.04\";i:2;s:5:\"13.15\";i:3;s:5:\"30.07\";i:4;s:5:\"28.79\";i:5;s:5:\"21.07\";}}i:19;a:1:{s:14:\"net_hard_floor\";a:6:{i:0;s:16:\"104.958663297134\";i:1;s:16:\"101.608124976985\";i:2;s:8:\"121.7354\";i:3;s:16:\"87.8224325258133\";i:4;s:16:\"85.8617087514361\";i:5;s:16:\"149.701873556084\";}}i:20;a:1:{s:10:\"nhf_status\";a:6:{i:0;s:13:\"No NHF Breach\";i:1;s:13:\"No NHF Breach\";i:2;s:13:\"No NHF Breach\";i:3;s:13:\"No NHF Breach\";i:4;s:13:\"No NHF Breach\";i:5;s:13:\"No NHF Breach\";}}i:21;a:1:{s:6:\"reason\";a:6:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";i:4;s:0:\"\";i:5;s:0:\"\";}}i:22;a:1:{s:9:\"flagOffer\";a:6:{i:0;s:1:\"N\";i:1;s:1:\"N\";i:2;s:1:\"N\";i:3;s:1:\"N\";i:4;s:1:\"N\";i:5;s:1:\"N\";}}i:23;a:1:{s:18:\"lowest_offer_price\";N;}i:24;a:1:{s:27:\"previous_actual_vol_monthly\";N;}}",
+      "customerLevelInputs": {
+        "target_incentive": "0",
+        "target_rs": [
+          ""
+        ],
+        "target_ltr": [
+          ""
+        ],
+        "csa_exist": "",
+        "csa_val": "4"
+      },
+      "currentProposed": {
+        "existing_details": {
+          "volume": "",
+          "from": "",
+          "to": "",
+          "total_cust_level_input": "",
+          "nsv_pl": "",
+          "gmpl": ""
+        },
+        "actual_details": {
+          "volume": "",
+          "from": "",
+          "to": "",
+          "total_cust_level_input": "",
+          "nsv_pl": "",
+          "gmpl": ""
+        }
+      },
+      "previousSkus": [],
+      "skus": [
+        {
+          "sku_code": [
+            "3417814",
+            "3417935",
+            "3418198",
+            "3365039",
+            "3365036",
+            "3371771"
+          ]
+        },
+        {
+          "sku_name": [
+            "CRB TURBOMAX 15W40 CH4 210L (3417814)",
+            "TRANSMAX MANUAL 90, 210L MK (3417935)",
+            "TRANSMAX AXLE 140, 210L MK (3418198)",
+            "HYSPIN HEAVY DUTY 46 210L ME (3365039)",
+            "HYSPIN HEAVY DUTY 68 210L ME (3365036)",
+            "PREMIUM LONGLIFE  180KG (3371771)"
+          ]
+        },
+        {
+          "previous_contract_vol": null
+        },
+        {
+          "previous_disc": null
+        },
+        {
+          "previous_offer_price": null
+        },
+        {
+          "previous_actual_vol": null
+        },
+        {
+          "list_price": [
+            "192.55",
+            "181.256",
+            "191.1368",
+            "157.29",
+            "157.29",
+            "225.53"
+          ]
+        },
+        {
+          "last_price_change_date": null
+        },
+        {
+          "contract_vol": [
+            "1260",
+            "1260",
+            "1260",
+            "2520",
+            "1260",
+            "1080"
+          ]
+        },
+        {
+          "sku_rebate": [
+            "42.55",
+            "27.26",
+            "25.14",
+            "47.29",
+            "45.29",
+            "47.53"
+          ]
+        },
+        {
+          "net_price": [
+            "150",
+            "154",
+            "166",
+            "110",
+            "112",
+            "178"
+          ]
+        },
+        {
+          "foc_percentage": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "foc_value": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "cust_lvl_input_rs_ltr": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "db_margin": [
+            "14.78",
+            "14.15",
+            "14.70",
+            "12.81",
+            "12.81",
+            "16.63"
+          ]
+        },
+        {
+          "cogs": [
+            "83.273165410183",
+            "83.9128683990393",
+            "91.7354",
+            "71.18553478060041",
+            "71.0357513877138",
+            "118.650484096966"
+          ]
+        },
+        {
+          "gmpl": [
+            "51.95",
+            "55.93",
+            "59.56",
+            "26.00",
+            "28.15",
+            "42.72"
+          ]
+        },
+        {
+          "gmplPool": [
+            "65453.01",
+            "70475.75",
+            "75047.36",
+            "65531.25",
+            "35474.35",
+            "46137.08"
+          ]
+        },
+        {
+          "your_discount": [
+            "22.10",
+            "15.04",
+            "13.15",
+            "30.07",
+            "28.79",
+            "21.07"
+          ]
+        },
+        {
+          "net_hard_floor": [
+            "104.958663297134",
+            "101.608124976985",
+            "121.7354",
+            "87.8224325258133",
+            "85.8617087514361",
+            "149.701873556084"
+          ]
+        },
+        {
+          "nhf_status": [
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach",
+            "No NHF Breach"
+          ]
+        },
+        {
+          "reason": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "flagOffer": [
+            "N",
+            "N",
+            "N",
+            "N",
+            "N",
+            "N"
+          ]
+        },
+        {
+          "lowest_offer_price": null
+        },
+        {
+          "previous_actual_vol_monthly": null
+        }
+      ],
+      "offerId": 12176,
+      "offerCode": "HD-TBD_Andhra_Temp-12176",
+      "offerType": "HD",
+      "offerStatus": "D",
+      "startDate": "2020-04-30",
+      "endDate": "2021-04-29",
+      "contractTenure": "12",
+      "contractVolume": 8640,
+      "volumeCommitment": 8640,
+      "previousCommitment": 8640,
+      "previousActual": 0,
+      "previousInvestment": 0,
+      "investmentRate": 0,
+      "gmpl": 0,
+      "gmplDofa": "RM",
+      "totalCustLvlInput": 0,
+      "totalNetPrice": 139,
+      "executiveCode": "01125828",
+      "createdDate": "2020-04-30",
+      "latestUpdatedDate": "2020-05-25",
+      "executiveName": "Akshiv Avikshit",
+      "executive_name": "Akshiv Avikshit",
+      "bp_sales_rep_text": "Akshiv Avikshit",
+      "state": "EMH",
+      "cust_state": "EMH",
+      "customerName": "BIKE POINT NEW BALAJI AUTOMOBILES",
+      "customer_name_text": "BIKE POINT NEW BALAJI AUTOMOBILES",
+      "volPerMonth": 720,
+      "volumePM": 720
+    }
+  ]
+}

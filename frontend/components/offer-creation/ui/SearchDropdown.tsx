@@ -67,11 +67,16 @@ export default function SearchDropdown({
 
   return (
     <div className="w-full flex flex-col relative" ref={dropdownRef}>
-      {label && (
-        <label className="text-xs font-semibold text-brand-gray mb-1.5 block">
-          {label} {required && <span className="text-red-500">*</span>}
-        </label>
-      )}
+      {label && (() => {
+        const cleanLabel = label.replace(/\s*\*+$/, "").trim();
+        const hasManualAsterisk = label.includes("*");
+        const showAsterisk = required || hasManualAsterisk;
+        return cleanLabel ? (
+          <label className="text-xs font-semibold text-brand-gray mb-1.5 block">
+            {cleanLabel} {showAsterisk && <span className="text-red-500">*</span>}
+          </label>
+        ) : null;
+      })()}
 
       <button
         type="button"

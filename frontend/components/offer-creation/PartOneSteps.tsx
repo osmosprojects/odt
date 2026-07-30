@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Tag,
   FileText,
@@ -16,6 +16,8 @@ import {
   Search,
 } from "lucide-react";
 import StepCard, { FieldLabel, inputClass } from "./StepCard";
+
+import { api } from "@/lib/api";
 
 const offerTypes = [
   { label: "Cash Discount", icon: Percent },
@@ -33,27 +35,21 @@ const eligibilityCriteria = [
   "Region matches offer zone",
 ];
 
-const products = [
-  { name: "Castrol GTX 5W-30 (4L)", sku: "CTL-GTX-530-4L" },
-  { name: "Castrol Magnatec 10W-40 (4L)", sku: "CTL-MAG-1040-4L" },
-  { name: "Castrol EDGE 0W-20 (4L)", sku: "CTL-EDG-020-4L" },
-  { name: "Castrol CRB Turbomax 15W-40", sku: "CTL-CRB-1540-20L" },
-];
-
 export default function PartOneSteps() {
   const [selectedType, setSelectedType] = useState("Volume Discount");
-  const [criteria, setCriteria] = useState<Record<string, boolean>>({
-    "Minimum 6 months purchase history": true,
-    "KYC verified account": true,
-    "Active credit line with no overdue": false,
-    "Region matches offer zone": true,
-  });
-  const [selectedProducts, setSelectedProducts] = useState<Record<string, boolean>>({
-    "Castrol GTX 5W-30 (4L)": true,
-    "Castrol Magnatec 10W-40 (4L)": true,
-    "Castrol EDGE 0W-20 (4L)": false,
-    "Castrol CRB Turbomax 15W-40": true,
-  });
+  const [criteria, setCriteria] = useState<Record<string, boolean>>({});
+  const [products, setProducts] = useState<any[]>([]);
+  const [selectedProducts, setSelectedProducts] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    api.getSkus().then((data) => {
+      const items = (Array.isArray(data) ? data : []).map((s) => ({
+        name: s.description || s.brandName || s.skuName || s.skuCode,
+        sku: s.skuCode,
+      }));
+      setProducts(items);
+    }).catch(console.error);
+  }, []);
 
   const selectedCount = Object.values(selectedProducts).filter(Boolean).length;
 

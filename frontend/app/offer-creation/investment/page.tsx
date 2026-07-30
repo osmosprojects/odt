@@ -48,67 +48,50 @@ export default function InvestmentAndApprovalPage() {
   // ----------------------------------------------------
   const [formData, setFormData] = useState({
     // Section 1: Investment Classification
-    investmentType: "Cash Loan",
-    investmentRationale: "Asset Purchase",
-    bpBankFunded: "BP Funded",
-    planningStatus: "Planned",
+    investmentType: "",
+    investmentRationale: "",
+    bpBankFunded: "",
+    planningStatus: "",
 
     // Section 2: Investment Data
-    investmentTerm: "24",
-    startDate: "2026-08-01",
-    endDate: "2028-08-01",
-    existingLoanBalance: 200000,
-    existingLoanEndDate: "2026-07-31",
-    existingLoanVolumeRemaining: 15000,
-    additionalCashLoan: 50000,
-    additionalEquipmentLoan: 30000,
-    totalAdditionalLoan: 80000,
-    totalTradeLoan: 120000,
-    totalVolumeCommitment: 50000,
-    amortizationRatePerLitre: 2.4,
+    investmentTerm: "",
+    startDate: "",
+    endDate: "",
+    existingLoanBalance: null as any,
+    existingLoanEndDate: "",
+    existingLoanVolumeRemaining: null as any,
+    additionalCashLoan: 0,
+    additionalEquipmentLoan: 0,
+    totalAdditionalLoan: 0,
+    totalTradeLoan: 0,
+    totalVolumeCommitment: null as any,
+    amortizationRatePerLitre: 0,
 
-    // Section 3: Advance Rebate & Volume Disbursement Plan (Upgraded to dynamic array)
-    yearlyPlans: [
-      {
-        year: 1,
-        volume: 20000,
-        monthlyVolume: 1666.67,
-        volumePct: 40,
-        advanceRebate: 25000,
-        advanceRebatePct: 50,
-      },
-      {
-        year: 2,
-        volume: 30000,
-        monthlyVolume: 2500.00,
-        volumePct: 60,
-        advanceRebate: 25000,
-        advanceRebatePct: 50,
-      },
-    ] as YearlyPlan[],
+    // Section 3: Advance Rebate & Volume Disbursement Plan
+    yearlyPlans: [] as YearlyPlan[],
 
     // Section 4: Advance Rebate Total
-    totalVolume: 50000,
-    totalAdvanceRebateAmount: 50000,
+    totalVolume: 0,
+    totalAdvanceRebateAmount: 0,
 
     // Section 5: Bank Guarantee Details
-    bgEndDate: "2029-02-28", // default set to > 6 months after end date
-    bgTenure: "30",
-    bgAmount: 40000,
-    bgAmountPctOfAr: 80,
-    bankName: "State Bank of India",
-    bankAddress: "MG Road Branch, Mumbai",
+    bgEndDate: "",
+    bgTenure: "",
+    bgAmount: null as any,
+    bgAmountPctOfAr: 0,
+    bankName: "",
+    bankAddress: "",
     gstNumber: "",
     gstName: "",
     bgTenureCheck: true,
 
     // Section 6: Credit Input
-    creditTerm: 45,
-    primaryCustomerCreditTerm: 30,
-    tradingCreditLimit: 150000,
-    existingSecurity: 50000,
-    additionalSecurityRequired: 170000,
-    totalCreditExposure: 230000,
+    creditTerm: null as any,
+    primaryCustomerCreditTerm: null as any,
+    tradingCreditLimit: null as any,
+    existingSecurity: null as any,
+    additionalSecurityRequired: 0,
+    totalCreditExposure: 0,
   });
 
   // Keep activeYearIndex inside valid boundaries

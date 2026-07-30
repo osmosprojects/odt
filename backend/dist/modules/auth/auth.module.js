@@ -10,23 +10,37 @@ exports.AuthModule = void 0;
 const common_1 = require("@nestjs/common");
 const jwt_1 = require("@nestjs/jwt");
 const passport_1 = require("@nestjs/passport");
-const auth_service_1 = require("./auth.service");
+const typeorm_1 = require("@nestjs/typeorm");
+const config_1 = require("@nestjs/config");
 const auth_controller_1 = require("./auth.controller");
+const auth_service_1 = require("./auth.service");
+const jwt_strategy_1 = require("../auth/jwt.strategy");
+const jwt_refresh_strategy_1 = require("../auth/jwt-refresh.strategy");
+const role_guard_1 = require("../../common/guards/role.guard");
+const user_entity_1 = require("../../database/migrations/user.entity");
+const permissions_controller_1 = require("./permissions.controller");
+const permissions_service_1 = require("./permissions.service");
+const defaultJwtSecret = 'dev-jwt-secret';
 let AuthModule = class AuthModule {
 };
 exports.AuthModule = AuthModule;
 exports.AuthModule = AuthModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            passport_1.PassportModule,
-            jwt_1.JwtModule.register({
-                secret: process.env.JWT_SECRET || 'odt_jwt_secret_key_2026',
-                signOptions: { expiresIn: '8h' },
+            passport_1.PassportModule.register({ defaultStrategy: 'jwt' }),
+            jwt_1.JwtModule.registerAsync({
+                imports: [config_1.ConfigModule],
+                inject: [config_1.ConfigService],
+                useFactory: (config) => ({
+                    secret: config.get('JWT_SECRET', defaultJwtSecret),
+                    signOptions: { expiresIn: config.get('JWT_EXPIRES_IN', '8h') },
+                }),
             }),
+            typeorm_1.TypeOrmModule.forFeature([user_entity_1.UserEntity]),
         ],
-        controllers: [auth_controller_1.AuthController],
-        providers: [auth_service_1.AuthService],
-        exports: [auth_service_1.AuthService, jwt_1.JwtModule],
+        controllers: [auth_controller_1.AuthController, permissions_controller_1.PermissionsController],
+        providers: [auth_service_1.AuthService, jwt_strategy_1.JwtStrategy, jwt_refresh_strategy_1.JwtRefreshStrategy, role_guard_1.RolesGuard, permissions_service_1.PermissionsService],
+        exports: [auth_service_1.AuthService, jwt_1.JwtModule, role_guard_1.RolesGuard, permissions_service_1.PermissionsService],
     })
 ], AuthModule);
 //# sourceMappingURL=auth.module.js.map

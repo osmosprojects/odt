@@ -34,51 +34,22 @@ interface SkuRow {
   productTargetIncentive: number;
 }
 
-const AVAILABLE_SKUS = [
-  {
-    skuCode: "SKU-8392",
-    skuName: "EDGE 5W-40 Synthetic",
-    skuDataOption: "Synthetic",
-    cogs: 420,
-    lbmName: "LBM - High Performance",
-    pvName: "HD",
-    recMixIncentive: 2.2,
-    mixIncentive: 2.2,
-    skuRebate: 3.5,
-    productTargetIncentive: 1.5,
-  },
-  {
-    skuCode: "SKU-4829",
-    skuName: "GTX 15W-40 Mineral",
-    skuDataOption: "Mineral",
-    cogs: 280,
-    lbmName: "LBM - Standard",
-    pvName: "ILS",
-    recMixIncentive: 1.5,
-    mixIncentive: 1.5,
-    skuRebate: 2.2,
-    productTargetIncentive: 1.0,
-  },
-  {
-    skuCode: "SKU-9182",
-    skuName: "CRB Turbo 15W-40 Diesel",
-    skuDataOption: "Semi-Synthetic",
-    cogs: 310,
-    lbmName: "LBM - Light Duty",
-    pvName: "FWS",
-    recMixIncentive: 1.8,
-    mixIncentive: 1.8,
-    skuRebate: 2.5,
-    productTargetIncentive: 1.2,
-  },
-];
-
-const skuCodesOptions = AVAILABLE_SKUS.map((s) => s.skuCode);
-const skuNamesOptions = AVAILABLE_SKUS.map((s) => s.skuName);
+import { api } from "@/lib/api";
 
 export default function SkuIncentivePage() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+
+  const [sqlSkus, setSqlSkus] = useState<any[]>([]);
+
+  useEffect(() => {
+    api.getSkus().then((data) => {
+      setSqlSkus(Array.isArray(data) ? data : []);
+    }).catch(console.error);
+  }, []);
+
+  const skuCodesOptions = sqlSkus.map((s) => s.skuCode).filter(Boolean);
+  const skuNamesOptions = sqlSkus.map((s) => s.description || s.skuName).filter(Boolean);
 
   // ----------------------------------------------------
   // OFFER STREAM STATE FOR CONDITIONAL COLUMNS
@@ -100,87 +71,32 @@ export default function SkuIncentivePage() {
   // CUSTOMER LEVEL STATE
   // ----------------------------------------------------
   const [customerData, setCustomerData] = useState({
-    targetIncentiveRs: 150000,
-    targetIncentiveLtr: 3,
-    disbursementVolume: 50000,
-    disbursementMonths: 12,
-    disbursementAmount: 50000,
-    totalCustomerRebate: 200000,
-    totalCustomerRebateLtr: 4,
+    targetIncentiveRs: 0,
+    targetIncentiveLtr: 0,
+    disbursementVolume: 0,
+    disbursementMonths: 0,
+    disbursementAmount: 0,
+    totalCustomerRebate: 0,
+    totalCustomerRebateLtr: 0,
   });
 
   // ----------------------------------------------------
   // SKU DATA TABLE STATE
   // ----------------------------------------------------
-  const [skus, setSkus] = useState<SkuRow[]>([
-    {
-      id: "1",
-      skuDataOption: "Synthetic",
-      lbmName: "LBM - High Performance",
-      pvName: "HD",
-      skuCode: "SKU-8392",
-      skuName: "EDGE 5W-40 Synthetic",
-      cogs: 420,
-      contractVolume: 20000,
-      focVolume: 1000,
-      totalInput: 4.5,
-      surcharge: 0,
-      nhf: 0,
-      recMixIncentive: 2.2,
-      mixIncentive: 2.2,
-      skuRebate: 3.5,
-      productTargetIncentive: 1.5,
-    },
-    {
-      id: "2",
-      skuDataOption: "Mineral",
-      lbmName: "LBM - Standard",
-      pvName: "ILS",
-      skuCode: "SKU-4829",
-      skuName: "GTX 15W-40 Mineral",
-      cogs: 280,
-      contractVolume: 15000,
-      focVolume: 500,
-      totalInput: 3.2,
-      surcharge: 0,
-      nhf: 0,
-      recMixIncentive: 1.5,
-      mixIncentive: 1.5,
-      skuRebate: 2.2,
-      productTargetIncentive: 1.0,
-    },
-    {
-      id: "3",
-      skuDataOption: "Semi-Synthetic",
-      lbmName: "LBM - Light Duty",
-      pvName: "FWS",
-      skuCode: "SKU-9182",
-      skuName: "CRB Turbo 15W-40 Diesel",
-      cogs: 310,
-      contractVolume: 15000,
-      focVolume: 500,
-      totalInput: 3.8,
-      surcharge: 1.5,
-      nhf: 0.8,
-      recMixIncentive: 1.8,
-      mixIncentive: 1.8,
-      skuRebate: 2.5,
-      productTargetIncentive: 1.2,
-    },
-  ]);
+  const [skus, setSkus] = useState<SkuRow[]>([]);
 
   // Selected SKU for Product Target Incentive card
-  const [selectedSkuId, setSelectedSkuId] = useState<string>("1");
+  const [selectedSkuId, setSelectedSkuId] = useState<string>("");
 
   // ----------------------------------------------------
   // PRODUCT TARGET INCENTIVE STATE
   // ----------------------------------------------------
   const [productIncentiveData, setProductIncentiveData] = useState({
-    disbursementVolume: 20000,
-    disbursementMonths: 12,
-    disbursementAmount: 30000,
-    skuVolume: 20000,
-    incentivePool: 60000,
+    disbursementVolume: 0,
+    disbursementMonths: 0,
+    disbursementAmount: 0,
+    skuVolume: 0,
+    incentivePool: 0,
   });
 
   // ----------------------------------------------------
@@ -302,24 +218,7 @@ export default function SkuIncentivePage() {
     setSkus((prev) =>
       prev.map((row) => {
         if (row.id === rowId) {
-          const updated = { ...row, [field]: value };
-          // Auto populate Code & Name mock logic
-          if (field === "skuDataOption") {
-            if (value === "Synthetic") {
-              updated.skuCode = "SKU-8392";
-              updated.skuName = "EDGE 5W-40 Synthetic";
-              updated.cogs = 420;
-            } else if (value === "Mineral") {
-              updated.skuCode = "SKU-4829";
-              updated.skuName = "GTX 15W-40 Mineral";
-              updated.cogs = 280;
-            } else {
-              updated.skuCode = "SKU-9182";
-              updated.skuName = "CRB Turbo 15W-40 Diesel";
-              updated.cogs = 310;
-            }
-          }
-          return updated;
+          return { ...row, [field]: value };
         }
         return row;
       })
@@ -327,8 +226,13 @@ export default function SkuIncentivePage() {
   };
 
   const handleSelectSku = (rowId: string, val: string) => {
-    const selectedCode = val.split(" - ")[0];
-    const foundSku = AVAILABLE_SKUS.find((sku) => sku.skuCode === selectedCode);
+    const selectedCode = val.includes(" - ") ? val.split(" - ")[0] : val;
+    const foundSku = sqlSkus.find(
+      (sku) =>
+        sku.skuCode === selectedCode ||
+        sku.skuCode === val ||
+        (sku.description || sku.brandName || sku.skuName) === val
+    );
 
     setSkus((prev) =>
       prev.map((row) => {
@@ -336,26 +240,22 @@ export default function SkuIncentivePage() {
           if (foundSku) {
             return {
               ...row,
-              skuCode: foundSku.skuCode,
-              skuName: foundSku.skuName,
-              skuDataOption: foundSku.skuDataOption,
-              cogs: foundSku.cogs,
-              lbmName: foundSku.lbmName,
-              pvName: foundSku.pvName,
-              recMixIncentive: foundSku.recMixIncentive,
-              mixIncentive: foundSku.mixIncentive,
-              skuRebate: foundSku.skuRebate,
-              productTargetIncentive: foundSku.productTargetIncentive,
+              skuCode: foundSku.skuCode || "",
+              skuName: foundSku.description || foundSku.brandName || foundSku.skuName || "",
+              cogs: Number(foundSku.cogs || 0),
+              nhf: Number(foundSku.nhf || 0),
+              recMixIncentive: Number(foundSku.recMixIncentive || 0),
+              mixIncentive: Number(foundSku.mixIncentive || 0),
+              skuRebate: Number(foundSku.skuRebate || 0),
+              productTargetIncentive: Number(foundSku.productTargetIncentive || 0),
             };
           } else {
             return {
               ...row,
               skuCode: "",
               skuName: "",
-              skuDataOption: "",
               cogs: 0,
-              lbmName: "",
-              pvName: "",
+              nhf: 0,
               recMixIncentive: 0,
               mixIncentive: 0,
               skuRebate: 0,
@@ -743,7 +643,7 @@ export default function SkuIncentivePage() {
                           <td className="p-3 min-w-[220px]">
                             <SearchDropdown
                               placeholder="Search SKU..."
-                              options={AVAILABLE_SKUS.map((sku) => `${sku.skuCode} - ${sku.skuName}`)}
+                              options={sqlSkus.map((sku) => `${sku.skuCode} - ${sku.description || sku.brandName || sku.skuName || ""}`)}
                               value={row.skuCode && row.skuName ? `${row.skuCode} - ${row.skuName}` : ""}
                               onChange={(val) => handleSelectSku(row.id, val)}
                             />

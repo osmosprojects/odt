@@ -14,11 +14,16 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ label, error, required, prefixText, suffixText, className = "", ...props }, ref) => {
     return (
       <div className="w-full flex flex-col">
-        {label && (
-          <label className="text-xs font-semibold text-brand-gray mb-1.5 block">
-            {label} {required && <span className="text-red-500">*</span>}
-          </label>
-        )}
+        {label && (() => {
+          const cleanLabel = label.replace(/\s*\*+$/, "").trim();
+          const hasManualAsterisk = label.includes("*");
+          const showAsterisk = required || hasManualAsterisk;
+          return cleanLabel ? (
+            <label className="text-xs font-semibold text-brand-gray mb-1.5 block">
+              {cleanLabel} {showAsterisk && <span className="text-red-500">*</span>}
+            </label>
+          ) : null;
+        })()}
         <div className="relative flex items-center">
           {prefixText && (
             <span className="absolute left-3 text-xs font-semibold text-brand-gray pointer-events-none select-none">

@@ -14,59 +14,107 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
 const common_1 = require("@nestjs/common");
-const auth_service_1 = require("./auth.service");
 const swagger_1 = require("@nestjs/swagger");
+const auth_service_1 = require("./auth.service");
+const login_dto_1 = require("./dto/login.dto");
+const send_password_dto_1 = require("./dto/send-password.dto");
+const jwt_auth_guard_1 = require("../../common/guards/jwt-auth.guard");
+const jwt_refresh_guard_1 = require("../../common/guards/jwt-refresh.guard");
+const current_user_decorator_1 = require("../../common/decorators/current-user.decorator");
+const permissions_service_1 = require("./permissions.service");
 let AuthController = class AuthController {
-    constructor(authService) {
+    authService;
+    permissions;
+    constructor(authService, permissions) {
         this.authService = authService;
+        this.permissions = permissions;
     }
-    async login(credentials) {
-        return this.authService.login(credentials);
+    login(dto) {
+        return this.authService.login(dto);
     }
-    async logout() {
-        return { message: 'Session logged out successfully' };
+    refresh(user) {
+        return this.authService.refreshTokens(user.sub, user.refreshToken);
     }
-    async getProfile(req) {
-        const dummyUser = {
-            sub: 101,
-            loginId: 'john_doe',
-            userCode: 'EMP1001',
-            email: 'john.doe@castrol-odt.com',
-            role: 'Sales Representative',
-            stream: 'B2B',
-            channel: 'HD',
+    logout(user) {
+        return this.authService.logout(user.sub);
+    }
+    getProfile(user) {
+        return this.authService.getProfile(user.sub);
+    }
+    sendPassword(dto) {
+        return this.authService.sendPassword(dto.email);
+    }
+    getFormFields(req) {
+        const userRole = req.user?.role;
+        return {
+            role: userRole,
+            visibleFields: this.permissions.getVisibleFields(userRole),
         };
-        return this.authService.getProfile(dummyUser);
     }
 };
 exports.AuthController = AuthController;
 __decorate([
-    (0, swagger_1.ApiOperation)({ summary: 'User Login' }),
-    (0, swagger_1.ApiResponse)({ status: 200, description: 'Return JWT access token & user profile' }),
     (0, common_1.Post)('login'),
+    (0, common_1.HttpCode)(common_1.HttpStatus.OK),
+    (0, swagger_1.ApiOperation)({ summary: 'Login with empcode and password' }),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:paramtypes", [login_dto_1.LoginDto]),
+    __metadata("design:returntype", void 0)
 ], AuthController.prototype, "login", null);
 __decorate([
-    (0, swagger_1.ApiOperation)({ summary: 'Logout Session' }),
-    (0, common_1.Post)('logout'),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Promise)
-], AuthController.prototype, "logout", null);
-__decorate([
-    (0, swagger_1.ApiOperation)({ summary: 'Get Active User Profile' }),
-    (0, common_1.Get)('profile'),
-    __param(0, (0, common_1.Req)()),
+    (0, common_1.Post)('refresh'),
+    (0, common_1.UseGuards)(jwt_refresh_guard_1.JwtRefreshGuard),
+    (0, common_1.HttpCode)(common_1.HttpStatus.OK),
+    (0, swagger_1.ApiBearerAuth)('refresh-token'),
+    (0, swagger_1.ApiOperation)({ summary: 'Refresh access token' }),
+    __param(0, (0, current_user_decorator_1.CurrentUser)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", void 0)
+], AuthController.prototype, "refresh", null);
+__decorate([
+    (0, common_1.Post)('logout'),
+    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
+    (0, common_1.HttpCode)(common_1.HttpStatus.OK),
+    (0, swagger_1.ApiBearerAuth)(),
+    (0, swagger_1.ApiOperation)({ summary: 'Logout and invalidate refresh token' }),
+    __param(0, (0, current_user_decorator_1.CurrentUser)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AuthController.prototype, "logout", null);
+__decorate([
+    (0, common_1.Get)('me'),
+    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
+    (0, swagger_1.ApiBearerAuth)(),
+    (0, swagger_1.ApiOperation)({ summary: 'Get current logged-in user profile' }),
+    __param(0, (0, current_user_decorator_1.CurrentUser)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
 ], AuthController.prototype, "getProfile", null);
+__decorate([
+    (0, common_1.Post)('send-password'),
+    (0, common_1.HttpCode)(common_1.HttpStatus.OK),
+    (0, swagger_1.ApiOperation)({ summary: 'Send password to registered email' }),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [send_password_dto_1.SendPasswordDto]),
+    __metadata("design:returntype", void 0)
+], AuthController.prototype, "sendPassword", null);
+__decorate([
+    (0, common_1.Get)('permissions/form-fields'),
+    (0, common_1.UseGuards)(jwt_auth_guard_1.JwtAuthGuard),
+    __param(0, (0, common_1.Req)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Request]),
+    __metadata("design:returntype", void 0)
+], AuthController.prototype, "getFormFields", null);
 exports.AuthController = AuthController = __decorate([
-    (0, swagger_1.ApiTags)('Authentication'),
-    (0, common_1.Controller)('api/auth'),
-    __metadata("design:paramtypes", [auth_service_1.AuthService])
+    (0, swagger_1.ApiTags)('Auth'),
+    (0, common_1.Controller)('auth'),
+    __metadata("design:paramtypes", [auth_service_1.AuthService,
+        permissions_service_1.PermissionsService])
 ], AuthController);
 //# sourceMappingURL=auth.controller.js.map

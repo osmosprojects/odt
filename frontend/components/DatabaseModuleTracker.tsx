@@ -202,7 +202,7 @@ export default function DatabaseModuleTracker() {
           </span>
         </div>
         <span className="hidden sm:inline-block font-mono text-[11px] text-emerald-700 bg-emerald-100 px-2 py-1 rounded">
-          Port 3001 / MySQL 3306
+          Port 3001 / MySQL 3307
         </span>
       </div>
     </div>

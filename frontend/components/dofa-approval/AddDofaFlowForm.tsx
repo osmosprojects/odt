@@ -5,6 +5,7 @@ import { GitBranch, Plus, Trash2, Send } from "lucide-react";
 import { FieldLabel, inputClass } from "@/components/ui/form";
 import FileUploadField from "@/components/offer-letters/FileUploadField";
 import { offerToolTypes, DofaLevel, approvals } from "@/lib/offerManagement";
+import { api } from "@/lib/api";
 
 export default function AddDofaFlowForm() {
   const [dofaApproval, setDofaApproval] = useState(true);

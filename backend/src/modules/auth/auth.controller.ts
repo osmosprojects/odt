@@ -1,38 +1,87 @@
-import { Controller, Post, Body, Get, UseGuards, Req } from '@nestjs/common';
-import { AuthService, LoginDto } from './auth.service';
-import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import {
+  Controller,
+  Post,
+  Get,
+  Body,
+  UseGuards,
+  HttpCode,
+  HttpStatus,
+  Req,
+} from '@nestjs/common';
+import { ApiTags, ApiBearerAuth, ApiOperation } from '@nestjs/swagger';
+import { AuthService } from './auth.service';
+import { LoginDto } from './dto/login.dto';
+import { SendPasswordDto } from './dto/send-password.dto';
+import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
+import { JwtRefreshGuard } from '../../common/guards/jwt-refresh.guard';
+import { CurrentUser } from '../../common/decorators/current-user.decorator';
+import type { JwtPayload } from '../auth/jwt.strategy';
+import { PermissionsService } from './permissions.service';
+import { Role } from '../../enums/roles.enum';
 
-@ApiTags('Authentication')
-@Controller('api/auth')
+@ApiTags('Auth')
+@Controller('auth')
 export class AuthController {
-  constructor(private readonly authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private permissions:PermissionsService
+  ) {}
 
-  @ApiOperation({ summary: 'User Login' })
-  @ApiResponse({ status: 200, description: 'Return JWT access token & user profile' })
+  // POST /auth/login — replaces PHP index.php login section
   @Post('login')
-  async login(@Body() credentials: LoginDto) {
-    return this.authService.login(credentials);
+  @HttpCode(HttpStatus.OK)
+  @ApiOperation({ summary: 'Login with empcode and password' })
+  login(@Body() dto: LoginDto) {
+    return this.authService.login(dto);
   }
 
-  @ApiOperation({ summary: 'Logout Session' })
+  // POST /auth/refresh — get new access token using refresh token
+  @Post('refresh')
+  @UseGuards(JwtRefreshGuard)
+  @HttpCode(HttpStatus.OK)
+  @ApiBearerAuth('refresh-token')
+  @ApiOperation({ summary: 'Refresh access token' })
+  refresh(
+    @CurrentUser() user: JwtPayload & { refreshToken: string },
+  ) {
+    return this.authService.refreshTokens(user.sub, user.refreshToken);
+  }
+
+  // POST /auth/logout — replaces PHP session_destroy()
   @Post('logout')
-  async logout() {
-    return { message: 'Session logged out successfully' };
+  @UseGuards(JwtAuthGuard)
+  @HttpCode(HttpStatus.OK)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Logout and invalidate refresh token' })
+  logout(@CurrentUser() user: JwtPayload) {
+    return this.authService.logout(user.sub);
   }
 
-  @ApiOperation({ summary: 'Get Active User Profile' })
-  @Get('profile')
-  async getProfile(@Req() req: any) {
-    // If auth guard applied
-    const dummyUser = {
-      sub: 101,
-      loginId: 'john_doe',
-      userCode: 'EMP1001',
-      email: 'john.doe@castrol-odt.com',
-      role: 'Sales Representative',
-      stream: 'B2B',
-      channel: 'HD',
-    };
-    return this.authService.getProfile(dummyUser);
+  // GET /auth/me — replaces PHP session check at top of every file
+  @Get('me')
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Get current logged-in user profile' })
+  getProfile(@CurrentUser() user: JwtPayload) {
+    return this.authService.getProfile(user.sub);
   }
+
+  // POST /auth/send-password — replaces PHP send_mail.php
+  @Post('send-password')
+  @HttpCode(HttpStatus.OK)
+  @ApiOperation({ summary: 'Send password to registered email' })
+  sendPassword(@Body() dto: SendPasswordDto) {
+    return this.authService.sendPassword(dto.email);
+  }
+
+  @Get('permissions/form-fields')
+  @UseGuards(JwtAuthGuard) 
+  getFormFields(@Req() req: Request) {
+    const userRole = (req as any).user?.role as Role;
+    return {
+      role: userRole,
+      visibleFields: this.permissions.getVisibleFields(userRole),
+    };
+  }
+
 }

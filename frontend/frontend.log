@@ -1,0 +1,15 @@
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3001
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1213ms
+ ○ Compiling /offer-creation/pipeline-dashboard ...
+ ✓ Compiled /offer-creation/pipeline-dashboard in 2.2s (665 modules)
+ GET /offer-creation/pipeline-dashboard 200 in 2292ms
+ ○ Compiling /offer-creation-demo ...
+ ✓ Compiled /offer-creation-demo in 600ms (818 modules)
+ GET /offer-creation/pipeline-dashboard 200 in 146ms
+ ○ Compiling /offers/edit ...
+ ✓ Compiled /offers/edit in 2.1s (1888 modules)
+[?25h

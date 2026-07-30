@@ -1,40 +1,69 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { join } from 'path';
+import { AppController, TestCryptoController } from './app.controller';
+import { AppService } from './app.service';
 import { AuthModule } from './modules/auth/auth.module';
-import { MasterDataModule } from './modules/master-data/master-data.module';
-import { OffersModule } from './modules/offers/offers.module';
-import { OfferManagementModule } from './modules/offer-management/offer-management.module';
-import { InputManagementModule } from './modules/input-management/input-management.module';
-import { OfferLettersModule } from './modules/offer-letters/offer-letters.module';
+import { OfferModule } from './modules/offer/offer.module';
+import { CommonModule } from './common/common.module';
+import { ApprovalModule } from './modules/approval/approval.module';
+import { SkuModule } from './modules/sku/sku.module';
+import { CustomerModule } from './modules/customer/customer.module';
+import { PidModule } from './modules/pid/pid.module';
+import { PidController } from './modules/pid/pid.controller';
 import { ReportsModule } from './modules/reports/reports.module';
-import { NotificationsModule } from './modules/notifications/notifications.module';
-import {
-  userDbConfig,
-  roleDbConfig,
-  offerDbConfig,
-  masterDbConfig,
-  notificationDbConfig,
-  auditDbConfig,
-} from './config/database.config';
+import { ScheduleModule } from '@nestjs/schedule';
+import { MailModule } from './modules/mail/mail.module';
+import { EventEmitter2, EventEmitterModule } from '@nestjs/event-emitter';
+import { DatabaseService } from './database/database.service';
+import { ItemModule } from './modules/item/item.module';
+import { OfferHistoryModule } from './modules/offer-history/offer-history.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
-    TypeOrmModule.forRoot(userDbConfig),
-    TypeOrmModule.forRoot(roleDbConfig),
-    TypeOrmModule.forRoot(offerDbConfig),
-    TypeOrmModule.forRoot(masterDbConfig),
-    TypeOrmModule.forRoot(notificationDbConfig),
-    TypeOrmModule.forRoot(auditDbConfig),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: [
+        join(process.cwd(), '.env'),
+        join(process.cwd(), 'apps/api/.env'),
+      ],
+    }),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({
+        type: 'mysql',
+        host: config.get<string>('DB_HOST', 'localhost'),
+        port: config.get<number>('DB_PORT', 3307),
+        username: config.get<string>('DB_USERNAME', 'root'),
+        password: config.get<string>('DB_PASSWORD', 'V!n@y7997'),
+        database: config.get<string>('DB_NAME', 'cilcc_odt_fresh_test'),
+        autoLoadEntities: true,
+        synchronize: false,
+        charset: 'utf8mb4',
+        logging: true,
+        logger: 'advanced-console',
+      }),
+    }),
     AuthModule,
-    MasterDataModule,
-    OffersModule,
-    OfferManagementModule,
-    InputManagementModule,
-    OfferLettersModule,
+    OfferModule,
+    CommonModule,
+    ApprovalModule,
+    SkuModule,
+    CustomerModule,
+    PidModule,
     ReportsModule,
-    NotificationsModule,
+    ScheduleModule.forRoot(),
+    MailModule,
+    EventEmitterModule.forRoot(),
+    ItemModule,
+    OfferHistoryModule,
   ],
+  controllers: [AppController,TestCryptoController],
+  providers: [
+  AppService,
+  DatabaseService,
+],
 })
 export class AppModule {}

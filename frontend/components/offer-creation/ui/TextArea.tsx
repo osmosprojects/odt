@@ -12,11 +12,16 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ label, error, required, className = "", ...props }, ref) => {
     return (
       <div className="w-full flex flex-col">
-        {label && (
-          <label className="text-xs font-semibold text-brand-gray mb-1.5 block">
-            {label} {required && <span className="text-red-500">*</span>}
-          </label>
-        )}
+        {label && (() => {
+          const cleanLabel = label.replace(/\s*\*+$/, "").trim();
+          const hasManualAsterisk = label.includes("*");
+          const showAsterisk = required || hasManualAsterisk;
+          return cleanLabel ? (
+            <label className="text-xs font-semibold text-brand-gray mb-1.5 block">
+              {cleanLabel} {showAsterisk && <span className="text-red-500">*</span>}
+            </label>
+          ) : null;
+        })()}
         <textarea
           ref={ref}
           className={`w-full rounded-lg border text-sm px-3 py-2 outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-brand-dark placeholder:text-gray-400 transition-all resize-none
