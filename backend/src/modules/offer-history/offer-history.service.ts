@@ -152,6 +152,8 @@ export class OfferHistoryService {
             skuDataOption: item.skuDataOption || item.sku_data_option || "Primary",
             lbmName: item.lbmName || item.lbm_name || item.description || "Lubricants",
             pvName: item.pvName || item.pv_name || item.brandName || "PV",
+            lbm: item.lbm || item.lbm_name || item.lbmName || '',
+            pv: item.pv || item.pv_name || item.pvName || '',
             productTargetIncentiveDisbVol: vol,
             productTargetIncentiveDisbMonths: 12,
             productTargetIncentiveDisbAmt: inc * vol,
@@ -218,6 +220,8 @@ export class OfferHistoryService {
               skuDataOption: "Primary",
               lbmName: "Lubricants",
               pvName: "PV",
+              lbm: raw[`lbm${i}`] || raw[`sku_lbm${i}`] || '',
+              pv: raw[`pv${i}`] || raw[`sku_pv${i}`] || '',
               productTargetIncentiveDisbVol: vol,
               productTargetIncentiveDisbMonths: 12,
               productTargetIncentiveDisbAmt: inc * vol,
@@ -462,6 +466,35 @@ export class OfferHistoryService {
     }
 
     const history = offers.map((o) => this.mapOfferToDetails(o));
+
+    // Batch enrich all SKUs with actual LBM & PV from odt_item_master
+    const allSkuCodes: string[] = [];
+    for (const item of history) {
+      const skuList = item.previousSkuDetails || item.skus || item.previousSkus || [];
+      for (const sku of skuList) {
+        if (sku.skuCode) allSkuCodes.push(sku.skuCode);
+      }
+    }
+
+    if (allSkuCodes.length > 0) {
+      const targetStream = history[0]?.stream || history[0]?.offerType || '';
+      const lbmPvMap = await this.repo.findLbmPvMapBySkuCodes(allSkuCodes, targetStream);
+      for (const item of history) {
+        const skuList = item.previousSkuDetails || item.skus || item.previousSkus || [];
+        for (const sku of skuList) {
+          const code = (sku.skuCode || '').trim();
+          const match = lbmPvMap.get(code);
+          if (match) {
+            sku.lbm = match.lbm || '';
+            sku.pv = match.pv || '';
+          } else {
+            sku.lbm = sku.lbm || '';
+            sku.pv = sku.pv || '';
+          }
+        }
+      }
+    }
+
     const latest = history[0];
 
     const response: PreviousOfferResponse = {

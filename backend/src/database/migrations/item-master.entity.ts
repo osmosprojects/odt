@@ -43,4 +43,10 @@ export class ItemMasterEntity {
 
   @Column({ length: 10, nullable: true })
   gm_level!: string;
+
+  @Column({ length: 255, nullable: true })
+  lbm?: string;
+
+  @Column({ length: 255, nullable: true })
+  pv?: string;
 }

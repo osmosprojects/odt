@@ -231,6 +231,7 @@ export default function CustomerSection({
           onChange={onChange}
           errors={errors}
           previousOfferLoading={previousOfferLoading}
+          customerOfferHistory={customerOfferHistory}
         />
       </div>
 

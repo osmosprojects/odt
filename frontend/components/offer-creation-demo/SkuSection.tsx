@@ -57,6 +57,8 @@ export default function SkuSection({
       cogs: item.cogs,
       lbmName: item.description,
       pvName: item.brandName,
+      lbm: item.lbm || "",
+      pv: item.pv || "",
       recMixIncentive: item.recMixIncentive,
       mixIncentive: item.mixIncentive,
       skuRebate: item.skuRebate,
@@ -302,7 +304,7 @@ export default function SkuSection({
             <table className="w-full text-left border-collapse text-xs">
               <thead className="bg-gray-50 text-brand-gray font-bold uppercase text-[9px] border-b border-gray-250 sticky top-0 z-10 shadow-xs">
                 <tr className="border-b border-gray-200">
-                  <th className="p-3 text-center border-r border-gray-200" colSpan={3}>
+                  <th className="p-3 text-center border-r border-gray-200" colSpan={6}>
                     MANAGE SKU
                   </th>
                   <th className="p-3 text-center border-r border-gray-200" colSpan={3}>
@@ -316,7 +318,10 @@ export default function SkuSection({
                   </th>
                 </tr>
                 <tr>
+                  <th className="p-3 border-r border-gray-200">SKU CODE</th>
                   <th className="p-3 border-r border-gray-200">SKU NAME</th>
+                  <th className="p-3 border-r border-gray-200">LBM</th>
+                  <th className="p-3 border-r border-gray-200">PV</th>
                   <th className="p-3 border-r border-gray-200">BASE T.O./LTR</th>
                   <th className="p-3 border-r border-gray-200">BASE COGS+JBR/LTR</th>
                   <th className="p-3 border-r border-gray-200">CONTRACT VOLUME (LTR)</th>
@@ -337,10 +342,16 @@ export default function SkuSection({
                   return (
                     <tr key={sku.id} className="hover:bg-gray-50/50">
                       <td className="p-3 border-r border-gray-150 font-bold text-brand-dark">
-                        <p className="truncate max-w-[150px]">{sku.skuName}</p>
-                        <span className="text-[9px] text-brand-gray block font-bold">
-                          {sku.skuCode}
-                        </span>
+                        {sku.skuCode || "-"}
+                      </td>
+                      <td className="p-3 border-r border-gray-150 font-bold text-brand-dark">
+                        <p className="truncate max-w-[150px]">{sku.skuName || "-"}</p>
+                      </td>
+                      <td className="p-3 border-r border-gray-150 font-medium text-brand-gray">
+                        {sku.lbm || "-"}
+                      </td>
+                      <td className="p-3 border-r border-gray-150 font-medium text-brand-gray">
+                        {sku.pv || "-"}
                       </td>
                       <td className="p-3 border-r border-gray-150 font-bold text-brand-dark">
                         ₹{(Number(baseTO) || 0).toFixed(2)}
@@ -447,6 +458,8 @@ export default function SkuSection({
               </tbody>
             </table>
           </div>
+
+          
 
           {/* Product Target Incentive Disbursement Schedules (Unified Enterprise Card Layout) */}
           <div className="space-y-3">

@@ -39,6 +39,8 @@ export interface SkuMasterItem {
   mixIncentive: number;
   skuRebate: number;
   productTargetIncentive: number;
+  lbm?: string;
+  pv?: string;
 }
 
 export interface PreviousOffer {
@@ -115,6 +117,8 @@ export interface Sku {
   productTargetIncentive: number;
   baseTO?: number;
   baseCOGS?: number;
+  lbm?: string;
+  pv?: string;
 }
 
 export interface SkuRow extends Sku {
@@ -127,6 +131,8 @@ export interface SkuRow extends Sku {
   productTargetIncentiveDisbVol?: number;
   productTargetIncentiveDisbMonths?: number;
   productTargetIncentiveDisbAmt?: number;
+  lbm?: string;
+  pv?: string;
 }
 
 export interface Offer {

@@ -4,6 +4,8 @@ import { OfferEntity } from '../../database/migrations/offer.entity';
 import { OfferDetailsEntity } from '../../database/migrations/offer-details.entity';
 import { CustDetailsEntity } from '../../database/migrations/cust-details.entity';
 import { ActivityLogEntity } from '../../database/migrations/activity-log.entity';
+import { ItemMasterEntity } from '../../database/migrations/item-master.entity';
+import { ItemRepository } from '../item/item.repository';
 import { OfferRepository } from './offer.repository';
 import { OfferService } from './offer.service';
 import { OfferValidationService } from './offer-validation.service';
@@ -22,11 +24,13 @@ import { ActivityLogService } from './activity-log.service';
       OfferDetailsEntity,
       CustDetailsEntity,
       ActivityLogEntity,
+      ItemMasterEntity,
     ]),
   ],
   controllers: [OfferController, VolumePlanController],
   providers: [
     OfferRepository,
+    ItemRepository,
     OfferService,
     OfferValidationService,
     WbcNumberService,

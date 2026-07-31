@@ -19,6 +19,8 @@ export interface SkuSearchResult {
   mixIncentive: number;
   skuRebate: number;
   productTargetIncentive: number;
+  lbm?: string;
+  pv?: string;
 }
 
 @Injectable()
@@ -33,6 +35,11 @@ export class ItemService {
   ): Promise<{ data: SkuSearchResult[]; total: number; page: number; limit: number }> {
     const { data, total } = await this.itemRepo.searchItems(q, stream, page, limit);
 
+    const lbmPvMap = await this.itemRepo.findLbmPvMapBySkuCodes(
+      data.map((item) => item.sku_code),
+      stream,
+    );
+
     const mapped = data.map((item) => {
       const baseTO = parseFloat(item.new_price) || 0;
       const cogs = parseFloat(item.cogs) || 0;
@@ -42,6 +49,11 @@ export class ItemService {
       // Derive recommended mix incentive = margin % as Rs/Ltr
       const margin = baseTO > 0 ? ((baseTO - cogs) / baseTO) * baseTO : 0;
       const recMixIncentive = parseFloat((margin * 0.05).toFixed(4));
+
+      const lbmPv = lbmPvMap.get((item.sku_code || '').trim()) || {
+        lbm: item.lbm || '',
+        pv: item.pv || '',
+      };
 
       return {
         itemId: item.item_id,
@@ -60,6 +72,8 @@ export class ItemService {
         mixIncentive: parseFloat(recMixIncentive.toFixed(4)),
         skuRebate: 0,
         productTargetIncentive: 0,
+        lbm: lbmPv.lbm || '',
+        pv: lbmPv.pv || '',
       } satisfies SkuSearchResult;
     });
 

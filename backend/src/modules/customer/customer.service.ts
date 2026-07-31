@@ -50,29 +50,40 @@ export class CustomerService {
       limit,
     );
 
-    const mapped = rows.map((c) => ({
-      id: String(c.cust_id || c.id),
-      name: c.customer_name || '',
-      businessStream: c.stream || '',
-      customerCode: c.customer_code || '',
-      customerType: c.customer_type || 'Direct',
-      distributorName: c.db_name || '',
-      distributorCode: c.db_code || '',
-      jdeCode: c.customer_code || String(c.cust_id || c.id),
-      executiveCode: c.executive_code || '',
-      state: c.state || '',
-      segment: c.segment || '',
-      subSegment: c.sub_segment || '',
-      executive: c.executive_name || '',
-      salesRep: c.executive_name || '',
-      salesArea: c.state ? `${c.state}` : '',
-      address: c.customer_address || '',
-      gstNumber: c.gst_no || '',
-      creditDays: c.credit_days || '',
-      keyAccount: c.key_account || '',
-      previousWbc: 'N/A',
-      previousWbcOffer: 'N/A',
-    }));
+    const enrichmentMap = await this.customerRepo.enrichCustomerData(rows);
+
+    const mapped = rows.map((c) => {
+      const key = String(c.id || c.cust_id);
+      const enriched = enrichmentMap.get(key);
+
+      const finalExec = enriched?.executive || c.executive_name || '';
+      const finalState = enriched?.state || c.state || '';
+      const finalGst = enriched?.gstNumber || c.gst_no || '';
+
+      return {
+        id: String(c.cust_id || c.id),
+        name: c.customer_name || '',
+        businessStream: c.stream || '',
+        customerCode: c.customer_code || '',
+        customerType: c.customer_type || 'Direct',
+        distributorName: c.db_name || '',
+        distributorCode: c.db_code || '',
+        jdeCode: c.customer_code || String(c.cust_id || c.id),
+        executiveCode: c.executive_code || '',
+        state: finalState,
+        segment: c.segment || '',
+        subSegment: c.sub_segment || '',
+        executive: finalExec,
+        salesRep: finalExec,
+        salesArea: finalState,
+        address: c.customer_address || '',
+        gstNumber: finalGst,
+        creditDays: c.credit_days || '',
+        keyAccount: c.key_account || '',
+        previousWbc: 'N/A',
+        previousWbcOffer: 'N/A',
+      };
+    });
 
     return { data: mapped, total, page, limit };
   }

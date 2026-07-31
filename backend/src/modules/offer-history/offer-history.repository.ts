@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 import { OfferDetailsEntity } from '../../database/migrations/offer-details.entity';
 import { CustDetailsEntity } from '../../database/migrations/cust-details.entity';
 import { CustomerMasterEntity } from '../../database/migrations/customer-master.entity';
+import { ItemMasterEntity } from '../../database/migrations/item-master.entity';
 
 @Injectable()
 export class OfferHistoryRepository {
@@ -16,7 +17,51 @@ export class OfferHistoryRepository {
     private custRepo: Repository<CustDetailsEntity>,
     @InjectRepository(CustomerMasterEntity)
     private masterRepo: Repository<CustomerMasterEntity>,
+    @InjectRepository(ItemMasterEntity)
+    private itemRepo: Repository<ItemMasterEntity>,
   ) {}
+
+  async findLbmPvMapBySkuCodes(
+    skuCodes: string[],
+    stream?: string,
+  ): Promise<Map<string, { lbm: string; pv: string }>> {
+    const map = new Map<string, { lbm: string; pv: string }>();
+    if (!skuCodes || skuCodes.length === 0) return map;
+
+    const cleanCodes = Array.from(
+      new Set(skuCodes.map((c) => (c || '').trim()).filter(Boolean)),
+    );
+    if (cleanCodes.length === 0) return map;
+
+    const cleanStream = (stream || '').trim().toUpperCase();
+
+    try {
+      const qb = this.itemRepo
+        .createQueryBuilder('i')
+        .select(['i.sku_code', 'i.stream', 'i.lbm', 'i.pv'])
+        .where('i.sku_code IN (:...cleanCodes)', { cleanCodes });
+
+      if (cleanStream) {
+        qb.andWhere('UPPER(i.stream) = :cleanStream', { cleanStream });
+      }
+
+      const rawResults = await qb.getRawMany();
+
+      for (const r of rawResults) {
+        const code = (r.i_sku_code || r.sku_code || '').trim();
+        if (code) {
+          map.set(code, {
+            lbm: r.i_lbm ?? r.lbm ?? '',
+            pv: r.i_pv ?? r.pv ?? '',
+          });
+        }
+      }
+    } catch (err) {
+      this.logger.error('Error fetching batch LBM/PV from odt_item_master:', err);
+    }
+
+    return map;
+  }
 
   /**
    * Search wow_odt_cust_details by customer_name_text ONLY.

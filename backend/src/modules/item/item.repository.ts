@@ -40,4 +40,45 @@ export class ItemRepository {
   findBySkuCode(skuCode: string): Promise<ItemMasterEntity | null> {
     return this.repo.findOne({ where: { sku_code: skuCode } });
   }
+
+  async findLbmPvMapBySkuCodes(
+    skuCodes: string[],
+    stream?: string,
+  ): Promise<Map<string, { lbm: string; pv: string }>> {
+    const map = new Map<string, { lbm: string; pv: string }>();
+    if (!skuCodes || skuCodes.length === 0) return map;
+
+    const cleanCodes = Array.from(
+      new Set(skuCodes.map((c) => (c || '').trim()).filter(Boolean)),
+    );
+    if (cleanCodes.length === 0) return map;
+
+    const cleanStream = (stream || '').trim().toUpperCase();
+
+    try {
+      const qb = this.repo
+        .createQueryBuilder('i')
+        .select(['i.sku_code', 'i.stream', 'i.lbm', 'i.pv'])
+        .where('i.sku_code IN (:...cleanCodes)', { cleanCodes });
+
+      if (cleanStream) {
+        qb.andWhere('UPPER(i.stream) = :cleanStream', { cleanStream });
+      }
+
+      const rawResults = await qb.getRawMany();
+
+      for (const r of rawResults) {
+        const code = (r.i_sku_code || r.sku_code || '').trim();
+        if (code) {
+          map.set(code, {
+            lbm: r.i_lbm ?? r.lbm ?? '',
+            pv: r.i_pv ?? r.pv ?? '',
+          });
+        }
+      }
+    } catch (err) {
+      console.error('[ItemRepository] Error fetching batch LBM/PV:', err);
+    }
+    return map;
+  }
 }

@@ -32,6 +32,8 @@ interface SkuRow {
   mixIncentive: number;
   skuRebate: number;
   productTargetIncentive: number;
+  lbm?: string;
+  pv?: string;
 }
 
 import { api } from "@/lib/api";
@@ -40,21 +42,17 @@ export default function SkuIncentivePage() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
+  const [offerStream, setOfferStream] = useState<string>("IWS");
   const [sqlSkus, setSqlSkus] = useState<any[]>([]);
 
   useEffect(() => {
-    api.getSkus().then((data) => {
+    api.getSkus("", offerStream).then((data) => {
       setSqlSkus(Array.isArray(data) ? data : []);
     }).catch(console.error);
-  }, []);
+  }, [offerStream]);
 
   const skuCodesOptions = sqlSkus.map((s) => s.skuCode).filter(Boolean);
   const skuNamesOptions = sqlSkus.map((s) => s.description || s.skuName).filter(Boolean);
-
-  // ----------------------------------------------------
-  // OFFER STREAM STATE FOR CONDITIONAL COLUMNS
-  // ----------------------------------------------------
-  const [offerStream, setOfferStream] = useState<string>("IWS");
 
   // ----------------------------------------------------
   // ACCORDIONS OPEN/CLOSE STATES
@@ -248,6 +246,8 @@ export default function SkuIncentivePage() {
               mixIncentive: Number(foundSku.mixIncentive || 0),
               skuRebate: Number(foundSku.skuRebate || 0),
               productTargetIncentive: Number(foundSku.productTargetIncentive || 0),
+              lbm: foundSku.lbm || "",
+              pv: foundSku.pv || "",
             };
           } else {
             return {
@@ -260,6 +260,8 @@ export default function SkuIncentivePage() {
               mixIncentive: 0,
               skuRebate: 0,
               productTargetIncentive: 0,
+              lbm: "",
+              pv: "",
             };
           }
         }
@@ -596,6 +598,16 @@ export default function SkuIncentivePage() {
                           SKU Name <ArrowUpDown size={12} />
                         </div>
                       </th>
+                      <th className="p-3.5 cursor-pointer hover:bg-gray-100" onClick={() => handleSort("lbm" as any)}>
+                        <div className="flex items-center gap-1">
+                          LBM <ArrowUpDown size={12} />
+                        </div>
+                      </th>
+                      <th className="p-3.5 cursor-pointer hover:bg-gray-100" onClick={() => handleSort("pv" as any)}>
+                        <div className="flex items-center gap-1">
+                          PV <ArrowUpDown size={12} />
+                        </div>
+                      </th>
                       <th className="p-3.5 min-w-[200px]">Select SKU</th>
                       {offerStream === "IWS" && <th className="p-3.5">LBM Name</th>}
                       {(offerStream === "FWS" || offerStream === "HD" || offerStream === "ILS") && <th className="p-3.5">PV Name</th>}
@@ -638,8 +650,10 @@ export default function SkuIncentivePage() {
                               className="w-4 h-4 text-primary focus:ring-primary border-gray-300 cursor-pointer"
                             />
                           </td>
-                          <td className="p-3 font-semibold text-brand-dark">{row.skuCode}</td>
-                          <td className="p-3 font-medium text-brand-dark">{row.skuName}</td>
+                          <td className="p-3 font-semibold text-brand-dark">{row.skuCode || "-"}</td>
+                          <td className="p-3 font-medium text-brand-dark">{row.skuName || "-"}</td>
+                          <td className="p-3 font-medium text-brand-gray">{row.lbm || "-"}</td>
+                          <td className="p-3 font-medium text-brand-gray">{row.pv || "-"}</td>
                           <td className="p-3 min-w-[220px]">
                             <SearchDropdown
                               placeholder="Search SKU..."

@@ -519,4 +519,8 @@ export const mockSkus: Sku[] = [
     skuRebate: 40.0,
     productTargetIncentive: 18.0
   }
-];
+].map((s) => ({
+  ...s,
+  lbm: (s as any).lbm || s.lbmName || "",
+  pv: (s as any).pv || s.pvName || "",
+}));

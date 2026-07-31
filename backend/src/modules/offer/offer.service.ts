@@ -11,6 +11,7 @@ import { phpUnserialize, phpSerialize, safePhpUnserialize } from '../../common/u
 import { moneyFormatIndia } from '../../common/utils/money-format.utils';
 import { OfferStatus } from '../../enums/offer-status.enum';
 
+import { ItemRepository } from '../item/item.repository';
 import { ActivityLogService } from './activity-log.service';
 
 @Injectable()
@@ -20,6 +21,7 @@ export class OfferService {
     private validation: OfferValidationService,
     private wbcNumberService: WbcNumberService,
     private activityLogService: ActivityLogService,
+    private itemRepo: ItemRepository,
   ) {}
 
   async getPreviousOffer(customerCode: string): Promise<any> {
@@ -97,6 +99,24 @@ export class OfferService {
         }
       } catch {
         parsedSkuText = null;
+      }
+    }
+
+    if (skuRows.length > 0) {
+      const skuCodes = skuRows.map((s) => s.skuCode || s.sku_code).filter(Boolean);
+      if (skuCodes.length > 0) {
+        const stream = detailed?.stream || offer?.stream || '';
+        const lbmPvMap = await this.itemRepo.findLbmPvMapBySkuCodes(skuCodes, stream);
+        for (const s of skuRows) {
+          const match = lbmPvMap.get((s.skuCode || s.sku_code || '').trim());
+          if (match) {
+            s.lbm = match.lbm || '';
+            s.pv = match.pv || '';
+          } else {
+            s.lbm = s.lbm || '';
+            s.pv = s.pv || '';
+          }
+        }
       }
     }
 

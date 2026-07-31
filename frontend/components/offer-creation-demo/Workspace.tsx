@@ -256,6 +256,74 @@ export default function Workspace() {
 
   // ── Sync single-owner previousOfferState into formData & auto-populate SKU Rebates grid ───────────
   React.useEffect(() => {
+    if (!formData.selectedCustomer) {
+      setFormData((prev) => {
+        if (
+          prev.previousOffer === null &&
+          prev.selectedSkus.length === 0 &&
+          !prev.whyInvest &&
+          !prev.risksToVolume &&
+          !prev.mitigationToRisk &&
+          prev.prevOfferCommitment === 0 &&
+          prev.commitment === 0 &&
+          prev.additionalCashLoan === 0
+        ) {
+          return prev;
+        }
+        return {
+          ...prev,
+          selectedCustomer: null,
+          previousOffer: null,
+          previousOfferState: { status: 'idle', customerCode: null, requestId: 0, data: null, error: null },
+          selectedSkus: [],
+
+          // Reset customer performance & contract metrics
+          prevOfferCommitment: 0,
+          prevOfferActual: 0,
+          months: 12,
+          periodFrom: "",
+          periodTo: "",
+          volumePM: 0,
+          actualPM: 0,
+          synthShare: 0,
+          synthShareActual: 0,
+          commitment: 0,
+          actual: 0,
+          arSeol: "",
+          targetIncentive: 0,
+          additionalInput: 0,
+          signOnBonus: 0,
+          others: 0,
+          totalInvestment: 0,
+          rsLtrInvestment: 0,
+          skuLevelRebate: 0,
+          totalFocValue: 0,
+          prevGmpl: 0,
+          remark: "",
+
+          // Reset customer qualification remarks
+          whyInvest: "",
+          significanceWithCastrol: "",
+          upTradingOpportunities: "",
+          risksToVolume: "",
+          mitigationToRisk: "",
+          groupBelongsTo: "",
+          otherQualitativeInfo: "",
+
+          // Reset customer-level investment loans
+          existingLoanBalance: 0,
+          existingLoanEndDate: "",
+          existingLoanVolumeRemaining: 0,
+          additionalCashLoan: 0,
+          additionalEquipmentLoan: 0,
+          totalAdditionalLoan: 0,
+          totalTradeLoan: 0,
+          amortizationRatePerLitre: 0,
+        };
+      });
+      return;
+    }
+
     setFormData((prev) => {
       let nextSkus = prev.selectedSkus;
       if (prevOfferData?.found && prevOfferData !== prev.previousOffer) {
@@ -284,6 +352,8 @@ export default function Workspace() {
               baseTO: baseTOVal,
               lbmName: s.lbmName || "Lubricants",
               pvName: s.pvName || "PV",
+              lbm: s.lbm || s.lbm_name || "",
+              pv: s.pv || s.pv_name || "",
               contractVolume: vol,
               focVolume: focVol,
               totalInput: totInp,
@@ -311,7 +381,7 @@ export default function Workspace() {
         selectedSkus: nextSkus,
       };
     });
-  }, [previousOfferState, prevOfferData]);
+  }, [formData.selectedCustomer, previousOfferState, prevOfferData]);
 
   // ── Hydrate offer data when copying / editing a template offer ID ─────────────
   const targetOfferId = (formData as any).templateOfferId || (formData as any).editingOfferId;
@@ -535,26 +605,29 @@ export default function Workspace() {
 
       {/* ── HEADER ─────────────────────────────────────────────────── */}
       <div className="space-y-[16px]">
-        {/* Breadcrumb */}
+        {/* ROW 1: Breadcrumb & System Date */}
         <BreadcrumbHeader items={breadcrumbItems} showDate />
 
-        {/* Workspace Title (30px, 700), Description (12px, 400), Mode Selection & Live Badge */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-white p-[20px] border border-slate-200 rounded-[14px] shadow-xs">
+        {/* ROW 2: Mode Selection */}
+        <ModeSelection activeTab="workspace" />
+
+        {/* ROW 3: Offer Creation Workspace Section */}
+        <div className="bg-white p-[20px] border border-slate-200 rounded-[14px] shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <h1 className="text-[30px] font-bold text-slate-900 tracking-tight leading-tight">
-              Offer Creation Workspace
-            </h1>
+            <div className="flex items-center gap-2.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+              <h1 className="text-[28px] sm:text-[30px] font-bold text-slate-900 tracking-tight leading-tight">
+                Offer Creation Workspace
+              </h1>
+            </div>
             <p className="text-[12px] font-normal text-slate-500 max-w-3xl">
               Enterprise offer formulation, commercial calculations, investment modeling, and DOFA governance engine.
             </p>
           </div>
 
-          <div className="flex items-center gap-3 flex-wrap">
-            <ModeSelection activeTab="workspace" />
-            <div className="flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold text-[12px] px-3 py-1.5 rounded-full shrink-0">
-              <Database size={13} />
-              Live Data Badge
-            </div>
+          <div className="flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold text-[12px] px-3.5 py-1.5 rounded-full shrink-0 self-start sm:self-auto">
+            <Database size={13} />
+            <span>Live Data – Production Mode</span>
           </div>
         </div>
       </div>

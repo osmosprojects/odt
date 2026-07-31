@@ -53,8 +53,11 @@ export const api = {
       Array.isArray(res) ? res : res?.data || []
     );
   },
-  getSkus: (search?: string) => {
-    const query = search ? `?q=${encodeURIComponent(search)}` : '';
+  getSkus: (search?: string, stream?: string) => {
+    const params = new URLSearchParams();
+    if (search) params.append('q', search);
+    if (stream) params.append('stream', stream);
+    const query = params.toString() ? `?${params.toString()}` : '';
     return fetchApi<any>(`/items/search${query}`).then((res: any) =>
       Array.isArray(res) ? res : res?.data || []
     );

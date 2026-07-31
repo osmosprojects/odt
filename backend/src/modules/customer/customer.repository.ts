@@ -120,4 +120,146 @@ export class CustomerRepository {
     return rows || [];
   }
 
+  /**
+   * Enrich customer records with Executive Name (from econ_customers_drm),
+   * State Name (from wow_statemaster), and GST Number (from odt_customer_master).
+   */
+  async enrichCustomerData(
+    customers: CustomerMasterEntity[],
+  ): Promise<Map<string, { executive: string; state: string; gstNumber: string }>> {
+    const map = new Map<string, { executive: string; state: string; gstNumber: string }>();
+    if (!customers || customers.length === 0) return map;
+
+    const execCodes = Array.from(
+      new Set(customers.map((c) => (c.executive_code || '').trim()).filter(Boolean)),
+    );
+    const stateCodes = Array.from(
+      new Set(customers.map((c) => (c.state || '').trim()).filter(Boolean)),
+    );
+
+    // 1. Executive Name lookup from econ_customers_drm
+    const execMap = new Map<string, string>();
+    if (execCodes.length > 0) {
+      try {
+        const rawExecs = await this.masterRepo.manager.query(
+          `SELECT loginid, TRIM(CONCAT(IFNULL(fname, ''), ' ', IFNULL(lname, ''))) AS full_name
+           FROM econ_customers_drm
+           WHERE loginid IN (?)`,
+          [execCodes],
+        );
+        if (Array.isArray(rawExecs)) {
+          for (const r of rawExecs) {
+            const loginid = (r.loginid || r.LOGINID || '').toString().trim();
+            const fullName = (r.full_name || r.FULL_NAME || '').toString().trim();
+            if (loginid && fullName) {
+              execMap.set(loginid, fullName);
+            }
+          }
+        }
+      } catch (err) {
+        // Graceful error logging
+      }
+    }
+
+    // 2. State lookup via 4-step relational flow:
+    // Step 1: odt_customer_master.id
+    // Step 2: wow_wo_cust_details.offer_id = odt_customer_master.id -> cust_state
+    // Step 3: wow_statemaster.code = cust_state -> statename
+    // Step 4: state = statename
+    const masterIds = Array.from(
+      new Set(customers.map((c) => c.id).filter(Boolean)),
+    );
+
+    const custStateMap = new Map<number, string>();
+    if (masterIds.length > 0) {
+      try {
+        let rawCustDetails: any[] = [];
+        try {
+          rawCustDetails = await this.masterRepo.manager.query(
+            `SELECT offer_id, cust_state FROM wow_wo_cust_details WHERE offer_id IN (?)`,
+            [masterIds],
+          );
+        } catch {
+          try {
+            rawCustDetails = await this.masterRepo.manager.query(
+              `SELECT offer_id, cust_state FROM wow_odt_cust_details WHERE offer_id IN (?)`,
+              [masterIds],
+            );
+          } catch {
+            rawCustDetails = await this.masterRepo.manager.query(
+              `SELECT offer_id, cust_state FROM odt_cust_details WHERE offer_id IN (?)`,
+              [masterIds],
+            );
+          }
+        }
+
+        if (Array.isArray(rawCustDetails)) {
+          for (const r of rawCustDetails) {
+            const offerId = Number(r.offer_id || r.OFFER_ID);
+            const custState = (r.cust_state || r.CUST_STATE || '').toString().trim();
+            if (offerId && custState) {
+              custStateMap.set(offerId, custState);
+            }
+          }
+        }
+      } catch (err) {
+        // Graceful error handling
+      }
+    }
+
+    const custStateCodes = Array.from(
+      new Set(Array.from(custStateMap.values()).filter(Boolean)),
+    );
+    const stateNameMap = new Map<string, string>();
+    if (custStateCodes.length > 0) {
+      try {
+        const rawStates = await this.masterRepo.manager.query(
+          `SELECT code, statename FROM wow_statemaster WHERE code IN (?) OR statename IN (?)`,
+          [custStateCodes, custStateCodes],
+        );
+        if (Array.isArray(rawStates)) {
+          for (const r of rawStates) {
+            const code = (r.code || r.CODE || '').toString().trim();
+            const name = (r.statename || r.STATENAME || r.state_name || '').toString().trim();
+            if (code && name) {
+              stateNameMap.set(code, name);
+            }
+            if (name) {
+              stateNameMap.set(name, name);
+            }
+          }
+        }
+      } catch (err) {
+        // Graceful error handling
+      }
+    }
+
+    for (const c of customers) {
+      const key = String(c.id || c.cust_id);
+      const execCode = (c.executive_code || '').trim();
+
+      let resolvedExec = (c.executive_name || '').trim();
+      if (!resolvedExec && execCode) {
+        resolvedExec = execMap.get(execCode) || '';
+      }
+
+      // Step 4: Populate state = statename derived from offer_id -> cust_state -> statename
+      const custStateCode = custStateMap.get(c.id) || '';
+      let resolvedState = '';
+      if (custStateCode) {
+        resolvedState = stateNameMap.get(custStateCode) || custStateCode;
+      }
+
+      const resolvedGst = (c.gst_no || '').trim();
+
+      map.set(key, {
+        executive: resolvedExec,
+        state: resolvedState,
+        gstNumber: resolvedGst,
+      });
+    }
+
+    return map;
+  }
+
 }
